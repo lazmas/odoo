@@ -4158,6 +4158,8 @@ msgid ""
 "Number of days/week/month before executing the action. It allows to plan the"
 " action deadline."
 msgstr ""
+"Anzahl der Tage/Wochen/Monate vor Durchführung der Aktion. Ermöglicht die "
+"Planung der Frist für die Durchführung der Aktion."
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_blacklist__message_has_error_counter
@@ -4406,7 +4408,7 @@ msgstr "Optionaler Wert, wenn das Zielfeld leer ist."
 #: code:addons/mail/static/src/js/models/threads/dm_chat.js:0
 #, python-format
 msgid "Out of office until %s"
-msgstr ""
+msgstr "Abwesend bis %s"
 
 #. module: mail
 #: model:ir.model.fields.selection,name:mail.selection__mail_mail__state__outgoing
