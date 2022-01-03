@@ -789,7 +789,7 @@ msgstr ""
 #, python-format
 msgid ""
 "The attachment %s cannot be removed because it is not in a pending state."
-msgstr ""
+msgstr "Der Anhang %s kann nicht entfernt werden, da er nicht ausstehend ist."
 
 #. module: portal
 #: code:addons/portal/controllers/mail.py:0
@@ -868,7 +868,7 @@ msgstr ""
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_searchbar
 msgid "Toggle filters"
-msgstr ""
+msgstr "Filter umschalten"
 
 #. module: portal
 #: model:ir.model.fields,field_description:portal.field_portal_wizard__user_ids
