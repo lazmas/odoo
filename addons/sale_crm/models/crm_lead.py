@@ -94,7 +94,8 @@ class CrmLead(models.Model):
             'search_default_draft': 1,
             'search_default_partner_id': self.partner_id.id,
             'default_partner_id': self.partner_id.id,
-            'default_opportunity_id': self.id
+            'default_opportunity_id': self.id,
+            'default_source_id': self.source_id.id
         }
         action['domain'] = [('opportunity_id', '=', self.id), ('state', 'in', ['draft', 'sent'])]
         quotations = self.mapped('order_ids').filtered(lambda l: l.state in ('draft', 'sent'))
