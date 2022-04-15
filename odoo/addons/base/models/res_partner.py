@@ -646,12 +646,14 @@ class Partner(models.Model):
         name = name.replace('\n\n', '\n')
         if self._context.get('address_inline'):
             name = name.replace('\n', ', ')
-        if self._context.get('show_email') and partner.email:
-            name = "%s <%s>" % (name, partner.email)
+        # if self._context.get('show_email') and partner.email:
+        #     name = "%s <%s>" % (name, partner.email)
         if self._context.get('html_format'):
             name = name.replace('\n', '<br/>')
         if self._context.get('show_vat') and partner.vat:
             name = "%s ‒ %s" % (name, partner.vat)
+        if self._context.get('show_email') and partner.email:
+            name = "%s <%s>" % (name, partner.email)
         return name
 
     def name_get(self):
