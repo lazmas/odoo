@@ -44,7 +44,8 @@ class Partner(models.Model):
                 <field name='city' placeholder="%(placeholder)s" class="o_address_city"
                     attrs="{
                         'invisible': [('country_enforce_cities', '=', True), '|', ('city_id', '!=', False), ('city', 'in', ['', False ])],
-                        'readonly': [('type', '=', 'contact')%(parent_condition)s]
+                        'readonly': [('type', '=', 'contact')%(parent_condition)s],
+                        'required': True
                     }"
                 />
                 <field name='city_id' placeholder="%(placeholder)s" string="%(placeholder)s" class="o_address_city"
