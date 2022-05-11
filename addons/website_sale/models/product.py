@@ -13,7 +13,7 @@ class ProductStyle(models.Model):
     _name = "product.style"
     _description = 'Product Style'
 
-    name = fields.Char(string='Style Name', required=True)
+    name = fields.Char(string='Style Name', required=True, translate=True)
     html_class = fields.Char(string='HTML Classes')
 
 
