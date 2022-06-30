@@ -176,7 +176,6 @@ class Groups(models.Model):
         # DLE P139
         if self.ids:
             self.env['ir.model.access'].call_cache_clearing_methods()
-            self.env['res.users'].has_group.clear_cache(self.env['res.users'])
         return super(Groups, self).write(vals)
 
 
@@ -522,7 +521,6 @@ class Users(models.Model):
             # `test_00_equipment_multicompany_user`
             self.env['ir.model.access'].call_cache_clearing_methods()
             self.env['ir.rule'].clear_caches()
-            self.has_group.clear_cache(self)
         if any(key.startswith('context_') or key in ('lang', 'tz') for key in values):
             self.context_get.clear_cache(self)
         if any(key in values for key in ['active'] + USER_PRIVATE_FIELDS):
@@ -736,8 +734,10 @@ class Users(models.Model):
     def has_group(self, group_ext_id):
         # use singleton's id if called on a non-empty recordset, otherwise
         # context uid
-        uid = self.id or self._uid
-        return self.with_user(uid)._has_group(group_ext_id)
+        uid = self.id
+        if uid and uid != self._uid:
+            self = self.with_user(uid)
+        return self._has_group(group_ext_id)
 
     @api.model
     @tools.ormcache('self._uid', 'group_ext_id')
@@ -756,8 +756,6 @@ class Users(models.Model):
                             (SELECT res_id FROM ir_model_data WHERE module=%s AND name=%s)""",
                          (self._uid, module, ext_id))
         return bool(self._cr.fetchone())
-    # for a few places explicitly clearing the has_group cache
-    has_group.clear_cache = _has_group.clear_cache
 
     def action_show_groups(self):
         self.ensure_one()

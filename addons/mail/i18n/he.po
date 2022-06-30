@@ -16,6 +16,8 @@
 # ZVI BLONDER <ZVIBLONDER@gmail.com>, 2020
 # david danilov, 2021
 # hed shefer <hed@laylinetech.com>, 2021
+# Sagi Ahiel, 2022
+# Netta Waizer, 2022
 # Lilach Gilliam <lilach.gilliam@gmail.com>, 2022
 # 
 msgid ""
@@ -4860,7 +4862,7 @@ msgstr ""
 #. module: mail
 #: model:ir.actions.act_window,name:mail.mail_resend_message_action
 msgid "Resend mail"
-msgstr ""
+msgstr "שלח מחדש את המייל"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_resend_message_view_form
@@ -6262,12 +6264,12 @@ msgstr ""
 #: code:addons/mail/models/mail_thread.py:0
 #, python-format
 msgid "You have been assigned to %s"
-msgstr ""
+msgstr "הוקצת ל%s"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.message_user_assigned
 msgid "You have been assigned to the"
-msgstr ""
+msgstr "הוקצת ל"
 
 #. module: mail
 #. openerp-web
@@ -6365,14 +6367,14 @@ msgstr ""
 #: code:addons/mail/static/src/xml/thread.xml:0
 #, python-format
 msgid "Zoom In"
-msgstr ""
+msgstr "זום פנימה"
 
 #. module: mail
 #. openerp-web
 #: code:addons/mail/static/src/xml/thread.xml:0
 #, python-format
 msgid "Zoom Out"
-msgstr ""
+msgstr "להקטין את התצוגה(זום אאוט)"
 
 #. module: mail
 #: model:ir.model.fields.selection,name:mail.selection__mail_activity_type__delay_from__previous_activity
@@ -6393,12 +6395,12 @@ msgstr ""
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.message_activity_assigned
 msgid "assigned you an activity"
-msgstr ""
+msgstr "הקצה אלי את הפעילות"
 
 #. module: mail
 #: model:mail.channel,name:mail.channel_2
 msgid "board-meetings"
-msgstr ""
+msgstr "פגישות הנהלה"
 
 #. module: mail
 #. openerp-web

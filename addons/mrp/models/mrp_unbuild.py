@@ -3,7 +3,7 @@
 
 from odoo import api, fields, models, _
 from odoo.exceptions import AccessError, UserError
-from odoo.tools import float_compare, float_round
+from odoo.tools import float_compare, float_round, float_is_zero
 
 
 class MrpUnbuild(models.Model):
@@ -190,11 +190,18 @@ class MrpUnbuild(models.Model):
         for unbuild in self:
             if unbuild.mo_id:
                 finished_moves = unbuild.mo_id.move_finished_ids.filtered(lambda move: move.state == 'done')
-                factor = unbuild.product_qty / unbuild.mo_id.product_uom_id._compute_quantity(unbuild.mo_id.product_qty, unbuild.product_uom_id)
+                qty_produced = 0
+                for line in finished_moves.move_line_ids:
+                    if line.product_id != unbuild.mo_id.product_id:
+                        continue
+                    qty_produced += line.product_uom_id._compute_quantity(line.qty_done, unbuild.product_uom_id)
+                if float_is_zero(qty_produced, precision_rounding=unbuild.product_uom_id.rounding):
+                    return moves
+                factor = unbuild.product_qty / qty_produced
                 for product in finished_moves.product_id:
                     product_moves = finished_moves.filtered(lambda m: m.product_id == product)
                     qty = sum(product_moves.mapped('product_uom_qty'))
-                    moves += unbuild._generate_move_from_existing_move_with_qty(product_moves[0], factor * qty, product_moves[0].location_dest_id, product_moves[0].location_id)
+                    moves += unbuild._generate_move_from_existing_move_with_qty(product_moves[0], factor * qty, self.location_id, product_moves[0].location_id)
             else:
                 factor = unbuild.product_uom_id._compute_quantity(unbuild.product_qty, unbuild.bom_id.product_uom_id) / unbuild.bom_id.product_qty
                 moves += unbuild._generate_move_from_bom_line(self.product_id, self.product_uom_id, unbuild.product_qty)
@@ -208,7 +215,14 @@ class MrpUnbuild(models.Model):
         for unbuild in self:
             if unbuild.mo_id:
                 raw_moves = unbuild.mo_id.move_raw_ids.filtered(lambda move: move.state == 'done')
-                factor = unbuild.product_qty / unbuild.mo_id.product_uom_id._compute_quantity(unbuild.mo_id.product_qty, unbuild.product_uom_id)
+                qty_produced = 0
+                for line in unbuild.mo_id.move_finished_ids.move_line_ids:
+                    if line.product_id != unbuild.mo_id.product_id or line.state != 'done':
+                        continue
+                    qty_produced += line.product_uom_id._compute_quantity(line.qty_done, unbuild.product_uom_id)
+                if float_is_zero(qty_produced, precision_rounding=unbuild.product_uom_id.rounding):
+                    return moves
+                factor = unbuild.product_qty / qty_produced
                 for product in raw_moves.product_id:
                     product_moves = raw_moves.filtered(lambda m: m.product_id == product)
                     qty = sum(product_moves.mapped('product_uom_qty'))

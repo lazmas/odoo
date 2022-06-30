@@ -292,7 +292,7 @@ class StockRule(models.Model):
                 partners = move_dest.location_dest_id.get_warehouse().partner_id
                 if len(partners) == 1:
                     partner = partners
-                    move_dest.partner_id = partner
+                move_dest.partner_id = self.location_src_id.get_warehouse().partner_id or self.company_id.partner_id
 
         move_values = {
             'name': name[:2000],
@@ -650,18 +650,12 @@ class ProcurementGroup(models.Model):
                             else:
                                 raise
 
-            try:
-                if use_new_cursor:
-                    cr.commit()
-            except OperationalError:
-                if use_new_cursor:
-                    cr.rollback()
-                    continue
-                else:
-                    raise
-
             if use_new_cursor:
-                cr.commit()
-                cr.close()
+                try:
+                    cr.commit()
+                except OperationalError:
+                    cr.rollback()
+                finally:
+                    cr.close()
 
         return {}

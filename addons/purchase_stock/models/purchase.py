@@ -262,13 +262,14 @@ class PurchaseOrderLine(models.Model):
                             pass
                         elif (
                             move.location_dest_id.usage == "internal"
-                            and move.to_refund
+                            and move.location_id.usage != "supplier"
                             and move.location_dest_id
                             not in self.env["stock.location"].search(
                                 [("id", "child_of", move.warehouse_id.view_location_id.id)]
                             )
                         ):
-                            total -= move.product_uom._compute_quantity(move.product_uom_qty, line.product_uom, rounding_method='HALF-UP')
+                            if move.to_refund:
+                                total -= move.product_uom._compute_quantity(move.product_uom_qty, line.product_uom, rounding_method='HALF-UP')
                         else:
                             total += move.product_uom._compute_quantity(move.product_uom_qty, line.product_uom, rounding_method='HALF-UP')
                 line.qty_received = total
@@ -403,6 +404,7 @@ class PurchaseOrderLine(models.Model):
             'propagate_cancel': self.propagate_cancel,
             'route_ids': self.order_id.picking_type_id.warehouse_id and [(6, 0, [x.id for x in self.order_id.picking_type_id.warehouse_id.route_ids])] or [],
             'warehouse_id': self.order_id.picking_type_id.warehouse_id.id,
+            'sequence': self.sequence,
         }
         diff_quantity = self.product_qty - qty
         if float_compare(diff_quantity, 0.0,  precision_rounding=self.product_uom.rounding) > 0:
