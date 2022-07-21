@@ -6,7 +6,7 @@ from odoo import api, fields, models, tools, SUPERUSER_ID, _
 from odoo.exceptions import UserError, AccessError
 from odoo.tools.safe_eval import safe_eval, time
 from odoo.tools.misc import find_in_path
-from odoo.tools import config, is_html_empty, parse_version
+from odoo.tools import config, is_html_empty
 from odoo.sql_db import TestCursor
 from odoo.http import request
 from odoo.osv.expression import NEGATIVE_TERM_OPERATORS, FALSE_DOMAIN
@@ -23,6 +23,7 @@ import json
 
 from lxml import etree
 from contextlib import closing
+from distutils.version import LooseVersion
 from reportlab.graphics.barcode import createBarcodeDrawing
 from PyPDF2 import PdfFileWriter, PdfFileReader, utils
 from collections import OrderedDict
@@ -64,12 +65,12 @@ else:
     match = re.search(b'([0-9.]+)', out)
     if match:
         version = match.group(0).decode('ascii')
-        if parse_version(version) < parse_version('0.12.0'):
+        if LooseVersion(version) < LooseVersion('0.12.0'):
             _logger.info('Upgrade Wkhtmltopdf to (at least) 0.12.0')
             wkhtmltopdf_state = 'upgrade'
         else:
             wkhtmltopdf_state = 'ok'
-        if parse_version(version) >= parse_version('0.12.2'):
+        if LooseVersion(version) >= LooseVersion('0.12.2'):
             wkhtmltopdf_dpi_zoom_ratio = True
 
         if config['workers'] == 1:
@@ -377,20 +378,15 @@ class IrActionsReport(models.Model):
             footer_node.append(node)
 
         # Retrieve bodies
-        layout_sections = None
         for node in root.xpath(match_klass.format('article')):
             layout_with_lang = layout
+            # set context language to body language
             if node.get('data-oe-lang'):
-                # context language to body language
                 layout_with_lang = layout_with_lang.with_context(lang=node.get('data-oe-lang'))
-                # set header/lang to body lang prioritizing current user language
-                if not layout_sections or node.get('data-oe-lang') == self.env.lang:
-                    layout_sections = layout_with_lang
             body = layout_with_lang._render({
                 'subst': False,
                 'body': Markup(lxml.html.tostring(node, encoding='unicode')),
-                'base_url': base_url,
-                'report_xml_id': self.xml_id
+                'base_url': base_url
             })
             bodies.append(body)
             if node.get('data-oe-model') == self.model:
@@ -409,12 +405,12 @@ class IrActionsReport(models.Model):
             if attribute[0].startswith('data-report-'):
                 specific_paperformat_args[attribute[0]] = attribute[1]
 
-        header = (layout_sections or layout)._render({
+        header = layout._render({
             'subst': True,
             'body': Markup(lxml.html.tostring(header_node, encoding='unicode')),
             'base_url': base_url
         })
-        footer = (layout_sections or layout)._render({
+        footer = layout._render({
             'subst': True,
             'body': Markup(lxml.html.tostring(footer_node, encoding='unicode')),
             'base_url': base_url
@@ -522,25 +518,7 @@ class IrActionsReport(models.Model):
         return report_obj.with_context(context).sudo().search(conditions, limit=1)
 
     @api.model
-    def barcode(self, barcode_type, value, **kwargs):
-        defaults = {
-            'width': (600, int),
-            'height': (100, int),
-            'humanreadable': (False, lambda x: bool(int(x))),
-            'quiet': (True, lambda x: bool(int(x))),
-            'mask': (None, lambda x: x),
-            'barBorder': (4, int),
-            # The QR code can have different layouts depending on the Error Correction Level
-            # See: https://en.wikipedia.org/wiki/QR_code#Error_correction
-            # Level 'L' – up to 7% damage   (default)
-            # Level 'M' – up to 15% damage  (i.e. required by l10n_ch QR bill)
-            # Level 'Q' – up to 25% damage
-            # Level 'H' – up to 30% damage
-            'barLevel': ('L', lambda x: x in ('L', 'M', 'Q', 'H') and x or 'L'),
-        }
-        kwargs = {k: validator(kwargs.get(k, v)) for k, (v, validator) in defaults.items()}
-        kwargs['humanReadable'] = kwargs.pop('humanreadable')
-
+    def barcode(self, barcode_type, value, width=600, height=100, humanreadable=0, quiet=1, mask=None):
         if barcode_type == 'UPCA' and len(value) in (11, 12, 13):
             barcode_type = 'EAN13'
             if len(value) in (11, 12):
@@ -548,31 +526,34 @@ class IrActionsReport(models.Model):
         elif barcode_type == 'auto':
             symbology_guess = {8: 'EAN8', 13: 'EAN13'}
             barcode_type = symbology_guess.get(len(value), 'Code128')
-        elif barcode_type == 'QR':
+        try:
+            width, height, humanreadable, quiet = int(width), int(height), bool(int(humanreadable)), bool(int(quiet))
             # for `QR` type, `quiet` is not supported. And is simply ignored.
             # But we can use `barBorder` to get a similar behaviour.
-            if kwargs['quiet']:
-                kwargs['barBorder'] = 0
+            bar_border = 4
+            if barcode_type == 'QR' and quiet:
+                bar_border = 0
 
-        try:
-            barcode = createBarcodeDrawing(barcode_type, value=value, format='png', **kwargs)
+            barcode = createBarcodeDrawing(
+                barcode_type, value=value, format='png', width=width, height=height,
+                humanReadable=humanreadable, quiet=quiet, barBorder=bar_border
+            )
 
             # If a mask is asked and it is available, call its function to
             # post-process the generated QR-code image
-            if kwargs['mask']:
+            if mask:
                 available_masks = self.get_available_barcode_masks()
-                mask_to_apply = available_masks.get(kwargs['mask'])
+                mask_to_apply = available_masks.get(mask)
                 if mask_to_apply:
-                    mask_to_apply(kwargs['width'], kwargs['height'], barcode)
+                    mask_to_apply(width, height, barcode)
 
             return barcode.asString('png')
         except (ValueError, AttributeError):
             if barcode_type == 'Code128':
                 raise ValueError("Cannot convert into barcode.")
-            elif barcode_type == 'QR':
-                raise ValueError("Cannot convert into QR code.")
             else:
-                return self.barcode('Code128', value, **kwargs)
+                return self.barcode('Code128', value, width=width, height=height,
+                    humanreadable=humanreadable, quiet=quiet)
 
     @api.model
     def get_available_barcode_masks(self):
@@ -612,7 +593,7 @@ class IrActionsReport(models.Model):
             time=time,
             context_timestamp=lambda t: fields.Datetime.context_timestamp(self.with_context(tz=user.tz), t),
             user=user,
-            res_company=self.env.company,
+            res_company=user.company_id,
             website=website,
             web_base_url=self.env['ir.config_parameter'].sudo().get_param('web.base.url', default=''),
         )
@@ -720,7 +701,7 @@ class IrActionsReport(models.Model):
             try:
                 result = self._merge_pdfs(streams)
             except utils.PdfReadError:
-                raise UserError(_("One of the documents you are trying to merge is encrypted"))
+                raise UserError(_("One of the documents, you try to merge is encrypted"))
 
         # We have to close the streams after PdfFileWriter's call to write()
         close_streams(streams)
@@ -729,13 +710,11 @@ class IrActionsReport(models.Model):
     def _get_unreadable_pdfs(self, streams):
         unreadable_streams = []
 
+        writer = PdfFileWriter()
         for stream in streams:
-            writer = PdfFileWriter()
-            result_stream = io.BytesIO()
             try:
                 reader = PdfFileReader(stream)
                 writer.appendPagesFromReader(reader)
-                writer.write(result_stream)
             except utils.PdfReadError:
                 unreadable_streams.append(stream)
 
@@ -770,13 +749,13 @@ class IrActionsReport(models.Model):
             data = {}
         data.setdefault('report_type', 'pdf')
 
-        # access the report details with sudo() but evaluation context as sudo(False)
+        # access the report details with sudo() but evaluation context as current user
         self_sudo = self.sudo()
 
         # In case of test environment without enough workers to perform calls to wkhtmltopdf,
         # fallback to render_html.
         if (tools.config['test_enable'] or tools.config['test_file']) and not self.env.context.get('force_report_rendering'):
-            return self_sudo._render_qweb_html(res_ids, data=data)
+            return self._render_qweb_html(res_ids, data=data)
 
         # As the assets are generated during the same transaction as the rendering of the
         # templates calling them, there is a scenario where the assets are unreachable: when
@@ -867,7 +846,7 @@ class IrActionsReport(models.Model):
         data.setdefault('report_type', 'text')
         data.setdefault('__keep_empty_lines', True)
         data = self._get_rendering_context(docids, data)
-        return self._render_template(self.report_name, data), 'text'
+        return self._render_template(self.sudo().report_name, data), 'text'
 
     @api.model
     def _render_qweb_html(self, docids, data=None):
@@ -879,29 +858,29 @@ class IrActionsReport(models.Model):
             data = {}
         data.setdefault('report_type', 'html')
         data = self._get_rendering_context(docids, data)
-        return self._render_template(self.report_name, data), 'html'
+        return self._render_template(self.sudo().report_name, data), 'html'
 
     def _get_rendering_context_model(self):
         report_model_name = 'report.%s' % self.report_name
         return self.env.get(report_model_name)
 
     def _get_rendering_context(self, docids, data):
+        # access the report details with sudo() but evaluation context as current user
+        self_sudo = self.sudo()
+
         # If the report is using a custom model to render its html, we must use it.
         # Otherwise, fallback on the generic html rendering.
-        report_model = self._get_rendering_context_model()
+        report_model = self_sudo._get_rendering_context_model()
 
         data = data and dict(data) or {}
 
         if report_model is not None:
-            # _render_ may be executed in sudo but evaluation context as real user
-            report_model = report_model.sudo(False)
             data.update(report_model._get_report_values(docids, data=data))
         else:
-            # _render_ may be executed in sudo but evaluation context as real user
-            docs = self.env[self.model].sudo(False).browse(docids)
+            docs = self.env[self_sudo.model].browse(docids)
             data.update({
                 'doc_ids': docids,
-                'doc_model': self.model,
+                'doc_model': self_sudo.model,
                 'docs': docs,
             })
         data['is_html_empty'] = is_html_empty

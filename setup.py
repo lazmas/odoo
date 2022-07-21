@@ -27,10 +27,12 @@ setup(
         'decorator',
         'docutils',
         'gevent',
+        'html2text',
         'idna',
         'Jinja2',
         'lxml',  # windows binary http://www.lfd.uci.edu/~gohlke/pythonlibs/
         'libsass',
+        'mako',
         'mock',
         'ofxparse',
         'passlib',
@@ -55,7 +57,7 @@ setup(
         'xlsxwriter',
         'xlwt',
     ],
-    python_requires='>=3.7',
+    python_requires='>=3.6',
     extras_require={
         'ldap': ['python-ldap'],
         'SSL': ['pyopenssl'],

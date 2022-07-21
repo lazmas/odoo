@@ -1,4 +1,3 @@
-from . import test_checkers
 from . import test_pylint
 from . import test_pofile
 from . import test_ecmascript

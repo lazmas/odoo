@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from datetime import datetime
+import datetime
 import gc
 import json
 import logging
@@ -17,9 +17,6 @@ from odoo import tools
 
 _logger = logging.getLogger(__name__)
 
-# ensure we have a non patched time for profiling times when using freezegun
-real_datetime_now = datetime.now
-real_time = time.time.__call__
 
 def _format_frame(frame):
     code = frame.f_code
@@ -60,7 +57,7 @@ def stack_size():
 
 
 def make_session(name=''):
-    return f'{real_datetime_now():%Y-%m-%d %H:%M:%S} {name}'
+    return f'{datetime.datetime.now():%Y-%m-%d %H:%M:%S} {name}'
 
 
 def force_hook():
@@ -117,7 +114,7 @@ class Collector:
         self._entries.append({
             'stack': self._get_stack_trace(frame),
             'exec_context': getattr(self.profiler.init_thread, 'exec_context', ()),
-            'start': real_time(),
+            'start': time.time(),
             **(entry or {}),
         })
 
@@ -181,9 +178,9 @@ class PeriodicCollector(Collector):
 
     def run(self):
         self.active = True
-        last_time = real_time()
+        last_time = time.time()
         while self.active:  # maybe add a check on parent_thread state?
-            duration = real_time() - last_time
+            duration = time.time() - last_time
             if duration > self.frame_interval * 10 and self.last_frame:
                 # The profiler has unexpectedly slept for more than 10 frame intervals. This may
                 # happen when calling a C library without releasing the GIL. In that case, the
@@ -193,10 +190,10 @@ class PeriodicCollector(Collector):
                 self._entries[-1]['stack'].append(('profiling', 0, '⚠ Profiler freezed for %s s' % duration, ''))
                 self.last_frame = None  # skip duplicate detection for the next frame.
             self.add()
-            last_time = real_time()
+            last_time = time.time()
             time.sleep(self.frame_interval)
 
-        self._entries.append({'stack': [], 'start': real_time()})  # add final end frame
+        self._entries.append({'stack': [], 'start': time.time()})  # add final end frame
 
     def start(self):
         interval = self.profiler.params.get('traces_async_interval')
@@ -364,7 +361,7 @@ class QwebCollector(Collector):
         self.events = []
 
         def hook(event, sql_log_count, **kwargs):
-            self.events.append((event, kwargs, sql_log_count, real_time()))
+            self.events.append((event, kwargs, sql_log_count, time.time()))
         self.hook = hook
 
     def _get_directive_profiling_name(self, directive, attrib):
@@ -479,7 +476,6 @@ class Profiler:
         self.disable_gc = disable_gc
         self.filecache = {}
         self.params = params or {}  # custom parameters usable by collectors
-        self.profile_id = None
 
         if db is ...:
             # determine database from current thread
@@ -515,7 +511,7 @@ class Profiler:
             self.init_thread.profiler_params = self.params
         if self.disable_gc and gc.isenabled():
             gc.disable()
-        self.start_time = real_time()
+        self.start_time = time.time()
         for collector in self.collectors:
             collector.start()
         return self
@@ -524,7 +520,7 @@ class Profiler:
         try:
             for collector in self.collectors:
                 collector.stop()
-            self.duration = real_time() - self.start_time
+            self.duration = time.time() - self.start_time
             self._add_file_lines(self.init_stack_trace)
 
             if self.db:
@@ -534,7 +530,7 @@ class Profiler:
                     values = {
                         "name": self.description,
                         "session": self.profile_session,
-                        "create_date": real_datetime_now(),
+                        "create_date": datetime.datetime.now(),
                         "init_stack_trace": json.dumps(_format_stack(self.init_stack_trace)),
                         "duration": self.duration,
                         "entry_count": self.entry_count(),
@@ -547,8 +543,8 @@ class Profiler:
                         sql.SQL(",").join(map(sql.Identifier, values)),
                     )
                     cr.execute(query, [tuple(values.values())])
-                    self.profile_id = cr.fetchone()[0]
-                    _logger.info('ir_profile %s (%s) created', self.profile_id, self.profile_session)
+                    profile_id = cr.fetchone()[0]
+                    _logger.info('ir_profile %s (%s) created', profile_id, self.profile_session)
         finally:
             if self.disable_gc:
                 gc.enable()
@@ -585,7 +581,7 @@ class Profiler:
         This is mainly useful to uniquify a path between executions.
         """
         return path.format(
-            time=real_datetime_now.strftime("%Y%m%d-%H%M%S"),
+            time=datetime.datetime.now().strftime("%Y%m%d-%H%M%S"),
             len=self.entry_count(),
             desc=re.sub("[^0-9a-zA-Z-]+", "_", self.description)
         )
@@ -605,7 +601,7 @@ class Profiler:
         return json.dumps({
             "name": self.description,
             "session": self.profile_session,
-            "create_date": real_datetime_now.strftime("%Y%m%d-%H%M%S"),
+            "create_date": datetime.datetime.now().strftime("%Y%m%d-%H%M%S"),
             "init_stack_trace": _format_stack(self.init_stack_trace),
             "duration": self.duration,
             "collectors": {collector.name: collector.entries for collector in self.collectors},
