@@ -1884,8 +1884,8 @@ class MailThread(models.AbstractModel):
             subtype_id = self.env['ir.model.data'].xmlid_to_res_id(subtype)
 
         # automatically subscribe recipients if asked to
-        if self._context.get('mail_post_autofollow') and partner_ids:
-            self.message_subscribe(list(partner_ids))
+        # if self._context.get('mail_post_autofollow') and partner_ids:
+        #     self.message_subscribe(list(partner_ids))
 
         # parent management, depending on ``_mail_flat_thread``
         # ``_mail_flat_thread`` True: no free message. If no parent, find the first
