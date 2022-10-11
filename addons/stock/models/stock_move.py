@@ -736,11 +736,11 @@ class StockMove(models.Model):
         distinct_fields = self._prepare_merge_moves_distinct_fields()
 
         candidate_moves_list = []
-        if not merge_into:
-            for picking in self.mapped('picking_id'):
-                candidate_moves_list.append(picking.move_lines)
-        else:
-            candidate_moves_list.append(merge_into | self)
+        # if not merge_into:
+        #     for picking in self.mapped('picking_id'):
+        #         candidate_moves_list.append(picking.move_lines)
+        # else:
+        #     candidate_moves_list.append(merge_into | self)
 
         # Move removed after merge
         moves_to_unlink = self.env['stock.move']
