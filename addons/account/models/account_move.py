@@ -411,6 +411,7 @@ class AccountMove(models.Model):
             # Copy currency.
             if self.currency_id != self.invoice_vendor_bill_id.currency_id:
                 self.currency_id = self.invoice_vendor_bill_id.currency_id
+                self._onchange_currency()
 
             # Reset
             self.invoice_vendor_bill_id = False
@@ -1013,7 +1014,12 @@ class AccountMove(models.Model):
                     else:
                         tax_type = line.tax_ids[0].type_tax_use
                         is_refund = (tax_type == 'sale' and line.debit) or (tax_type == 'purchase' and line.credit)
-                    taxes = line.tax_ids.flatten_taxes_hierarchy()
+                    taxes = line.tax_ids._origin.flatten_taxes_hierarchy().filtered(
+                        lambda tax: (
+                                tax.amount_type == 'fixed' and not invoice.company_id.currency_id.is_zero(tax.amount)
+                                or not float_is_zero(tax.amount, precision_digits=4)
+                        )
+                    )
                     if is_refund:
                         tax_rep_lines = taxes.refund_repartition_line_ids._origin.filtered(lambda x: x.repartition_type == "tax")
                     else:
@@ -3371,7 +3377,7 @@ class AccountMoveLine(models.Model):
             #computing the `reconciled` field.
             reconciled = False
             digits_rounding_precision = line.move_id.company_id.currency_id.rounding
-            if float_is_zero(amount, precision_rounding=digits_rounding_precision) and line.move_id.state not in ('draft', 'cancel'):
+            if float_is_zero(amount, precision_rounding=digits_rounding_precision) and (line.matched_debit_ids or line.matched_credit_ids):
                 if line.currency_id and line.amount_currency:
                     if float_is_zero(amount_residual_currency, precision_rounding=line.currency_id.rounding):
                         reconciled = True
@@ -3785,6 +3791,18 @@ class AccountMoveLine(models.Model):
         return result
 
     @api.model
+    def _name_search(self, name, args=None, operator='ilike', limit=100, name_get_uid=None):
+        if operator == 'ilike':
+            args = ['|', '|',
+                    ('name', 'ilike', name),
+                    ('move_id', 'ilike', name),
+                    ('product_id', 'ilike', name)]
+            result = self._search(args, limit=limit, access_rights_uid=name_get_uid)
+            return models.lazy_name_get(self.browse(result).with_user(name_get_uid))
+
+        return super()._name_search(name, args=args, operator=operator, limit=limit, name_get_uid=name_get_uid)
+
+    @api.model
     def invalidate_cache(self, fnames=None, ids=None):
         # Invalidate cache of related moves
         if fnames is None or 'move_id' in fnames:
@@ -3996,6 +4014,7 @@ class AccountMoveLine(models.Model):
         # Create list of debit and list of credit move ordered by date-currency
         debit_moves = self.filtered(lambda r: r.debit != 0 or r.amount_currency > 0)
         credit_moves = self.filtered(lambda r: r.credit != 0 or r.amount_currency < 0)
+        void_moves = self.filtered(lambda r: not r.credit and not r.debit and not r.amount_currency)
         debit_moves = debit_moves.sorted(key=lambda a: (a.date_maturity or a.date, a.currency_id))
         credit_moves = credit_moves.sorted(key=lambda a: (a.date_maturity or a.date, a.currency_id))
         # Compute on which field reconciliation should be based upon:
@@ -4007,7 +4026,12 @@ class AccountMoveLine(models.Model):
         if self[0].currency_id and all([x.amount_currency and x.currency_id == self[0].currency_id for x in self]):
             field = 'amount_residual_currency'
         # Reconcile lines
-        ret = self._reconcile_lines(debit_moves, credit_moves, field)
+        if debit_moves:
+            ret = self._reconcile_lines(debit_moves, void_moves + credit_moves, field)
+        elif credit_moves:
+            ret = self._reconcile_lines(void_moves + debit_moves, credit_moves, field)
+        else:
+            ret = self._reconcile_lines(void_moves[:len(void_moves) // 2], void_moves[len(void_moves) // 2:], field)
         return ret
 
     def _check_reconcile_validity(self):
