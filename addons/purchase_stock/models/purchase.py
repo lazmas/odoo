@@ -293,7 +293,7 @@ class PurchaseOrderLine(models.Model):
         self.ensure_one()
         moves = self.move_ids.filtered(lambda m: m.product_id == self.product_id)
         if self._context.get('accrual_entry_date'):
-            moves = moves.filtered(lambda r: fields.Date.to_date(r.date) <= self._context['accrual_entry_date'])
+            moves = moves.filtered(lambda r: fields.Date.context_today(r, r.date) <= self._context['accrual_entry_date'])
         return moves
 
     @api.depends('move_ids.state', 'move_ids.product_uom_qty', 'move_ids.product_uom')
@@ -319,6 +319,7 @@ class PurchaseOrderLine(models.Model):
                         elif (
                             move.location_dest_id.usage == "internal"
                             and move.location_id.usage != "supplier"
+                            and move.warehouse_id
                             and move.location_dest_id
                             not in self.env["stock.location"].search(
                                 [("id", "child_of", move.warehouse_id.view_location_id.id)]
@@ -357,7 +358,10 @@ class PurchaseOrderLine(models.Model):
         previous_product_qty = {line.id: line.product_uom_qty for line in lines}
         result = super(PurchaseOrderLine, self).write(values)
         if 'price_unit' in values:
-            self.move_ids.price_unit = self.price_unit
+            for line in lines:
+                # Avoid updating kit components' stock.move
+                moves = line.move_ids.filtered(lambda s: s.state not in ('cancel', 'done') and s.product_id == line.product_id)
+                moves.write({'price_unit': line.price_unit})
         if 'product_qty' in values:
             lines.with_context(previous_product_qty=previous_product_qty)._create_or_update_picking()
         return result
