@@ -22,7 +22,7 @@ msgstr ""
 #. module: account_analytic_default
 #: model_terms:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_kanban
 msgid "<i class=\"fa fa-calendar\"/> From"
-msgstr ""
+msgstr "<i class=\"fa fa-calendar\"/> Dan"
 
 #. module: account_analytic_default
 #: model_terms:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_kanban
@@ -146,7 +146,7 @@ msgstr "Aşağıdakılara görə Qrupla"
 #. module: account_analytic_default
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: account_analytic_default
 #: model:ir.model,name:account_analytic_default.model_account_move_line
