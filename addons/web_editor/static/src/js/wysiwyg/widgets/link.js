@@ -18,7 +18,7 @@ const Link = Widget.extend({
     events: {
         'input': '_onAnyChange',
         'change': '_onAnyChange',
-        'input input[name="url"]': '_onURLInput',
+        'input input[name="url"]': '__onURLInput',
         'change input[name="url"]': '_onURLInputChange',
     },
 
@@ -121,7 +121,7 @@ const Link = Widget.extend({
     /**
      * @override
      */
-    start: function () {
+    start: async function () {
         for (const option of this._getLinkOptions()) {
             const $option = $(option);
             const value = $option.is('input') ? $option.val() : $option.data('value');
@@ -137,6 +137,11 @@ const Link = Widget.extend({
             }
             this._setSelectOption($option, active);
         }
+
+        const _super = this._super.bind(this);
+
+        await this._updateOptionsUI();
+
         if (this.data.url) {
             var match = /mailto:(.+)/.exec(this.data.url);
             this.$('input[name="url"]').val(match ? match[1] : this.data.url);
@@ -144,13 +149,11 @@ const Link = Widget.extend({
             this._savedURLInputOnDestroy = false;
         }
 
-        this._updateOptionsUI();
-
         if (!this.noFocusUrl) {
             this.focusUrl();
         }
 
-        return this._super.apply(this, arguments);
+        return _super(...arguments);
     },
     /**
      * @override
@@ -186,13 +189,6 @@ const Link = Widget.extend({
             this.$link.css('border-width', data.customBorderWidth);
             this.$link.css('border-style', data.customBorderStyle);
             this.$link.css('border-color', data.customBorder);
-        } else {
-            this.$link.css('color', '');
-            this.$link.css('background-color', '');
-            this.$link.css('background-image', '');
-            this.$link.css('border-width', '');
-            this.$link.css('border-style', '');
-            this.$link.css('border-color', '');
         }
         const attrs = Object.assign({}, this.data.oldAttributes, {
             href: data.url,
@@ -300,7 +296,10 @@ const Link = Widget.extend({
             (type && size ? (' btn-' + size) : '');
         var isNewWindow = this._isNewWindow(url);
         var doStripDomain = this._doStripDomain();
-        if (url.indexOf('@') >= 0 && url.indexOf('mailto:') < 0 && !url.match(/^http[s]?/i)) {
+        if (
+            url.indexOf('@') >= 0 && url.indexOf('mailto:') < 0 && !url.match(/^http[s]?/i) ||
+            this._link && this._link.href.includes('mailto:') && !url.includes('mailto:')
+        ) {
             url = ('mailto:' + url);
         } else if (url.indexOf(location.origin) === 0 && doStripDomain) {
             url = url.slice(location.origin.length);
@@ -336,6 +335,15 @@ const Link = Widget.extend({
         }
         return nodes;
     },
+    /**
+     * Abstract method: return a JQuery object containing the UI elements
+     * holding the "Open in new window" option's row of the link.
+     *
+     * @abstract
+     * @private
+     * @returns {JQuery}
+     */
+    _getIsNewWindowFormRow() {},
     /**
      * Abstract method: return a JQuery object containing the UI elements
      * holding the styling options of the link (eg: color, size, shape).
@@ -473,6 +481,23 @@ const Link = Widget.extend({
         }
     },
     /**
+     * @todo Adapt in master: in stable _onURLInput was both used as an event
+     * handler responding to url input events + a private method called at the
+     * widget lifecycle start. Originally both points were to update the link
+     * tools/dialog UI. It was later wanted to actually update the DOM... but
+     * should only be done in event handler part.
+     *
+     * This allows to differentiate the event handler part. In master, we should
+     * take the opportunity to also update the `_updatePreview` concept which
+     * updates the "preview" of the original link dialog but actually updates
+     * the real DOM for the "new" link tools.
+     *
+     * @private
+     */
+    __onURLInput: function () {
+        this._onURLInput(...arguments);
+    },
+    /**
      * @private
      */
     _onURLInput: function () {
@@ -480,12 +505,12 @@ const Link = Widget.extend({
         var $linkUrlInput = this.$('#o_link_dialog_url_input');
         let value = $linkUrlInput.val();
         let isLink = value.indexOf('@') < 0;
-        this.$('input[name="is_new_window"]').closest('.form-group').toggleClass('d-none', !isLink);
+        this._getIsNewWindowFormRow().toggleClass('d-none', !isLink);
         this.$('.o_strip_domain').toggleClass('d-none', value.indexOf(window.location.origin) !== 0);
-        this.options.wysiwyg && this.options.wysiwyg.odooEditor.historyPauseSteps('_onURLInput');
-        this._adaptPreview();
-        this.options.wysiwyg && this.options.wysiwyg.odooEditor.historyUnpauseSteps('_onURLInput');
     },
+    /**
+     * @private
+     */
     _onURLInputChange: function () {
         this._adaptPreview();
         this._savedURLInputOnDestroy = false;

@@ -5,8 +5,8 @@
 # Translators:
 # Bohdan Lisnenko, 2021
 # ТАрас <tratatuta@i.ua>, 2021
-# Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2022
 # Martin Trigaux, 2022
+# Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2022
 # 
 msgid ""
 msgstr ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-18 09:52+0000\n"
 "PO-Revision-Date: 2021-09-14 12:18+0000\n"
-"Last-Translator: Martin Trigaux, 2022\n"
+"Last-Translator: Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2022\n"
 "Language-Team: Ukrainian (https://www.transifex.com/odoo/teams/41243/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1255,6 +1255,14 @@ msgid ""
 msgstr ""
 "Журнал використовується для запису транзакцій з усіх бухгалтерських даних,\n"
 "пов'язаних з повсякденним бізнесом."
+
+#. module: account
+#: code:addons/account/models/account_move.py:0
+#, python-format
+msgid "A line of this move is using a deprecated account, you cannot post it."
+msgstr ""
+"Рядок цієї проводки використовує застарілий рахунок, ви не можете його "
+"опублікувати."
 
 #. module: account
 #: code:addons/account/models/account_payment.py:0
@@ -10367,6 +10375,19 @@ msgid "Please check that the field 'Transfer Account' is set on the company."
 msgstr "Перевірте, чи встановлено в компанії поле  \"Передача рахунку\"."
 
 #. module: account
+#: code:addons/account/models/chart_template.py:0
+#, python-format
+msgid ""
+"Please check these taxes. They might be outdated. We did not update them. "
+"Indeed, they do not exactly match the taxes of the original version of the "
+"localization module.<br/>You might want to archive or adapt them.<br/><ul>"
+msgstr ""
+"Будь ласка, перевірте ці податки. Вони можуть бути застарілими. Ми не "
+"оновлювали їх. Дійсно, вони не зовсім відповідають податкам оригінальної "
+"версії модуля локалізації.<br/>Ви можливо захочете архівувати їх або "
+"адаптувати.<br/><ul>"
+
+#. module: account
 #: code:addons/account/models/account_payment.py:0
 #, python-format
 msgid "Please define a payment method line on your payment."
@@ -14249,6 +14270,14 @@ msgid "The payment's currency."
 msgstr "Валюта платежу."
 
 #. module: account
+#: code:addons/account/models/product.py:0
+#, python-format
+msgid ""
+"The product \"%s\" is used in invoices. You cannot change its Unit of "
+"Measure."
+msgstr ""
+
+#. module: account
 #: code:addons/account/models/account_move.py:0
 #, python-format
 msgid ""
@@ -16622,6 +16651,12 @@ msgstr ""
 msgid "You should update this document to reflect your T&amp;C."
 msgstr ""
 "Вам слід оновити цей документ, щоб він відображав ваші терміни та умови."
+
+#. module: account
+#: code:addons/account/models/chart_template.py:0
+#, python-format
+msgid "Your taxes have been updated !"
+msgstr "Ваші податки оновлено!"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_position_form

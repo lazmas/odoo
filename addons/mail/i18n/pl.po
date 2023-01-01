@@ -8,7 +8,7 @@
 # Jan Dziurz <jan.dziurzynski@openglobe.pl>, 2021
 # Jaroslaw Kaczmarski, 2021
 # Monika Motyczyńska <m.monia@op.pl>, 2021
-# Andrzej Donczew <a.donczew@hadron.eu.com>, 2021
+# Andrzej Wiśniewski <a.wisniewski@hadron.eu.com>, 2021
 # Maja Stawicka <mjstwck@wp.pl>, 2021
 # Grażyna Grzelak <grazyna.grzelak@openglobe.pl>, 2021
 # Tadeusz Karpiński <tadeuszkarpinski@gmail.com>, 2021
@@ -32,6 +32,7 @@
 # Wojciech Warczakowski <w.warczakowski@gmail.com>, 2022
 # Karol Rybak <karolrybak85@gmail.com>, 2022
 # Jacek Michalski <michalski.jck@gmail.com>, 2022
+# Łukasz Grzenkowicz <lukasz.grzenkowicz@gmail.com>, 2022
 # Maksym <ms@myodoo.pl>, 2022
 # 
 msgid ""
@@ -149,7 +150,7 @@ msgstr ""
 #: code:addons/mail/static/src/models/messaging_notification_handler/messaging_notification_handler.js:0
 #, python-format
 msgid "%s connected"
-msgstr ""
+msgstr "%społączony"
 
 #. module: mail
 #: code:addons/mail/models/mail_thread.py:0
@@ -3085,7 +3086,7 @@ msgstr "Grupy"
 #: model_terms:ir.ui.view,arch_db:mail.mail_guest_view_tree
 #, python-format
 msgid "Guest"
-msgstr ""
+msgstr "Gość"
 
 #. module: mail
 #: code:addons/mail/models/mail_guest.py:0
@@ -6987,7 +6988,7 @@ msgstr ""
 #: code:addons/mail/static/src/models/messaging_notification_handler/messaging_notification_handler.js:0
 #, python-format
 msgid "This is their first connection. Wish them luck."
-msgstr ""
+msgstr "To ich pierwsze połączenie. Życz im powodzenia."
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_compose_message__auto_delete

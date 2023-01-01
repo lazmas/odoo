@@ -192,17 +192,17 @@ class Sanitize {
             ) {
                 node.setAttribute('contenteditable', 'false');
             }
-            // update link URL if label is a new valid link
+            if (node.firstChild) {
+                this._parse(node.firstChild);
+            }
+            // Update link URL if label is a new valid link.
             if (node.nodeName === 'A' && anchorEl === node) {
                 const linkLabel = node.textContent;
                 const match = linkLabel.match(URL_REGEX);
-                if (match && match[0] === node.textContent) {
+                if (match && match[0] === node.textContent && !node.href.startsWith('mailto:')) {
                     const urlInfo = getUrlsInfosInString(linkLabel)[0];
                     node.setAttribute('href', urlInfo.url);
                 }
-            }
-            if (node.firstChild) {
-                this._parse(node.firstChild);
             }
             node = node.nextSibling;
         }

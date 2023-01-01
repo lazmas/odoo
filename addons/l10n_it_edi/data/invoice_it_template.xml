@@ -58,9 +58,17 @@
         </DatiTrasmissione>
         <CedentePrestatore>
             <DatiAnagrafici>
-                <IdFiscaleIVA>
+                <IdFiscaleIVA t-if="seller.vat and in_eu(seller)">
                     <IdPaese t-esc="get_vat_country(seller.vat)"/>
                     <IdCodice t-esc="get_vat_number(seller.vat)"/>
+                </IdFiscaleIVA>
+                <IdFiscaleIVA t-if="seller.vat and not in_eu(seller)">
+                    <IdPaese t-esc="seller.country_id.code"/>
+                    <IdCodice t-esc="'OO99999999999'"/>
+                </IdFiscaleIVA>
+                <IdFiscaleIVA t-if="not seller.vat and seller.country_id.code != 'IT'">
+                    <IdPaese t-esc="seller.country_id.code"/>
+                    <IdCodice t-esc="'0000000'"/>
                 </IdFiscaleIVA>
                 <CodiceFiscale t-if="seller.l10n_it_codice_fiscale" t-esc="normalize_codice_fiscale(seller.l10n_it_codice_fiscale)"/>
                 <Anagrafica>
@@ -166,7 +174,7 @@
                     <ImponibileImporto t-esc="format_monetary(tax_dict['base_amount'] if currency.name == 'EUR' else tax_dict['base_amount_currency'], currency)"/>
                     <Imposta t-esc="format_monetary(tax_dict['tax_amount'] if currency.name == 'EUR' else tax_dict['base_amount_currency'], currency)"/>
                     <EsigibilitaIVA t-if="not has_exoneration or kind_exoneration == 'N6'" t-esc="tax.l10n_it_vat_due_date"/>
-                    <RiferimentoNormativo t-if="has_exoneration" t-esc="format_alphanumeric(tax.l10n_it_law_reference[:100])"/>
+                    <RiferimentoNormativo t-if="tax.l10n_it_law_reference" t-esc="format_alphanumeric(tax.l10n_it_law_reference[:100])"/>
                 </DatiRiepilogo>
             </t>
         </DatiBeniServizi>

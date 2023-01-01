@@ -1407,6 +1407,12 @@ msgid "Change to a better name"
 msgstr "Verander naar een betere naam"
 
 #. module: stock
+#: code:addons/stock/models/stock_quant.py:0
+#, python-format
+msgid "Changing %s is restricted, you can't do this operation."
+msgstr "Wijzigen van %s is beperkt, je kunt deze bewerking niet uitvoeren."
+
+#. module: stock
 #: code:addons/stock/models/product_strategy.py:0
 #: code:addons/stock/models/stock_location.py:0
 #: code:addons/stock/models/stock_orderpoint.py:0
@@ -4343,7 +4349,7 @@ msgstr "Maart"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_picking_form
 msgid "Mark as Todo"
-msgstr "Zet op gereed voor uitvoeren"
+msgstr "Marker als nog te doen"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_warehouse_orderpoint__product_max_qty
@@ -9144,6 +9150,12 @@ msgstr ""
 "Je kunt het type product niet veranderen voor een product welke gereserveerd"
 " is in een voorraadbeweging. Wanneer je het type moet veranderen, zul je de "
 "reservering voor deze voorraad beweging eerst ongedaan moeten maken."
+
+#. module: stock
+#: code:addons/stock/models/product.py:0
+#, python-format
+msgid "You can not change the type of a product that was already used."
+msgstr "Je kunt het soort product dat al in gebruik is niet wijzigen."
 
 #. module: stock
 #: code:addons/stock/models/stock_move_line.py:0

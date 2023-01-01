@@ -89,9 +89,9 @@ class AccountEdiFormat(models.Model):
             errors.append(_("%s must have a country", seller.display_name))
 
         # <1.1.1.2>
-        if not seller.vat:
+        if not invoice.company_id.vat:
             errors.append(_("%s must have a VAT number", seller.display_name))
-        elif len(seller.vat) > 30:
+        if seller.vat and len(seller.vat) > 30:
             errors.append(_("The maximum length for VAT number is 30. %s have a VAT number too long: %s.", seller.display_name, seller.vat))
 
         # <1.2.1.2>
@@ -217,7 +217,7 @@ class AccountEdiFormat(models.Model):
 
     def _l10n_it_document_type_mapping(self):
         return {
-            'TD01': dict(move_types=['out_invoice'], import_type='in_invoice'),
+            'TD01': dict(move_types=['out_invoice'], import_type='in_invoice', downpayment=False),
             'TD02': dict(move_types=['out_invoice'], import_type='in_invoice', downpayment=True),
             'TD04': dict(move_types=['out_refund'], import_type='in_refund'),
             'TD07': dict(move_types=['out_invoice'], import_type='in_invoice', simplified=True),
@@ -239,7 +239,9 @@ class AccountEdiFormat(models.Model):
             info_partner_in_eu = infos.get('partner_in_eu', False)
             if all([
                 invoice.move_type in infos.get('move_types', False),
-                invoice._is_downpayment() == infos.get('downpayment', False),
+                # Only check downpayment if the key is specified in the document_type_mapping entry
+                # If it's not specified, the get() will return None and the condition will be True
+                infos.get('downpayment') in (None, invoice._is_downpayment()),
                 is_self_invoice == infos.get('self_invoice', False),
                 is_simplified == infos.get('simplified', False),
                 info_services_or_goods in ("both", services_or_goods),
@@ -247,6 +249,7 @@ class AccountEdiFormat(models.Model):
                 goods_in_italy == infos.get('goods_in_italy', False),
             ]):
                 return code
+
         return None
 
     def _l10n_it_is_simplified_document_type(self, document_type):

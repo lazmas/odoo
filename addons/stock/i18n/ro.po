@@ -545,6 +545,9 @@ msgid ""
 "quantity and now, the difference of quantity is not consistent "
 "anymore.</strong>"
 msgstr ""
+"<strong>Din cauza unor mișcări de stoc efectuate între actualizarea inițială"
+" a cantității și acum, diferența de cantitate nu mai este "
+"corespunzătoare.</strong>"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.report_picking
@@ -1339,6 +1342,12 @@ msgid "Change to a better name"
 msgstr "Schimbați la un nume mai bun"
 
 #. module: stock
+#: code:addons/stock/models/stock_quant.py:0
+#, python-format
+msgid "Changing %s is restricted, you can't do this operation."
+msgstr ""
+
+#. module: stock
 #: code:addons/stock/models/product_strategy.py:0
 #: code:addons/stock/models/stock_location.py:0
 #: code:addons/stock/models/stock_orderpoint.py:0
@@ -1559,7 +1568,7 @@ msgstr ""
 #: code:addons/stock/models/stock_quant.py:0
 #, python-format
 msgid "Conflict in Inventory Adjustment"
-msgstr ""
+msgstr "Conflict în ajustarea inventarului"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_inventory_conflict__quant_to_fix_ids
@@ -2376,7 +2385,7 @@ msgstr "Abandonează"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.stock_inventory_conflict_form_view
 msgid "Discard and manually resolve the conflict"
-msgstr ""
+msgstr "Eliminați și rezolvați manual conflictul"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move__display_assign_serial
@@ -3687,18 +3696,19 @@ msgstr "Iunie"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.stock_inventory_conflict_form_view
 msgid "Keep Counted Quantity"
-msgstr ""
+msgstr "Păstrați cantitatea numărată"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.stock_inventory_conflict_form_view
 msgid "Keep Difference"
-msgstr ""
+msgstr "Păstrați diferența"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.stock_inventory_conflict_form_view
 msgid ""
 "Keep the <strong>Counted Quantity</strong> (the Difference will be updated)"
 msgstr ""
+"Păstrați <strong>cantitatea numărată</strong> (diferența va fi actualizată)"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.stock_inventory_conflict_form_view
@@ -3706,6 +3716,8 @@ msgid ""
 "Keep the <strong>Difference</strong> (the Counted Quantity will be updated "
 "to reflect the same difference as when you counted)"
 msgstr ""
+"Păstrați <strong>diferența</strong> (cantitatea numărată va fi actualizată "
+"pentru a reflecta aceeași diferență ca atunci când ați fi numărat)"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.stock_move_line_view_search
@@ -3911,7 +3923,7 @@ msgstr "Termen livrare"
 #: code:addons/stock/static/src/xml/stock_orderpoint.xml:0
 #, python-format
 msgid "Lead Times"
-msgstr ""
+msgstr "Timp livrare"
 
 #. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__stock_request_count__set_count__empty
@@ -4615,7 +4627,7 @@ msgid ""
 "No rule has been found to replenish \"%s\" in \"%s\".\n"
 "Verify the routes configuration on the product."
 msgstr ""
-"Nu a fost găsită nicio regulă care să se reumple \"%s\" în \"%s\".\n"
+"Nu a fost găsită nicio regulă care să se completeze stocul \"%s\" în \"%s\".\n"
 "Verificați configurația fișelor tehnologice pe produs."
 
 #. module: stock
@@ -6239,13 +6251,13 @@ msgstr "Reaprovizionare"
 #. module: stock
 #: model:ir.actions.act_window,name:stock.action_stock_replenishment_info
 msgid "Replenishment Information"
-msgstr ""
+msgstr "Informații de reaprovizionare"
 
 #. module: stock
 #: code:addons/stock/models/stock_orderpoint.py:0
 #, python-format
 msgid "Replenishment Information for %s in %s"
-msgstr ""
+msgstr "Informații de reaprovizionare pentru %s în %s"
 
 #. module: stock
 #: code:addons/stock/models/stock_orderpoint.py:0
@@ -6563,7 +6575,7 @@ msgstr "TERMENI ȘI CONDIȚII STANDARD DE VÂNZARE"
 #: code:addons/stock/static/src/xml/stock_orderpoint.xml:0
 #, python-format
 msgid "Sales History"
-msgstr ""
+msgstr "Istoric vânzări"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_product_replenish__date_planned
@@ -8476,7 +8488,7 @@ msgid ""
 "                Depending on your product configuration, launching a replenishment may trigger a request for quotation,\n"
 "                a manufacturing order or a transfer."
 msgstr ""
-"Folosiți acest asistent pentru a reumple stocul.\n"
+"Folosiți acest asistent pentru a completa stocul necesar.\n"
 "                În funcție de configurația produsului dvs., lansarea unei reaprovizionări poate declanșa o cerere de ofertă,\n"
 "                o comandă de producție sau un transfer."
 
@@ -8965,7 +8977,7 @@ msgstr ""
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.stock_inventory_conflict_form_view
 msgid "You can either :"
-msgstr ""
+msgstr "Puteți să:"
 
 #. module: stock
 #: code:addons/stock/models/product.py:0
@@ -8978,6 +8990,12 @@ msgstr ""
 "Nu puteți schimba tipul unui produs care este rezervat în mișcările de stoc."
 " Dacă doriți să schimbați tipul, ar trebui mai întâi să anulați rezervările "
 "din mișcările de stoc."
+
+#. module: stock
+#: code:addons/stock/models/product.py:0
+#, python-format
+msgid "You can not change the type of a product that was already used."
+msgstr ""
 
 #. module: stock
 #: code:addons/stock/models/stock_move_line.py:0
@@ -9340,7 +9358,7 @@ msgstr "_Anulează"
 #: code:addons/stock/static/src/xml/stock_orderpoint.xml:0
 #, python-format
 msgid "below the inventory"
-msgstr ""
+msgstr "sub cantitatea"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_res_config_settings__module_delivery_bpost
@@ -9430,7 +9448,7 @@ msgstr "manual pentru a declanșa regulile de comandare chiar acum."
 #: code:addons/stock/static/src/xml/stock_orderpoint.xml:0
 #, python-format
 msgid "minimum of"
-msgstr ""
+msgstr "minimă de"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.exception_on_picking
@@ -9459,14 +9477,14 @@ msgstr "report_stock_quantity_graph"
 #: code:addons/stock/static/src/xml/stock_orderpoint.xml:0
 #, python-format
 msgid "should be replenished"
-msgstr ""
+msgstr "ar trebui completate"
 
 #. module: stock
 #. openerp-web
 #: code:addons/stock/static/src/xml/stock_orderpoint.xml:0
 #, python-format
 msgid "to reach the maximum of"
-msgstr ""
+msgstr "pentru a atinge maximul de"
 
 #. module: stock
 #: model:mail.template,report_name:stock.mail_template_data_delivery_confirmation
