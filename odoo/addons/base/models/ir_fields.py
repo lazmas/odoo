@@ -31,6 +31,7 @@ class ImportWarning(Warning):
 class ConversionNotFound(ValueError):
     pass
 
+
 class IrFieldsConverter(models.AbstractModel):
     _name = 'ir.fields.converter'
     _description = 'Fields Converter'
@@ -83,8 +84,6 @@ class IrFieldsConverter(models.AbstractModel):
                             # uniform handling
                             w = ImportWarning(w)
                         log(field, w)
-                except (UnicodeEncodeError, UnicodeDecodeError) as e:
-                    log(field, ValueError(str(e)))
                 except ValueError as e:
                     log(field, e)
             return converted

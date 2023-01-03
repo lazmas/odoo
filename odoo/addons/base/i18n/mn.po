@@ -4,9 +4,11 @@
 # 
 # Translators:
 # Nurbahyt Kh <nurbahyt.kh@gmail.com>, 2020
+# Bayarkhuu Bataa, 2020
 # nurbakhit nurka <nurbakhit@bumanit.mn>, 2020
 # Batmunkh Ganbat <batmunkh.g@bumanit.mn>, 2020
-# Насан-Очир <nasaaskii@gmail.com>, 2020
+# nasaaskii <nasaaskii@gmail.com>, 2020
+# Baskhuu Lodoikhuu <baskhuujacara@gmail.com>, 2020
 # Otgonbayar.A <gobi.mn@gmail.com>, 2020
 # Onii Onii <onii0223@yahoo.com>, 2020
 # Minj P <pminj322@gmail.com>, 2020
@@ -14,12 +16,9 @@
 # Uuganbayar Batbaatar <uuganaaub33@gmail.com>, 2020
 # tserendavaa tsogtoo <tseegii011929@gmail.com>, 2020
 # Martin Trigaux, 2020
+# Khishigbat Ganbold <khishigbat@asterisk-tech.mn>, 2020
 # baaska sh <sh.baaskash@gmail.com>, 2020
 # Батмөнх Ганбат <batmunkh2522@gmail.com>, 2020
-# Bayarkhuu Bataa, 2021
-# Sanjaajamts Badamjunai <b.sanjaajamtsfc@gmail.com>, 2021
-# hish, 2022
-# Baskhuu Lodoikhuu <baskhuujacara@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
@@ -27,7 +26,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-27 13:50+0000\n"
 "PO-Revision-Date: 2020-09-07 08:09+0000\n"
-"Last-Translator: Baskhuu Lodoikhuu <baskhuujacara@gmail.com>, 2022\n"
+"Last-Translator: Батмөнх Ганбат <batmunkh2522@gmail.com>, 2020\n"
 "Language-Team: Mongolian (https://www.transifex.com/odoo/teams/41243/mn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -6650,7 +6649,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users__accesses_count
 msgid "# Access Rights"
-msgstr "Хандалтын эрхүүд"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users__groups_count
@@ -7112,12 +7111,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid ""
 "<span class=\"o_form_label o_td_label\" name=\"address_name\">\n"
-"                                <b attrs=\"{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'contact')]}\">Company Address</b>\n"
-"                                <b attrs=\"{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'invoice')]}\">Invoice Address</b>\n"
-"                                <b attrs=\"{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'delivery')]}\">Delivery Address</b>\n"
-"                                <b attrs=\"{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'other')]}\">Other Address</b>\n"
-"                                <b attrs=\"{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'private')]}\">Private Address</b>\n"
-"                                <b attrs=\"{'invisible': ['&amp;', ('parent_id', '!=', False), ('type', '!=', False)]}\">Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'contact')]}\">Company Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'invoice')]}\">Invoice Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'delivery')]}\">Delivery Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'other')]}\">Other Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'private')]}\">Private Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', False)]}\">Address</b>\n"
 "                            </span>"
 msgstr ""
 
@@ -7795,7 +7794,7 @@ msgstr "Дансны дугаар давтагдах ёсгүй"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_form_simple_modif
 msgid "Account Security"
-msgstr "Нууцлалын тохиргоо"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_taxcloud
@@ -8490,7 +8489,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.onboarding_step
 msgid "All done!"
-msgstr "Бүгд дууссан!"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_partner__lang
@@ -10785,7 +10784,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_uninstall
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_upgrade
 msgid "Confirm"
-msgstr "Батлах"
+msgstr "Илгээх"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.identity_check_wizard
@@ -10934,7 +10933,7 @@ msgstr ""
 #: code:addons/base/models/ir_model.py:0 code:addons/base/models/ir_rule.py:0
 #, python-format
 msgid "Contact your administrator to request access if necessary."
-msgstr "Шаардлагатай гэж үзвэл системийн администраторт хүсэлт гаргана уу."
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_partner_merge_automatic_wizard__partner_ids
@@ -11113,12 +11112,12 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_access__perm_create
 msgid "Create Access"
-msgstr "Үүсгэх эрх"
+msgstr "Хандалт үүсгэх"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_rule_search
 msgid "Create Access Right"
-msgstr "Хандах эрх үүсгэх"
+msgstr "Хандах Эрх Үүсгэх"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
@@ -11953,12 +11952,12 @@ msgstr "Тодорхойлолт"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_access__perm_unlink
 msgid "Delete Access"
-msgstr "Устгах эрх"
+msgstr "Устгах хандалт"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_rule_search
 msgid "Delete Access Right"
-msgstr "Хандах эрхийг устгах"
+msgstr "Хандах Эрхийг Устгах"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_inventory_delivery
@@ -12621,8 +12620,6 @@ msgid ""
 "Due to security restrictions, you are not allowed to access "
 "'%(document_kind)s' (%(document_model)s) records."
 msgstr ""
-"Нууцлалын хязгаарлалтын улмаас '%(document_kind)s' (%(document_model)s) "
-"баримтын өгөгдөл рүү та хандах зөвшөөрөлгүй байна."
 
 #. module: base
 #: code:addons/base/models/ir_rule.py:0
@@ -12631,8 +12628,6 @@ msgid ""
 "Due to security restrictions, you are not allowed to create "
 "'%(document_kind)s' (%(document_model)s) records."
 msgstr ""
-"Нууцлалын хязгаарлалтын улмаас '%(document_kind)s' (%(document_model)s) "
-"баримтыг та үүсгэх зөвшөөрөлгүй байна."
 
 #. module: base
 #: code:addons/base/models/ir_rule.py:0
@@ -12641,8 +12636,6 @@ msgid ""
 "Due to security restrictions, you are not allowed to delete "
 "'%(document_kind)s' (%(document_model)s) records."
 msgstr ""
-"Нууцлалын хязгаарлалтын улмаас '%(document_kind)s' (%(document_model)s) "
-"баримтыг та устгах зөвшөөрөлгүй байна.."
 
 #. module: base
 #: code:addons/base/models/ir_rule.py:0
@@ -12651,8 +12644,6 @@ msgid ""
 "Due to security restrictions, you are not allowed to modify "
 "'%(document_kind)s' (%(document_model)s) records."
 msgstr ""
-"Нууцлалын хязгаарлалтын улмаас '%(document_kind)s' (%(document_model)s) "
-"баримтыг та засах зөвшөөрөлгүй байна.."
 
 #. module: base
 #: code:addons/base/models/res_company.py:0
@@ -14012,7 +14003,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.identity_check_wizard
 msgid "Forgot password?"
-msgstr "Нууц үгээ мартсан уу?"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_actions_act_window_view__view_mode__form
@@ -14143,7 +14134,7 @@ msgstr "Дээд хандалт"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_rule_search
 msgid "Full Access Right"
-msgstr "Бүрэн хандалтын эрх"
+msgstr "Бүрэн Хандалтын Эрх"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner_industry__full_name
@@ -14296,7 +14287,7 @@ msgstr ""
 #: model:ir.ui.menu,name:base.menu_wizard_update_translations
 #: model_terms:ir.ui.view,arch_db:base.wizard_update_translations
 msgid "Generate Missing Terms"
-msgstr "Нэр томьёог ижилтгэх"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.form_res_users_key_description
@@ -14556,8 +14547,8 @@ msgstr "Бүлгэмийн нэр"
 #: model:ir.model.fields,help:base.field_res_groups__share
 msgid "Group created to set access rights for sharing data with some users."
 msgstr ""
-"Тодорхой хэрэглэгчдэд дундын өгөгдөлд хандах эрхийг олгохын тулд үүсгэдэг "
-"бүлэг."
+"Хуваалцах өгөгдлийг зарим хэрэглэгчидэд хандах эрхийг өгөхөөр групп "
+"үүсгэгдлээ."
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_country_group_form
@@ -16047,12 +16038,6 @@ msgid "Invalid model name %r in action definition."
 msgstr "Үйлдлийн тодорхойлолт дотор буруу моделийн нэр %r байна."
 
 #. module: base
-#: code:addons/base/models/ir_actions.py:611
-#, python-format
-msgid "many2many fields cannot be evaluated by reference"
-msgstr ""
-
-#. module: base
 #: code:addons/template_inheritance.py:0
 #, python-format
 msgid "Invalid position attribute: '%s'"
@@ -16303,7 +16288,7 @@ msgstr "Иордан"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_partner_merge_automatic_wizard__exclude_journal_item
 msgid "Journal Items associated to the contact"
-msgstr "Холбох хаягтай холбогдсон журналын бичилтүүд"
+msgstr "Холбох хаягтай холбогдсон журналийн бичилтүүд"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_procurement_jit
@@ -18736,7 +18721,7 @@ msgstr "Дуусаагүй"
 #: code:addons/base/models/ir_model.py:0
 #, python-format
 msgid "Not enough access rights on the external ID:"
-msgstr "Уг гадаад ID бүхий бичлэгт хангалттай эрх алга:"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_rule.py:0
@@ -19036,7 +19021,7 @@ msgstr "Odoo Байгууллага хувилбарын зөвшөөрөл v1.0
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_module_module__to_buy
 msgid "Odoo Enterprise Module"
-msgstr "Odoo лицензтэй хувилбарын модуль"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_mail
@@ -19449,7 +19434,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,description:base.module_payment_odoo_by_adyen
 msgid "Odoo Payments by Adyen"
-msgstr "Odoo төлбөр by Adyen"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_payment_odoo_by_adyen
@@ -19938,16 +19923,6 @@ msgstr ""
 msgid ""
 "Odoo is currently processing a scheduled action.\n"
 "Module operations are not possible at this time, please try again later or contact your system administrator."
-msgstr ""
-
-#. module: base
-#: code:addons/base/models/ir_actions_report.py:0
-#, python-format
-msgid ""
-"Odoo is unable to merge the PDFs attached to the following records:\n"
-"%s\n"
-"\n"
-"Please exclude them from the selection to continue. It's possible to still retrieve those PDFs by selecting each of the affected records individually, which will avoid merging."
 msgstr ""
 
 #. module: base
@@ -21304,7 +21279,7 @@ msgstr "Барааны имэйл үлгэр"
 #: model:ir.module.category,name:base.module_category_manufacturing_product_lifecycle_management_(plm)
 #: model:ir.module.module,shortdesc:base.module_mrp_plm
 msgid "Product Lifecycle Management (PLM)"
-msgstr "Бүтээгдэхүүний амьдралын мөчлөгийн менежмент (PLM)"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_product_matrix
@@ -21883,7 +21858,7 @@ msgstr "Унших эрх"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_rule_search
 msgid "Read Access Right"
-msgstr "Унших эрх"
+msgstr "Унших Хандалтын Эрх"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_fields__readonly
@@ -22398,7 +22373,7 @@ msgstr "Дүрмийн тодорхойлолт (Дөмэйн шүүлтүүр)"
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_ir_rule_no_access_rights
 msgid "Rule must have at least one checked access right !"
-msgstr "Дүрэм нь дор хаяж нэг хандах эрхтэй байх ёстой !"
+msgstr "Дүрэм нь дор хаяж нэг тэмдэглэгдсэн хандах эрхтэй байх ёстой !"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_groups__rule_groups
@@ -22926,7 +22901,7 @@ msgstr "Хамгаалалт"
 #: model_terms:ir.ui.view,arch_db:base.identity_check_wizard
 #, python-format
 msgid "Security Control"
-msgstr "Аюулгүй байдлын хяналт"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_mail_server_form
@@ -24464,8 +24439,8 @@ msgstr ""
 #. module: base
 #: code:addons/base/models/ir_module.py:0
 #, python-format
-msgid "Those modules cannot be uninstalled: %s"
-msgstr ""
+msgid "The `base` module cannot be uninstalled"
+msgstr "`base` модулийн суулгацыг арилгах боломжгүй"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_partner_category__active
@@ -24634,12 +24609,6 @@ msgstr "Улсын бүтэн нэр."
 #: model:ir.model.fields,help:base.field_res_users__user_id
 msgid "The internal user in charge of this contact."
 msgstr "Энэ гэрээнд системын хэрэглэгч холбогдсон байна."
-
-#. module: base
-#: code:addons/base/models/res_country.py:106
-#, python-format
-msgid "The layout contains an invalid format key"
-msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_model__inherited_model_ids
@@ -25041,8 +25010,6 @@ msgid ""
 "This is necessary for security-related changes. The authorization will last "
 "for a few minutes."
 msgstr ""
-"Энэ нь нууцлал хамгаалалттай холбоотой өөрчлөлт хийхэд шаардагддаг. Энэ "
-"баталгаажуулалт нь хэдэн минут ажиллах болно."
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_actions_report__attachment
@@ -25243,8 +25210,6 @@ msgid ""
 "This restriction is due to the following rules:\n"
 "%s"
 msgstr ""
-"Энэ хязгаарлалт нь дараах дүрмээс улбаатай:\n"
-"%s"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__thousands_sep
@@ -26257,8 +26222,8 @@ msgstr ""
 msgid ""
 "Used for custom many2many fields to define a custom relation table name"
 msgstr ""
-"Өөриймшүүлсэн хүснэгтийн нэрийг тодорхойлоход өөриймшүүлсэн "
-"many2many талбарт ашигладаг"
+"Өөриймшүүлсэн хүснэгтийн нэрийг тодорхойлоход өөриймшүүлсэн many2many "
+"талбарт ашигладаг"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_actions_act_window__usage
@@ -26668,7 +26633,7 @@ msgstr "Харагдац: %s"
 #: model_terms:ir.ui.view,arch_db:base.view_view_tree
 #: model_terms:ir.ui.view,arch_db:base.view_window_action_form
 msgid "Views"
-msgstr "Харагдац"
+msgstr "үзсэн"
 
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_ui_view
@@ -27125,12 +27090,12 @@ msgstr "Worldline SIPS"
 #: model:ir.model.fields,field_description:base.field_ir_model_access__perm_write
 #: model_terms:ir.ui.view,arch_db:base.ir_access_view_search
 msgid "Write Access"
-msgstr "Засах эрх"
+msgstr "Бичих Хандалт"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_rule_search
 msgid "Write Access Right"
-msgstr "Засах эрх"
+msgstr "Бичих Хандалтын Эрх"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_constraint__write_date
@@ -27292,8 +27257,8 @@ msgstr "Системын супер хэрэглэгч тул идэвхжүүл
 #. module: base
 #: code:addons/base/models/res_partner.py:0
 #, python-format
-msgid "You cannot archive a contact linked to a portal or internal user."
-msgstr ""
+msgid "You cannot archive a contact linked to an internal user."
+msgstr "Системын хэрэглэгчтэй холбоотой тул архивлах боломжгүй."
 
 #. module: base
 #: code:addons/base/models/res_partner.py:0
@@ -27351,15 +27316,12 @@ msgid ""
 "\n"
 "(Operation: %(operation)s)"
 msgstr ""
-"Танд %(document_kind)s (%(document_model)s)  бүртгэлийн %(fields)sталбарт хандах эрх алга. Системийн администратортой холбогдоно уу.\n"
-"\n"
-"(Үйлдэл: %(operation)s)"
 
 #. module: base
 #: code:addons/base/models/ir_actions.py:0
 #, python-format
 msgid "You don't have enough access rights to run this action."
-msgstr "Танд энэ үйлдлийг хийх эрх алга."
+msgstr ""
 
 #. module: base
 #: code:addons/models.py:0
@@ -28025,9 +27987,3 @@ msgstr "тийм"
 #: model:res.country,name:base.ax
 msgid "Åland Islands"
 msgstr "Аландийн Арлууд"
-
-#. module: base
-#: code:addons/base/models/res_currency.py:0
-#, python-format
-msgid "This currency is set on a company and therefore must be active."
-msgstr ""

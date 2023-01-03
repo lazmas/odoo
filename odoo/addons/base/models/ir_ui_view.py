@@ -249,13 +249,6 @@ different model than this one), then this view's inheritance specs
 (<xpath/>) are applied, and the result is used as if it were this view's
 actual arch.
 """)
-
-    # The "active" field is not updated during updates if <template> is used
-    # instead of <record> to define the view in XML, see _tag_template. For
-    # qweb views, you should not rely on the active field being updated anyway
-    # as those views, if used in frontend layouts, can be duplicated (see COW)
-    # and will thus always require upgrade scripts if you really want to change
-    # the default value of their "active" field.
     active = fields.Boolean(default=True,
                             help="""If this view is inherited,
 * if True, the view always extends its parent
@@ -818,6 +811,7 @@ actual arch.
         return dict(view_data, arch=etree.tostring(arch, encoding='unicode'))
 
     def _apply_groups(self, node, name_manager, node_info):
+        #pylint: disable=unused-argument
         """ Apply group restrictions: elements with a 'groups' attribute should
         be made invisible to people who are not members.
         """
@@ -911,7 +905,7 @@ actual arch.
         Model = self.env[model].sudo(False)
         is_base_model = self.env.context.get('base_model_name', model) == model
 
-        if node.tag in ('kanban', 'tree', 'form', 'activity', 'calendar'):
+        if node.tag in ('kanban', 'tree', 'form', 'activity'):
             for action, operation in (('create', 'create'), ('delete', 'unlink'), ('edit', 'write')):
                 if (not node.get(action) and
                         not Model.check_access_rights(operation, raise_exception=False) or
@@ -1636,12 +1630,7 @@ actual arch.
                 if not attrs.intersection(descendant.attrib):
                     continue
                 self._pop_view_branding(descendant)
-
-            # Remove the processing instructions indicating where nodes were
-            # removed (see apply_inheritance_specs)
-            for descendant in e.iterdescendants(tag=etree.ProcessingInstruction):
-                if descendant.target == 'apply-inheritance-specs-node-removal':
-                    descendant.getparent().remove(descendant)
+            # TODO: find a better name and check if we have a string to boolean helper
             return
 
         node_path = e.get('data-oe-xpath')
@@ -1674,18 +1663,16 @@ actual arch.
                 # TODO: collections.Counter if remove p2.6 compat
                 # running index by tag type, for XPath query generation
                 indexes = collections.defaultdict(lambda: 0)
-                for child in e.iterchildren(etree.Element, etree.ProcessingInstruction):
+                for child in e.iterchildren(tag=etree.Element):
                     if child.get('data-oe-xpath') or child.get('data-oe-field-xpath'):
                         # injected by view inheritance, skip otherwise
                         # generated xpath is incorrect
+                        # Also, if a node is known to have been replaced during applying xpath
+                        # increment its index to compute an accurate xpath for susequent nodes
+                        replaced_node_tag = child.attrib.pop('meta-oe-xpath-replacing', None)
+                        if replaced_node_tag:
+                            indexes[replaced_node_tag] += 1
                         self.distribute_branding(child)
-                    elif child.tag is etree.ProcessingInstruction:
-                        # If a node is known to have been replaced during
-                        # applying an inheritance, increment its index to
-                        # compute an accurate xpath for subsequent nodes
-                        if child.target == 'apply-inheritance-specs-node-removal':
-                            indexes[child.text] += 1
-                            e.remove(child)
                     else:
                         indexes[child.tag] += 1
                         self.distribute_branding(
@@ -1704,9 +1691,6 @@ actual arch.
         return any(
             (attr in ('data-oe-model', 'groups') or (attr.startswith('t-')))
             for attr in node.attrib
-        ) or (
-            node.tag is etree.ProcessingInstruction
-            and node.target == 'apply-inheritance-specs-node-removal'
         )
 
     @tools.ormcache('self.id')
@@ -1842,31 +1826,14 @@ actual arch.
             noupdate behavior on views having an ir.model.data.
         """
         if self.type == 'qweb':
+            # Update also specific views
             for cow_view in self._get_specific_views():
                 authorized_vals = {}
                 for key in values:
-                    if key != 'inherit_id' and cow_view[key] == self[key]:
+                    if cow_view[key] == self[key]:
                         authorized_vals[key] = values[key]
-                # if inherit_id update, replicate change on cow view but
-                # only if that cow view inherit_id wasn't manually changed
-                inherit_id = values.get('inherit_id')
-                if inherit_id and self.inherit_id.id != inherit_id and \
-                   cow_view.inherit_id.key == self.inherit_id.key:
-                    self._load_records_write_on_cow(cow_view, inherit_id, authorized_vals)
-                else:
-                    cow_view.with_context(no_cow=True).write(authorized_vals)
+                cow_view.write(authorized_vals)
         super(View, self)._load_records_write(values)
-
-    def _load_records_write_on_cow(self, cow_view, inherit_id, values):
-        # for modules updated before `website`, we need to
-        # store the change to replay later on cow views
-        if not hasattr(self.pool, 'website_views_to_adapt'):
-            self.pool.website_views_to_adapt = []
-        self.pool.website_views_to_adapt.append((
-            cow_view.id,
-            inherit_id,
-            values,
-        ))
 
 
 class ResetViewArchWizard(models.TransientModel):

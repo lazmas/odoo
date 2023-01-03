@@ -21,11 +21,7 @@
 # Vladimir Olujić <olujic.vladimir@storm.hr>, 2020
 # Karolina Tonković <karolina.tonkovic@storm.hr>, 2020
 # Tina Milas, 2020
-# Hrvoje Sić <hrvoje.sic@gmail.com>, 2021
-# 0ba0ac30481a756f36528ba6f9a4317e_6443a87 <52eefe24349934c364624ef40611b7a3_1010754>, 2021
-# Vladimir Vrgoč, 2022
-# Matej Mijoč, 2022
-# Bole <bole@dajmi5.com>, 2022
+# Bole <bole@dajmi5.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -33,7 +29,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-27 13:50+0000\n"
 "PO-Revision-Date: 2020-09-07 08:09+0000\n"
-"Last-Translator: Bole <bole@dajmi5.com>, 2022\n"
+"Last-Translator: Bole <bole@dajmi5.com>, 2020\n"
 "Language-Team: Croatian (https://www.transifex.com/odoo/teams/41243/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -308,8 +304,6 @@ msgid ""
 "\n"
 "This module adds a custom Sales Team for the Point of Sale. This enables you to view and manage your point of sale sales with more ease.\n"
 msgstr ""
-"\n"
-"Ovaj modul dodaje prilagođeni prodajni tim za prodajno mjesto. To vam omogućuje da s većom lakoćom pregledavate i upravljate prodajom na prodajnom mjestu.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_pos_restaurant
@@ -332,10 +326,6 @@ msgid ""
 "discount to a customer.\n"
 "\n"
 msgstr ""
-"\n"
-"Ovaj modul omogućuje blagajniku da brzo daje postotak\n"
-"popust kupcu.\n"
-"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_pos_loyalty
@@ -347,12 +337,6 @@ msgid ""
 "and get rewards.\n"
 "\n"
 msgstr ""
-"\n"
-"\n"
-"Ovaj modul omogućuje definiranje programa lojalnosti\n"
-"u POS modulu, pri kojem se zarađuju bodovi lojalnosti\n"
-"i dobivaju nagrade.\n"
-"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_pos_epson_printer_restaurant
@@ -377,9 +361,6 @@ msgid ""
 "            Bridge Sign functionalities with the Rental application\n"
 "        "
 msgstr ""
-"\n"
-"            Poveznica funkcionalnosti Potpisivanja i Rent aplikacije\n"
-"        "
 
 #. module: base
 #: model:ir.module.module,description:base.module_helpdesk_timesheet
@@ -389,9 +370,6 @@ msgid ""
 "        - Track timesheet for a task from a ticket\n"
 "    "
 msgstr ""
-"\n"
-" -Omogućuje postavljanje projekta za Helpdesk tim\n"
-"- Pratite vremenski raspored za zadatak iz ulaznice"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_be_reports
@@ -424,10 +402,6 @@ msgid ""
 "        Also adds DATEV export options to general ledger\n"
 "    "
 msgstr ""
-"\n"
-"Računovodstvena izvješća za Njemačku\n"
-"Sadrži izvješća o bilanci, računu dobiti i gubitku, PDV-u i PDV-u partnera\n"
-"Također dodaje mogućnosti izvoza DATEV u glavnu knjigu"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_lt_reports
@@ -438,10 +412,6 @@ msgid ""
 "        Contains Balance Sheet, Profit/Loss reports\n"
 "    "
 msgstr ""
-"\n"
-"Računovodstvena izvješća za Litvu\n"
-"\n"
-"Sadrži izvješća o bilanci, računu dobiti/gubitka"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_nl_reports
@@ -472,8 +442,6 @@ msgid ""
 "        Accounting reports for Sweden\n"
 "    "
 msgstr ""
-"\n"
-"Računovodstvena izvješća za Švedsku"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_ch_reports
@@ -516,9 +484,6 @@ msgid ""
 "        the questions and answers linked to the registrations.\n"
 "    "
 msgstr ""
-"\n"
-"Dodavanje informacija prilikom izrade opisa potencijalnog klijenta za uključivanje\n"
-"pitanja i odgovore povezane s registracijama."
 
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_mx_reports_closing
@@ -537,8 +502,6 @@ msgid ""
 "        App to upload and manage your documents.\n"
 "    "
 msgstr ""
-"\n"
-"Aplikacija za prijenos i upravljanje vašim dokumentima."
 
 #. module: base
 #: model:ir.module.module,description:base.module_helpdesk_sale_timesheet
@@ -572,9 +535,6 @@ msgid ""
 "        Bridge module between purchase and intrastat.\n"
 "    "
 msgstr ""
-"\n"
-"       Poveznica između modula Nabave i Intrastata.\n"
-"    "
 
 #. module: base
 #: model:ir.module.module,description:base.module_sale_intrastat
@@ -605,8 +565,6 @@ msgid ""
 "\n"
 "        Bridge module for website_sale_stock / sale_product_configurator"
 msgstr ""
-"\n"
-" Modul mosta za website_sale_stock / sale_product_configurator"
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_sale_product_configurator
@@ -639,16 +597,6 @@ msgid ""
 "        * Account Tags.\n"
 "    "
 msgstr ""
-"\n"
-"Predložak računskog plana (COA) za računovodstvo Litve.\n"
-"\n"
-"Ovaj modul također uključuje:\n"
-"\n"
-"* Popis dostupnih banaka u Litvi.\n"
-"* Porezne grupe.\n"
-"* Najčešći litavski porezi.\n"
-"* Fiskalne pozicije.\n"
-"* Oznake računa."
 
 #. module: base
 #: model:ir.module.module,description:base.module_helpdesk_fsm
@@ -700,8 +648,6 @@ msgid ""
 "\n"
 "        Define default sales journal on the warehouse"
 msgstr ""
-"\n"
-"Definiranje zadane temeljnice prodaje u skladištu"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_in_sale_stock
@@ -713,11 +659,6 @@ msgid ""
 "        useful when you setup the multiple GSTIN units.\n"
 "    "
 msgstr ""
-"\n"
-"Definiranje zadane temeljnice prodaje u skladištu,\n"
-"pomoći vam da odaberete ispravnu temeljnicu prodaje na nalogu za prodaju kada\n"
-"promijenite skladište.\n"
-"korisno prilikom postavljanja više GSTIN jedinica."
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_be_disallowed_expenses
@@ -773,8 +714,6 @@ msgid ""
 "        Enterprise digest data\n"
 "    "
 msgstr ""
-"\n"
-"Podaci sažetka poduzeća"
 
 #. module: base
 #: model:ir.module.module,description:base.module_account_sepa
@@ -801,8 +740,6 @@ msgid ""
 "\n"
 "        Make calls using a VOIP system"
 msgstr ""
-"\n"
-"        Obavljajte pozive korištenjem VOIP sistema"
 
 #. module: base
 #: model:ir.module.module,description:base.module_sale_renting
@@ -824,11 +761,6 @@ msgid ""
 "        fields are stored in a \"serialized\" field in the form of a JSON mapping.\n"
 "    "
 msgstr ""
-"\n"
-"Svrha ovog modula je provedba \"rijetkih\" polja, tj.\n"
-"koji su uglavnom null. Ova implementacija zaobilazi PostgreSQL\n"
-"ograničenje broja stupaca u tablici. Vrijednosti svih rijetkih\n"
-"polja se pohranjuju u polju \"serijalizirano\" u obliku JSON mapiranja."
 
 #. module: base
 #: model:ir.module.module,description:base.module_mrp_subcontracting_dropshipping
@@ -853,8 +785,6 @@ msgid ""
 "        This bridge module is auto-installed when the modules stock_barcode and mrp_subcontracting are installed.\n"
 "    "
 msgstr ""
-"\n"
-"Ovaj modul mosta automatski se instalira kada se instaliraju moduli stock_barcode i mrp_subcontracting. "
 
 #. module: base
 #: model:ir.module.module,description:base.module_stock_barcode_quality_control
@@ -953,8 +883,6 @@ msgid ""
 "        This module implements reCaptchaV3 so that you can prevent bot spam on your public modules.\n"
 "    "
 msgstr ""
-"\n"
-"This module implements reCaptchaV3 so that you can prevent bot spam on your public modules."
 
 #. module: base
 #: model:ir.module.module,summary:base.module_account_online_sync
@@ -1043,9 +971,6 @@ msgid ""
 "        linked to an SO, or only the validated timesheets\n"
 "    "
 msgstr ""
-"\n"
-"Prilikom fakturiranja vremenskih tablica omogućuje fakturiranje svih vremenskih tablica\n"
-"povezano s SO-om ili samo s provjerenim vremenskim tablicama"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_purchase_product_matrix
@@ -1070,9 +995,6 @@ msgid ""
 "       Technical module: Matrix Implementation\n"
 "    "
 msgstr ""
-"\n"
-"       Technički modul: Implementacija Matrice\n"
-"    "
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_multilang
@@ -1114,8 +1036,6 @@ msgid ""
 "\n"
 "    Adds workcenters to Quality Control\n"
 msgstr ""
-"\n"
-"Dodaje radne centre kontroli kvalitete\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_mrp_workorder_iot
@@ -1490,10 +1410,6 @@ msgid ""
 "==================\n"
 "    "
 msgstr ""
-"\n"
-"Računovodstveni izvještaji\n"
-"=======================\n"
-"    "
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_co_reports
@@ -1715,8 +1631,6 @@ msgid ""
 "\n"
 "Add relation information between Sale Orders and Purchase Orders if Make to Order (MTO) is activated on one sold product.\n"
 msgstr ""
-"\n"
-"Dodajte podatke o odnosu između naloga za prodaju i narudžbenica ako je na jednom prodanom proizvodu aktiviran Make to Order (MTO).\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_documents_project
@@ -1739,8 +1653,6 @@ msgid ""
 "\n"
 "Add the ability to manage resumés and letters from the Documents app.\n"
 msgstr ""
-"\n"
-"Dodajte mogućnost upravljanja životopisima i pismima iz aplikacije Dokumenti.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_product_margin
@@ -1781,8 +1693,6 @@ msgid ""
 "\n"
 "Adds fleet data to documents\n"
 msgstr ""
-"\n"
-"Dodaje podatke voznog parka dokumentima\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_documents_product
@@ -1816,10 +1726,6 @@ msgid ""
 "-------------------------------------------------------------\n"
 "\n"
 msgstr ""
-"\n"
-"Dopustite klijentima da zakažu obveze putem vašeg web-mjesta\n"
-"-------------------------------------------------------------\n"
-"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_pos_mercury
@@ -1905,10 +1811,6 @@ msgid ""
 "=============================================\n"
 "This module allows to generate a project/task from sales orders.\n"
 msgstr ""
-"\n"
-"Omogućuje kreiranje zadatka iz naloga za prodaju\n"
-"=============================================\n"
-"Ovaj modul omogućuje generiranje projekta/zadatka iz naloga za prodaju.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_voip
@@ -1917,8 +1819,6 @@ msgid ""
 "Allows to make call from next activities or with click-to-dial.\n"
 "    "
 msgstr ""
-"\n"
-"Omogućuje upućivanje poziva iz sljedećih aktivnosti ili s klikom na biranje."
 
 #. module: base
 #: model:ir.module.module,description:base.module_sale_timesheet
@@ -1939,9 +1839,6 @@ msgid ""
 "Allows to use in the Point of Sale the devices that are connected to an IoT Box.\n"
 "Supported devices include payment terminals, receipt printers, scales and customer displays.\n"
 msgstr ""
-"\n"
-"Omogućuje korištenje na prodajnom mjestu uređaja koji su povezani s IoT kutijom.\n"
-"Podržani uređaji uključuju terminale za plaćanje, pisače s potvrdama, vage i zaslone kupaca.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_sale_amazon_delivery
@@ -1967,9 +1864,6 @@ msgid ""
 "=====================================================\n"
 "        "
 msgstr ""
-"\n"
-"Allows users to send documents by post\n"
-"====================================================="
 
 #. module: base
 #: model:ir.module.module,description:base.module_snailmail_account
@@ -1979,9 +1873,6 @@ msgid ""
 "=====================================================\n"
 "        "
 msgstr ""
-"\n"
-"Omogućuje korisnicima slanje faktura poštom\n"
-"====================================================="
 
 #. module: base
 #: model:ir.module.module,description:base.module_delivery_iot
@@ -2282,9 +2173,6 @@ msgid ""
 "inclusion of rating directly within the customer portal discuss widget.\n"
 "        "
 msgstr ""
-"\n"
-"Modul mosta koji dodaje mogućnosti ocjenjivanja na portalu. To uključuje posebno\n"
-"uključivanje ocjene izravno unutar korisničkog portala raspravlja o widgetu."
 
 #. module: base
 #: model:ir.module.module,description:base.module_documents_account
@@ -2344,9 +2232,6 @@ msgid ""
 "=================================\n"
 "    "
 msgstr ""
-"\n"
-"Novčana osnova za računovodstvena izvješća\n"
-"================================="
 
 #. module: base
 #: model:ir.module.module,description:base.module_hr_skills_survey
@@ -2486,8 +2371,6 @@ msgid ""
 "Contains advanced features for Live Chat such as new views\n"
 "    "
 msgstr ""
-"\n"
-"Sadrži napredne značajke za Chat uživo, kao što su novi prikazi"
 
 #. module: base
 #: model:ir.module.module,description:base.module_purchase_enterprise
@@ -2504,8 +2387,6 @@ msgid ""
 "Contains advanced features for sale management\n"
 "    "
 msgstr ""
-"\n"
-"Sadrži napredne značajke za upravljanje prodajom"
 
 #. module: base
 #: model:ir.module.module,description:base.module_stock_account_enterprise
@@ -2514,8 +2395,6 @@ msgid ""
 "Contains the enterprise views for Stock account\n"
 "    "
 msgstr ""
-"\n"
-"Sadrži poslovne prikaze za burzovni račun"
 
 #. module: base
 #: model:ir.module.module,description:base.module_stock_enterprise
@@ -2582,9 +2461,6 @@ msgid ""
 "Create Sales order with timesheets and products from tasks\n"
 "    "
 msgstr ""
-"\n"
-"Kreiraj prodajne naloge sa obračunom vremena i proizvode iz zadataka\n"
-"    "
 
 #. module: base
 #: model:ir.module.module,description:base.module_survey
@@ -2600,15 +2476,6 @@ msgid ""
 "sent mails with personal token for the invitation of the survey.\n"
 "    "
 msgstr ""
-"\n"
-"Izradite prekrasne ankete i vizualizirajte odgovore\n"
-"==============================================\n"
-"\n"
-"To ovisi o odgovorima ili recenzijama nekih pitanja različitih korisnika. A\n"
-"anketa može imati više stranica. Svaka stranica može sadržavati više pitanja i\n"
-"svako pitanje može imati više odgovora. Različiti korisnici mogu dati različite\n"
-"odgovore na pitanja i prema toj anketi se radi. Partneri su također\n"
-"poslane pošte s osobnim tokenom za pozivnicu ankete."
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_sale_coupon
@@ -2703,8 +2570,6 @@ msgid ""
 "Design gorgeous mails\n"
 "    "
 msgstr ""
-"\n"
-"Dizajniranje prekrasnih poruka"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_de
@@ -2917,8 +2782,6 @@ msgid ""
 "\n"
 "Enable management of UTM trackers: campaign, medium, source.\n"
 msgstr ""
-"\n"
-"Omogućite upravljanje UTM trackerima: kampanja, medij, izvor.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_base_address_extended
@@ -2933,14 +2796,6 @@ msgid ""
 "with the street name, the house number, and room number.\n"
 "        "
 msgstr ""
-"\n"
-"Upravljanje proširenim adresama\n"
-"=============================\n"
-"\n"
-"Ovaj modul sadrži sva dodatna polja koja će vam možda trebati za precizno upravljanje adresama.\n"
-"\n"
-"Na primjer, u pravnim izvješćima neke zemlje trebaju podijeliti ulicu na nekoliko polja,\n"
-"s imenom ulice, kućnim brojem i brojem sobe."
 
 #. module: base
 #: model:ir.module.module,description:base.module_snailmail_account_followup
@@ -2949,8 +2804,6 @@ msgid ""
 "Extension to send follow-up documents by post\n"
 "    "
 msgstr ""
-"\n"
-"Proširenje za slanje pratećih dokumenata poštom"
 
 #. module: base
 #: model:ir.module.module,description:base.module_industry_fsm
@@ -3269,8 +3122,6 @@ msgid ""
 "Generates Netherlands Intrastat report for declaration based on invoices.\n"
 "    "
 msgstr ""
-"\n"
-"Generira nizozemsko izvješće intrastata za deklaraciju na temelju faktura."
 
 #. module: base
 #: model:ir.module.module,description:base.module_hr_payroll_account
@@ -3368,11 +3219,6 @@ msgid ""
 "The wizard used is similar as the one for the credit note.\n"
 "    "
 msgstr ""
-"\n"
-"U mnogim zemljama knjižno zaduženje koristi se kao povećanje iznosa postojećeg računa \n"
-"ili u nekim posebnim slučajevima otkazati knjižno odobrenje. \n"
-"To je poput običnog računa, ali moramo pratiti vezu s originalnim računom. \n"
-"Korišteni čarobnjak sličan je onom za kreditnu bilješku."
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_cn
@@ -3478,10 +3324,6 @@ msgid ""
 "==================\n"
 "    "
 msgstr ""
-"\n"
-"Intrastat Izvještaji\n"
-"==================\n"
-"    "
 
 #. module: base
 #: model:ir.module.module,description:base.module_account
@@ -3510,17 +3352,6 @@ msgid ""
 "regular Odoo interface anymore.\n"
 "\n"
 msgstr ""
-"\n"
-"Početna stranica IoT okvira\n"
-"================\n"
-"\n"
-"Ovaj modul nadjačava Odoo web sučelje za prikaz jednostavnog\n"
-"Početna stranica koja objašnjava što je iotbox i prikazuje status,\n"
-"i gdje pronaći dokumentaciju.\n"
-"\n"
-"Ako aktivirate ovaj modul, nećete moći pristupiti \n"
-"redovito Odoo sučelje više.\n"
-"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_stock_landed_costs
@@ -3590,14 +3421,6 @@ msgid ""
 "\n"
 "        "
 msgstr ""
-"\n"
-"Podrška za chat uživo\n"
-"==========================\n"
-"\n"
-"Dopusti ispuštanje widgeta za razmjenu izravnih poruka na bilo kojoj web stranici koja će komunicirati\n"
-"s trenutnim poslužiteljem i slanjem zahtjeva posjetitelja među nekoliko uživo\n"
-"chat operateri.\n"
-"Pomozite svojim klijentima u ovom chatu i analizirajte njihove povratne informacije."
 
 #. module: base
 #: model:ir.module.module,description:base.module_mail_mobile
@@ -3672,8 +3495,6 @@ msgid ""
 "Manage Product returns from helpdesk tickets\n"
 "    "
 msgstr ""
-"\n"
-"Upravljanje povratom proizvoda s ulaznica za službu za pomoć"
 
 #. module: base
 #: model:ir.module.module,description:base.module_hr_work_entry_holidays
@@ -3904,13 +3725,6 @@ msgid ""
 "that have no counterpart in the general financial accounts.\n"
 "    "
 msgstr ""
-"\n"
-"Modul za definiranje analitičkog računovodstvenog objekta.\n"
-"===============================================\n"
-"\n"
-"U Odoou su analitički računi povezani s općim računima, ali se tretiraju\n"
-"potpuno neovisno. Dakle, možete unijeti različite analitičke operacije\n"
-"koji nemaju pandan na općim financijskim računima."
 
 #. module: base
 #: model:ir.module.module,description:base.module_resource
@@ -4052,15 +3866,6 @@ msgid ""
 "creation of the Financial Accounting records).\n"
 "    "
 msgstr ""
-"\n"
-"Modul za uvoz ofx bankovnih izvataka.\n"
-"======================================\n"
-"\n"
-"Ovaj modul omogućuje vam uvoz strojno čitljivih OFX datoteka u Odoou: raščlanjuju se i pohranjuju u ljudskom čitljivom formatu u\n"
-"Računovodstvo Bankovni i gotovinski Bankovni izvadci.\n"
-"\n"
-"Bankovni izvadci mogu se generirati koji sadrže podskup podataka OFX-a (samo one retke transakcija koji su potrebni za\n"
-"stvaranje evidencije financijskog računovodstva)."
 
 #. module: base
 #: model:ir.module.module,description:base.module_account_bank_statement_import_qif
@@ -4224,10 +4029,6 @@ msgid ""
 "========================\n"
 "\n"
 msgstr ""
-"\n"
-"Odoo Web ture.\n"
-"========================\n"
-"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_hr_org_chart
@@ -4371,8 +4172,6 @@ msgid ""
 "Publish your customers as business references on your website to attract new potential prospects.\n"
 "    "
 msgstr ""
-"\n"
-"Objavite svoje klijente kao poslovne reference na svojoj web stranici kako biste privukli nove potencijalne izglede."
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_membership
@@ -4381,8 +4180,6 @@ msgid ""
 "Publish your members/association directory publicly.\n"
 "    "
 msgstr ""
-"\n"
-"Javno objavite svoj imenik članova/udruga."
 
 #. module: base
 #: model:ir.module.module,description:base.module_sale_ebay
@@ -4458,8 +4255,6 @@ msgid ""
 "Repair Products from helpdesk tickets\n"
 "    "
 msgstr ""
-"\n"
-"Popravak proizvoda preko helpdesk tiketa"
 
 #. module: base
 #: model:ir.module.module,description:base.module_fetchmail
@@ -4746,9 +4541,6 @@ msgid ""
 "Technical module.\n"
 "    "
 msgstr ""
-"\n"
-"Tehnički modul.\n"
-"    "
 
 #. module: base
 #: model:ir.module.module,description:base.module_repair
@@ -4766,18 +4558,6 @@ msgid ""
 "    * Repair quotation report\n"
 "    * Notes for the technician and for the final customer\n"
 msgstr ""
-"\n"
-"Cilj je imati kompletan modul za upravljanje svim popravcima proizvoda.\n"
-"====================================================================\n"
-"\n"
-"Ovaj modul obrađuje sljedeće teme:\n"
-"------------------------------------------------------\n"
-"* Dodajte/uklonite proizvode u reparaciji\n"
-"* Utjecaj na dionice\n"
-"* Fakturiranje (proizvodi i/ili usluge)\n"
-"* Jamstveni koncept\n"
-"* Izvješće o navodu za popravak\n"
-"* Bilješke za tehničara i za krajnjeg kupca\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_lunch
@@ -5038,13 +4818,6 @@ msgid ""
 "moneda Lempira. -- Adds accounting chart for Honduras. It also includes taxes\n"
 "and the Lempira currency."
 msgstr ""
-"\n"
-"Ovo je osnovni modul za upravljanje računovodstvenim grafikonom za Honduras.\n"
-"====================================================================\n"
-"\n"
-"Agrega una nomenclatura contable para Honduras. También incluye impuestos y la\n"
-"Moneda Lempira. - Dodaje knjigovodstveni grafikon za Honduras. Također uključuje poreze\n"
-"i valutu Lempira."
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_lu
@@ -5194,17 +4967,6 @@ msgid ""
 "Wewnętrzny numer wersji OpenGLOBE 1.02\n"
 "    "
 msgstr ""
-"\n"
-"Ovo je modul za upravljanje računovodstvenim grafikonom i porezima za Poljsku u Odoou.\n"
-"==================================================================================\n"
-"\n"
-"To jest moduł do tworzenia wzorcowego planu kont, podatków, obszarów podatkowych i\n"
-"rejestrów podatkowych. Moduł ustawia też konta do kupna i sprzedaży towarów\n"
-"zakładając, że wszystkie towary są w obrocie hurtowym.\n"
-"\n"
-"Niniejszy moduł jest przeznaczony dla odoo 8.0.\n"
-"Wewnętrzny numer wersji OpenGLOBE 1.02\n"
-"    "
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_dz
@@ -5254,15 +5016,6 @@ msgid ""
 "\n"
 "Financial requirement contributor: Baskhuu Lodoikhuu. BumanIT LLC\n"
 msgstr ""
-"\n"
-"Ovo je modul za upravljanje računovodstvenom kartom za Mongoliju.\n"
-"===============================================================\n"
-"\n"
-"* Mongolski službeni računski plan,\n"
-"* Grafikon poreznog zakona za Mongoliju\n"
-"* glavni porezi koji se koriste u Mongoliji\n"
-"\n"
-"Doprinos financijskim zahtjevima: Baskhuu Lodoikhuu. BumanIT LLC\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_vn
@@ -5295,8 +5048,6 @@ msgid ""
 "This module adds a Twitter scroller building block to the website builder, so that you can display Twitter feeds on any page of your website.\n"
 "    "
 msgstr ""
-"\n"
-"Ovaj modul dodaje gradivni blok Twitter skrolera alatu za izradu web stranica, tako da možete prikazati Twitter feedove na bilo kojoj stranici svoje web stranice."
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_sale_comparison
@@ -5319,10 +5070,6 @@ msgid ""
 "It also provides new tools to analyse your data.\n"
 "    "
 msgstr ""
-"\n"
-"Ovaj modul dodaje novi prikaz nadzorne ploče u aplikaciji web-mjesta.\n"
-"Ova nova vrsta prikaza sadrži neke osnovne statistike, grafikon i zaokretni podvizor koji vam omogućuju brzi pregled internetske prodaje.\n"
-"Također pruža nove alate za analizu vaših podataka."
 
 #. module: base
 #: model:ir.module.module,description:base.module_sale_renting_crm
@@ -5358,8 +5105,6 @@ msgid ""
 "This module adds an integration with Survey to ask feedbacks to any employee, based on a survey to fill.\n"
 "    "
 msgstr ""
-"\n"
-"Ovaj modul dodaje integraciju s Anketom kako bi se zatražile povratne informacije bilo kojem zaposleniku, na temelju ankete koju treba ispuniti."
 
 #. module: base
 #: model:ir.module.module,description:base.module_portal
@@ -5384,10 +5129,6 @@ msgid ""
 "the registration is confirmed.\n"
 "    "
 msgstr ""
-"\n"
-"Ovaj modul dodaje podršku za skeniranje crtičnih kodova u sustav upravljanja događajima.\n"
-"Crtični kod generira se za svakog sudionika i ispisuje se na znački. Kada se skenira,\n"
-"registracija je potvrđena."
 
 #. module: base
 #: model:ir.module.module,description:base.module_sale_margin
@@ -5409,9 +5150,6 @@ msgid ""
 "==================================================================\n"
 "    "
 msgstr ""
-"\n"
-"Ovaj modul dodaje mogućnost serijskog prijenosa u upravljanju skladištem\n"
-"=================================================================="
 
 #. module: base
 #: model:ir.module.module,description:base.module_account_accountant_check_printing
@@ -5482,8 +5220,6 @@ msgid ""
 "This module allows the user to add real estate related data to the Spanish localization and generates a mod 347 report.\n"
 "    "
 msgstr ""
-"\n"
-"Ovaj modul omogućuje korisniku dodavanje podataka povezanih s nekretninama u španjolsku lokalizaciju i generira izvješće mod 347."
 
 #. module: base
 #: model:ir.module.module,description:base.module_partner_commission
@@ -5607,13 +5343,6 @@ msgid ""
 "    - Modify subscriptions with sales orders\n"
 "    - Generate invoice automatically at fixed intervals\n"
 msgstr ""
-"\n"
-"Ovaj modul omogućuje upravljanje pretplatama.\n"
-"\n"
-"Značajkama:\n"
-"- Stvaranje i uređivanje pretplata\n"
-"- Izmjena pretplata pomoću naloga za prodaju\n"
-"- Automatsko generiranje fakture u fiksnim intervalima\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_purchase_requisition
@@ -5626,13 +5355,6 @@ msgid ""
 "competing offers from different vendors and select the best ones. Blanket orders\n"
 "are agreements you have with vendors to benefit from a predetermined pricing.\n"
 msgstr ""
-"\n"
-"Ovaj modul omogućuje vam upravljanje ugovorima o kupnji.\n"
-"===========================================================\n"
-"\n"
-"Upravljajte pozivima na podnošenje ponuda i okvirnih naloga. Pozivi na podnošenje ponuda koriste se za dobivanje\n"
-"konkurentske ponude različitih dobavljača i odaberite najbolje. Okvirni nalozi\n"
-"su ugovori koje imate s dobavljačima kako biste imali koristi od unaprijed određenih cijena.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_mass_mailing
@@ -5642,9 +5364,6 @@ msgid ""
 "On a simple click, your visitors can subscribe to mailing lists managed in the Email Marketing app.\n"
 "    "
 msgstr ""
-"\n"
-"Ovaj modul donosi novi sastavni blok s widgetom popisa primatelja koji će pasti na bilo koju stranicu vaše web stranice.\n"
-"Jednostavnim klikom vaši se posjetitelji mogu pretplatiti na mailing liste kojima se upravlja u aplikaciji Marketing putem e-pošte."
 
 #. module: base
 #: model:ir.module.module,description:base.module_sale
@@ -5653,8 +5372,6 @@ msgid ""
 "This module contains all the common features of Sales Management and eCommerce.\n"
 "    "
 msgstr ""
-"\n"
-"Ovaj modul sadrži sve uobičajene značajke upravljanja prodajom i e-trgovine."
 
 #. module: base
 #: model:ir.module.module,description:base.module_stock_barcode
@@ -5663,8 +5380,6 @@ msgid ""
 "This module enables the barcode scanning feature for the warehouse management system.\n"
 "    "
 msgstr ""
-"\n"
-"Ovaj modul omogućuje značajku skeniranja crtičnog koda za sustav upravljanja skladištem."
 
 #. module: base
 #: model:ir.module.module,description:base.module_delivery_barcode
@@ -5793,12 +5508,6 @@ msgid ""
 "membership products (schemes).\n"
 "    "
 msgstr ""
-"\n"
-"Ovaj modul je za konfiguriranje modula povezanih s pridruživanjem.\n"
-"==============================================================\n"
-"\n"
-"Instalira profil za udruge za upravljanje događajima, registracijama, članstvom, \n"
-"proizvodi za članstvo (sheme)."
 
 #. module: base
 #: model:ir.module.module,summary:base.module_account_online_synchronization
@@ -5864,12 +5573,6 @@ msgid ""
 "from sales order. It adds sales name and sales Reference on production order.\n"
 "    "
 msgstr ""
-"\n"
-"Ovaj modul pruža mogućnost korisniku da instalira MRP i prodajne module u isto vrijeme.\n"
-"====================================================================================\n"
-"\n"
-"U osnovi se koristi kada želimo pratiti generirane radne naloge\n"
-"iz naloga za prodaju. Dodaje naziv prodaje i referencu prodaje na radni nalog."
 
 #. module: base
 #: model:ir.module.module,description:base.module_iot
@@ -5885,9 +5588,6 @@ msgid ""
 "This module provides standard tools (account model, context manager and helpers)\n"
 "to support In-App purchases inside Odoo. "
 msgstr ""
-"\n"
-"Ovaj modul nudi standardne alate (model računa, upravitelj konteksta i pomagači)\n"
-"za podršku kupnjama putem aplikacije unutar Odooa. "
 
 #. module: base
 #: model:ir.module.module,description:base.module_quality_iot
@@ -5906,12 +5606,6 @@ msgid ""
 "Use for update your text memo in real time with the following user that you invite.\n"
 "\n"
 msgstr ""
-"\n"
-"Ovaj modul ažurira dopise unutar Odooa za korištenje vanjske podloge\n"
-"=================================================================\n"
-"\n"
-"Koristite za ažuriranje tekstualnog dopisa u stvarnom vremenu sa sljedećim korisnikom kojeg pozovete.\n"
-"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_procurement_jit
@@ -6007,18 +5701,6 @@ msgid ""
 "project.\n"
 "        "
 msgstr ""
-"\n"
-"Transifex integracija\n"
-"=====================\n"
-"Ovaj modul će dodati vezu na projekt Transifex u prijevodnom prikazu.\n"
-"Svrha ovog modula je ubrzati prijevode glavnih modula.\n"
-"\n"
-"Za rad Odoo koristi Transifex konfiguracijske datoteke '.tx/config' za deteciranje\n"
-"izvor projekta. Prilagođeni moduli neće se prevoditi (kako nije objavljeno na\n"
-"glavni projekt Transifex).\n"
-"\n"
-"Jezik koji korisnik pokušava prevesti mora se aktivirati na Transifexu\n"
-"projekt."
 
 #. module: base
 #: model:ir.module.module,description:base.module_auth_totp
@@ -6250,14 +5932,6 @@ msgid ""
 "\n"
 "    "
 msgstr ""
-"\n"
-"Integracija web-mjesta IM Livechat za modul službe za pomoć\n"
-"=======================================================\n"
-"\n"
-"Značajkama:\n"
-"\n"
-"- Imajte kanal uživo povezan s timom kako biste odgovorili na pitanja svog kupca.\n"
-"- S lakoćom izradite nove ulaznice pomoću naredbi u kanalu."
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_helpdesk_slides
@@ -6316,9 +5990,6 @@ msgid ""
 "\n"
 "    Supported documents are invoices/credit notes.\n"
 msgstr ""
-"Modul za sinkronizaciju dokumenata između nekoliko tvrtki. Na primjer, to vam omogućuje automatsko kreiranje naloga za prodaju kada se narudžbenica potvrdi s drugim poduzećem sustava kao dobavljačem, i obrnuto.\n"
-"\n"
-"Podržani dokumenti su fakture/kreditne bilješke.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_approvals_purchase_stock
@@ -6331,8 +6002,6 @@ msgid ""
 " This is the base module to manage chart of accounting and localization for "
 "Hong Kong "
 msgstr ""
-" Ovo je osnovni modul za upravljanje računovodstvenim i lokalizacijskim "
-"planom za Hong Kong"
 
 #. module: base
 #: code:addons/model.py:0
@@ -6358,12 +6027,12 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users__groups_count
 msgid "# Groups"
-msgstr "# Grupa"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users__rules_count
 msgid "# Record Rules"
-msgstr "# pravila zapisa"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_ui_view.py:0
@@ -6488,7 +6157,7 @@ msgstr "%y - Godina dvoznamenkasto [00,99].\""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_language_install
 msgid "&amp; Close"
-msgstr "&amp; Zatvori"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.module_view_kanban
@@ -6739,8 +6408,6 @@ msgid ""
 "<code>records</code>: recordset of all records on which the action is "
 "triggered in multi mode; may be void"
 msgstr ""
-"<code>zapisi</code>: skup slogova svih zapisa na kojima se akcija pokreće u "
-"više načina rada; može biti nevažeća"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_model_fields_form
@@ -6771,7 +6438,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_res_users_kanban
 msgid "<i class=\"fa fa-circle\" role=\"img\" aria-label=\"Invalid\" title=\"Invalid\"/>"
-msgstr "<i class=\"fa fa-circle\" role=\"img\" aria-label=\"Invalid\" title=\"Neispravno\"/>"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_res_users_kanban
@@ -6805,7 +6472,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.onboarding_container
 msgid "<span aria-label=\"Close\">×</span>"
-msgstr "<span aria-label=\"Close\">×</span>"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.reset_view_arch_wizard_view
@@ -6819,12 +6486,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid ""
 "<span class=\"o_form_label o_td_label\" name=\"address_name\">\n"
-"                                <b attrs=\"{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'contact')]}\">Company Address</b>\n"
-"                                <b attrs=\"{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'invoice')]}\">Invoice Address</b>\n"
-"                                <b attrs=\"{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'delivery')]}\">Delivery Address</b>\n"
-"                                <b attrs=\"{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'other')]}\">Other Address</b>\n"
-"                                <b attrs=\"{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'private')]}\">Private Address</b>\n"
-"                                <b attrs=\"{'invisible': ['&amp;', ('parent_id', '!=', False), ('type', '!=', False)]}\">Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'contact')]}\">Company Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'invoice')]}\">Invoice Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'delivery')]}\">Delivery Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'other')]}\">Other Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'private')]}\">Private Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', False)]}\">Address</b>\n"
 "                            </span>"
 msgstr ""
 
@@ -6910,17 +6577,17 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.report_irmodulereference
 msgid "<span>Version</span>"
-msgstr "<span>Verzija</span>"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.report_irmodulereference
 msgid "<span>Web</span>"
-msgstr "<span>Web</span>"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_currency_kanban
 msgid "<strong><span>Current Rate: </span></strong>"
-msgstr "<strong><span>Trenutni tečaj: </span></strong>"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.report_irmodeloverview
@@ -6940,7 +6607,7 @@ msgstr "<strong>Ovisnosti :</strong>"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_res_company_kanban
 msgid "<strong>Email:</strong>"
-msgstr "<strong>Email:</strong>"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.report_irmodeloverview
@@ -7160,8 +6827,6 @@ msgid ""
 "A Slide channel can be linked to forum. Also, profiles from slide and forum "
 "are regrouped together"
 msgstr ""
-"Klizni kanal može se povezati s forumom. Također, profili sa slajda i foruma"
-" pregrupiraju se zajedno"
 
 #. module: base
 #: code:addons/models.py:0
@@ -7210,7 +6875,7 @@ msgstr "Modul za testiranje uvoza/izvoza."
 #. module: base
 #: model:ir.module.module,description:base.module_test_populate
 msgid "A module to test populate."
-msgstr "Modul za testiranje popunjavanja."
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_test_new_api
@@ -7220,7 +6885,7 @@ msgstr "Modul za testiranje API sučelja."
 #. module: base
 #: model:ir.module.module,description:base.module_test_rpc
 msgid "A module to test the RPC requests."
-msgstr "Modul za testiranje RPC zahtjeva."
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_test_uninstall
@@ -7240,7 +6905,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,description:base.module_test_assetsbundle
 msgid "A module to verify the Assets Bundle mechanism."
-msgstr "Modul za provjeru mehanizma Assets Bundle."
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_test_inherits_depends
@@ -7251,7 +6916,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,description:base.module_test_inherits
 msgid "A module to verify the inheritance using _inherits."
-msgstr "Modul za provjeru nasljeđivanja pomoću _inherits."
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_test_inherit
@@ -7344,12 +7009,12 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users__api_key_ids
 msgid "API Keys"
-msgstr "API ključevi"
+msgstr ""
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_apikeys_admin
 msgid "API Keys Listing"
-msgstr "Popis API ključeva"
+msgstr ""
 
 #. module: base
 #: code:addons/fields.py:0
@@ -7422,17 +7087,17 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_website_profile
 msgid "Access the website profile of the users"
-msgstr "Pristupite profilima web stranica korisnika"
+msgstr ""
 
 #. module: base
 #: model:res.groups,name:base.group_private_addresses
 msgid "Access to Private Addresses"
-msgstr "Pristup privatnim adresama"
+msgstr ""
 
 #. module: base
 #: model:res.groups,name:base.group_allow_export
 msgid "Access to export feature"
-msgstr "Pristup svojstvu izvoza"
+msgstr ""
 
 #. module: base
 #: code:addons/api.py:0 code:addons/api.py:0
@@ -7448,7 +7113,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_generic_auto_transfer_demo
 msgid "Account Automatic Transfers Demo Data"
-msgstr "Pokazni podaci o automatskim prijenosima računa"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_bank_statement_import
@@ -7513,7 +7178,7 @@ msgstr "TaxCloud račun"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale_account_taxcloud
 msgid "Account TaxCloud - Ecommerce"
-msgstr "Račun na TaxCloud - e-trgovina"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_account_taxcloud
@@ -7528,17 +7193,17 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_coupon_taxcloud_delivery
 msgid "Account Taxcloud - Sale (coupon) - Delivery"
-msgstr "Račun Taxcloud - Prodaja (kupon) - Dostava"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_winbooks_import
 msgid "Account Winbooks Import"
-msgstr "Uvoz winbookova računa"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_account_payment
 msgid "Account and Payment Link and Portal"
-msgstr "Veza i portal za račun i plaćanje"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_partner_bank__acc_holder_name
@@ -7559,7 +7224,7 @@ msgstr "Računovodstvo"
 #: model:ir.module.module,shortdesc:base.module_mrp_account
 #: model:ir.module.module,shortdesc:base.module_mrp_account_enterprise
 msgid "Accounting - MRP"
-msgstr "Računovodstvo proizvodnje"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_test
@@ -7599,7 +7264,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_fleet
 msgid "Accounting/Fleet bridge"
-msgstr "Poveznica između računovodstva i voznog parka"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_act_window_view__act_window_id
@@ -7687,7 +7352,7 @@ msgstr "Korištenje akcije"
 #. module: base
 #: model:ir.model,name:base.model_ir_actions_act_window
 msgid "Action Window"
-msgstr "Akcijski prozor"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_ir_actions_act_window_close
@@ -7711,7 +7376,7 @@ msgstr "Akcije"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_lang_tree
 msgid "Activate / Update"
-msgstr "Aktiviraj / Ažuriraj"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_lang_form
@@ -7761,7 +7426,7 @@ msgstr "Dodaj"
 #. module: base
 #: model:ir.actions.act_window,name:base.action_view_base_language_install
 msgid "Add Language"
-msgstr "Dodaj jezik"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_mail_bot
@@ -7796,7 +7461,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_delivery_barcode
 msgid "Add barcode scanning facilities to Delivery."
-msgstr "Dodajte mogućnosti skaniranja barkodova na otpremnicama."
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_event_barcode
@@ -7806,7 +7471,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_account_reports_cash_basis
 msgid "Add cash basis functionality for reports"
-msgstr "Dodajte funkcionalnost principa blagajne za izvještaje."
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_slides_survey
@@ -7826,7 +7491,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_social_crm
 msgid "Add crm UTM info on social"
-msgstr "Dodajte crm UTM informacije na društvene mreže"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_sale_delivery
@@ -7837,7 +7502,7 @@ msgstr ""
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "Add direction"
-msgstr "Dodaj smjer"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_qweb_fields.py:0
@@ -7895,12 +7560,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_event_enterprise
 msgid "Add views and tweaks on event"
-msgstr "Dodavanje prikaza i podešavanja događaja"
+msgstr ""
 
 #. module: base
 #: model:res.partner,website_short_description:base.res_partner_address_31
 msgid "Addison Olson is a mighty sales representative at Deco Addict."
-msgstr "Addison Olson je moćni prodajni predstavnik u Deco Addictu."
+msgstr ""
 
 #. module: base
 #: model_terms:res.partner,website_description:base.res_partner_address_31
@@ -7909,9 +7574,6 @@ msgid ""
 "    notably for selling mouse traps. With that trick he cut\n"
 "    IT budget by almost half within the last 2 years."
 msgstr ""
-"Addison Olson radi u IT sektoru od 10 godina. On je poznat.\n"
-"posebno za prodaju mišjih zamki. S tim trikom je smanjio.\n"
-"IT proračun za gotovo polovicu u posljednje dvije godine."
 
 #. module: base
 #: code:addons/base/models/ir_qweb_fields.py:0
@@ -8092,7 +7754,7 @@ msgstr "Napredne karakteristike"
 #. module: base
 #: model:ir.module.module,summary:base.module_crm_enterprise
 msgid "Advanced features for CRM"
-msgstr "Napredne mogućnosti za CRM"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_im_livechat_enterprise
@@ -8107,7 +7769,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_stock_enterprise
 msgid "Advanced features for Stock"
-msgstr "Dodatne značajke za stock"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_stock_account_enterprise
@@ -8138,7 +7800,7 @@ msgstr "Affero GPL-3"
 #. module: base
 #: model:res.country,name:base.af
 msgid "Afghanistan"
-msgstr "Afganistan"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_country__name_position__after
@@ -8158,7 +7820,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_A
 msgid "Agriculture"
-msgstr "Agrikultutura"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.al
@@ -8199,7 +7861,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.onboarding_step
 msgid "All done!"
-msgstr "Sve gotovo!"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_partner__lang
@@ -8243,7 +7905,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_website_sale_wishlist
 msgid "Allow shoppers to enlist products"
-msgstr "Omogućite kupcima da unovače proizvode"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_mail_channel
@@ -8285,7 +7947,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_website_slides_forum
 msgid "Allows to link forum on a course"
-msgstr "Omogući poveznicu foruma i tečaja"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_coupon_delivery
@@ -8308,16 +7970,12 @@ msgstr ""
 msgid ""
 "Allows to send sms to website visitor if the visitor is linked to a lead."
 msgstr ""
-"Omogućuje slanje SMS-a posjetitelju web stranice ako je posjetitelj povezan "
-"s potencijalnim klijentom."
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_sms
 msgid ""
 "Allows to send sms to website visitor if the visitor is linked to a partner."
 msgstr ""
-"Omogućuje slanje SMS-a posjetitelju web stranice ako je posjetitelj povezan "
-"s partnerom."
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_crm_sms
@@ -8405,12 +8063,12 @@ msgstr ""
 #: model:ir.module.module,summary:base.module_mrp_account
 #: model:ir.module.module,summary:base.module_mrp_account_enterprise
 msgid "Analytic accounting in Manufacturing"
-msgstr "Analitičko računovodstvo u proizvodnji"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.ad
 msgid "Andorra"
-msgstr "Andorra"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.ao
@@ -8566,12 +8224,12 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_ui_view__arch_fs
 msgid "Arch Filename"
-msgstr "Naziv arch datoteke"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_reset_view_arch_wizard__arch_to_compare
 msgid "Arch To Compare To"
-msgstr "Luka za usporediti s"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_view_form
@@ -8581,7 +8239,7 @@ msgstr "Struktura"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_reset_view_arch_wizard__arch_diff
 msgid "Architecture Diff"
-msgstr "Razlika u arhitekturi"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.edit_menu_access_search
@@ -8636,7 +8294,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_actions_client__params
 msgid "Arguments sent to the client along with the view tag"
-msgstr "Argumenti poslani klijentu zajedno s oznakom prikaza"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.am
@@ -8656,7 +8314,7 @@ msgstr "Aruba"
 #: model_terms:res.partner,website_description:base.res_partner_3
 #: model_terms:res.partner,website_description:base.res_partner_4
 msgid "As a team, we are happy to contribute to this event."
-msgstr "Kao tim, sretni smo što možemo doprinijeti ovom događaju."
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_appraisal
@@ -8754,7 +8412,7 @@ msgstr "Australija - Računovodstvo"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_au_reports
 msgid "Australian Reports - Accounting"
-msgstr "Australski izvještaji - računovodstvo"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.at
@@ -8816,7 +8474,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_partner_autocomplete
 msgid "Auto-complete partner companies' data"
-msgstr "Automatski popuni podatke partnerove tvrtke"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_base_automation
@@ -8911,7 +8569,7 @@ msgstr "B1  15  707 x 1000 mm"
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__report_paperformat__format__b10
 msgid "B10    16  31 x 44 mm"
-msgstr "B10    16  31 x 44 mm"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__report_paperformat__format__b2
@@ -9073,7 +8731,7 @@ msgstr ""
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "Barcode symbology"
-msgstr "Simbolika barkoda"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_qweb_fields.py:0
@@ -9084,7 +8742,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_stock_barcode_quality_control_picking_batch
 msgid "Barcode/Quality/Batch Transfer bridge module"
-msgstr "Modul mosta Crtični kod/Kvaliteta/Skupni prijenos"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_base
@@ -9108,7 +8766,7 @@ msgstr "Osnovno polje"
 #: code:addons/base/models/res_lang.py:0
 #, python-format
 msgid "Base Language 'en_US' can not be deleted."
-msgstr "Osnovni jezik 'en_US' ne može se izbrisati."
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_adyen_platforms
@@ -9161,7 +8819,7 @@ msgstr "Osnovni pogled"
 #: model:ir.cron,cron_name:base.autovacuum_job
 #: model:ir.cron,name:base.autovacuum_job
 msgid "Base: Auto-vacuum internal data"
-msgstr "Osnovno: Automatsko brisanje internih podataka"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_web_grid
@@ -9181,12 +8839,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_iap
 msgid "Basic models and helpers to support In-App purchases."
-msgstr "Osnovni modeli i pomagači koji podržavaju kupnje putem aplikacije."
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_iot
 msgid "Basic models and helpers to support Internet of Things."
-msgstr "Osnovni modeli i pomagači koji podržavaju Internet stvari."
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_batch_payment
@@ -9199,13 +8857,11 @@ msgid ""
 "Be aware that editing the architecture of a standard view is not advised, since the changes will be overwritten during future module updates.<br/>\n"
 "                        We recommend applying modifications to standard views through inherited views or customization with Odoo Studio."
 msgstr ""
-"Imajte na umu da se uređivanje arhitekture standardnog prikaza ne savjetuje, jer će promjene biti prebrisane tijekom budućih ažuriranja modula.\n"
-"Preporučujemo primjenu izmjena na standardne prikaze putem naslijeđenih prikaza ili prilagodbe pomoću Odoo Studija."
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_country__name_position__before
 msgid "Before Address"
-msgstr "Prije adrese"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_currency__position__before
@@ -9247,7 +8903,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_blackbox_be
 msgid "Belgian Registered Cash Register"
-msgstr "Belgijska blagajna"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_hr_l10n_be
@@ -9437,7 +9093,7 @@ msgstr "Brazilski - Računovodstvo"
 #: model:ir.module.module,description:base.module_iap_crm
 #: model:ir.module.module,summary:base.module_iap_crm
 msgid "Bridge between IAP and CRM"
-msgstr "Most između IAP-a i CRM-a"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_iap_mail
@@ -9448,7 +9104,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_account_accountant
 msgid "Bridge between Sale and Accounting"
-msgstr "Most između prodaje i računovodstva"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_stock_accountant
@@ -9494,7 +9150,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_website_event_social
 msgid "Bridge module to push notifications to event attendees"
-msgstr "Modul most za guranje obavijesti sudionicima događaja"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_event_track_live_quiz
@@ -9525,7 +9181,7 @@ msgstr "Budžetiranje"
 #. module: base
 #: model:ir.module.module,summary:base.module_marketing_automation
 msgid "Build automated mailing campaigns"
-msgstr "Stvaranje automatiziranih kampanja za slanje e-pošte"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_form
@@ -9540,7 +9196,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_board
 msgid "Build your own dashboards"
-msgstr "Sastavite svoje nadzorne ploče"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.bg
@@ -9593,7 +9249,7 @@ msgstr "CRM"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_data_merge_crm
 msgid "CRM Deduplication"
-msgstr "CRM Deduplikacija"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_gamification_sale_crm
@@ -9608,7 +9264,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_crm_enterprise
 msgid "CRM enterprise"
-msgstr "CRM enterprise"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_social_crm
@@ -9626,8 +9282,6 @@ msgid ""
 "CSV format: you may edit it directly with your favorite spreadsheet software,\n"
 "                                the rightmost column (value) contains the translations"
 msgstr ""
-"CSV format: možete ga uređivati izravno pomoću omiljenog softvera za proračunske tablice,\n"
-"najdesniji stupac (vrijednost) sadrži prijevode"
 
 #. module: base
 #: model:res.country,vat_label:base.ar
@@ -9663,7 +9317,6 @@ msgstr "Kamerun"
 msgid ""
 "Can not create Many-To-One records indirectly, import the field separately"
 msgstr ""
-"Nije moguće neizravno stvoriti zapise više na jedan, uvezite polje zasebno"
 
 #. module: base
 #: code:addons/base/models/ir_module.py:0
@@ -9740,7 +9393,7 @@ msgstr "Otkaži dogradnju"
 #: code:addons/models.py:0
 #, python-format
 msgid "Cannot aggregate field %r."
-msgstr "Polje %r nije moguće objediniti."
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_fields.py:0
@@ -9851,7 +9504,7 @@ msgstr "Promjena lozinke"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_country_form
 msgid "Change the way addresses are displayed in reports"
-msgstr "Promjena načina prikaza adresa u izvješćima"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/res_partner.py:0
@@ -9892,7 +9545,7 @@ msgstr "Slovčano"
 #: model:ir.module.module,summary:base.module_im_livechat
 #: model:ir.module.module,summary:base.module_website_livechat
 msgid "Chat with your website visitors"
-msgstr "Čavrljanje s posjetiteljima vaše web stranice"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_mail
@@ -9907,7 +9560,7 @@ msgstr "Čekovi"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_accountant_check_printing
 msgid "Check Printing Accounting"
-msgstr "Provjera računovodstva ispisa"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_check_printing
@@ -9928,7 +9581,7 @@ msgstr "Provjerite zajednički ispis"
 #. module: base
 #: model:ir.module.module,summary:base.module_account_accountant_check_printing
 msgid "Check printing enterprise addons"
-msgstr "Provjera ispisa enterprise dodataka"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_partner__employee
@@ -9998,7 +9651,7 @@ msgstr "Čile - Računovodstvena izvješća"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_cl_edi
 msgid "Chile - E-invoicing"
-msgstr "Čile - E-fakturiranje"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.cn
@@ -10008,12 +9661,12 @@ msgstr "Kina"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_cn
 msgid "China - Accounting"
-msgstr "Kina - Računovodstvo"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_cn_city
 msgid "China - City Data"
-msgstr "Kina - podaci o gradovima"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_country_form
@@ -10100,13 +9753,6 @@ msgid ""
 "\n"
 "Modules time, datetime, dateutil are available."
 msgstr ""
-"Kod za izračunavanje vrijednosti polja.\n"
-"Iterirajte skup zapisa 'self' i dodijelite vrijednost polja:\n"
-"\n"
-"za zapis u sebi:\n"
-"zapis['size'] = len(record.name)\n"
-"\n"
-"Dostupni su moduli time, datetime, dateutil."
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_web_cohort
@@ -10121,7 +9767,7 @@ msgstr "Bilješke suradnika"
 #. module: base
 #: model:ir.module.module,summary:base.module_account_sepa_direct_debit
 msgid "Collect payments from your customers through SEPA direct debit."
-msgstr "Prikupite uplate od svojih kupaca putem SEPA izravnog zaduženja."
+msgstr ""
 
 #. module: base
 #: model_terms:res.partner,website_description:base.res_partner_address_28
@@ -10139,7 +9785,7 @@ msgstr "Kolumbija"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_co
 msgid "Colombia - Accounting"
-msgstr "Kolumbija - Računovodstvo"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_co_reports
@@ -10183,7 +9829,7 @@ msgstr "Kolona 2"
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_model_fields__column2
 msgid "Column referring to the record in the comodel table"
-msgstr "Stupac koji se odnosi na zapis u tablici komodela"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_model_fields__column1
@@ -10254,7 +9900,7 @@ msgstr "Tvrtke"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
 msgid "Companies count"
-msgstr "Broj tvrtki"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_qweb_fields.py:0
@@ -10304,7 +9950,7 @@ msgstr "Tvrtka"
 #: model:ir.model.fields,field_description:base.field_res_partner__commercial_company_name
 #: model:ir.model.fields,field_description:base.field_res_users__commercial_company_name
 msgid "Company Name Entity"
-msgstr "Entitet naziva tvrtke"
+msgstr ""
 
 #. module: base
 #: model:ir.actions.act_window,name:base.ir_property_form
@@ -10340,8 +9986,6 @@ msgid ""
 "Company used for the original currency (only used for t-esc). By default use"
 " the user company"
 msgstr ""
-"Tvrtka koja se koristi za izvornu valutu (koristi se samo za t-esc). Prema "
-"zadanim postavkama koristi korisničku tvrtku"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_reset_view_arch_wizard__compare_view_id
@@ -10356,12 +10000,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_project_timesheet_forecast
 msgid "Compare timesheets and plannings"
-msgstr "Usporedba vremenskih tablica i planova"
+msgstr ""
 
 #. module: base
 #: model:ir.actions.act_window,name:base.reset_view_arch_wizard_action
 msgid "Compare/Reset"
-msgstr "Usporedi/resetiraj"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner__contact_address
@@ -10465,7 +10109,7 @@ msgstr "Konfiguracijski čarobnjaci"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_event_twitter_wall
 msgid "Configure a Twitter Wall on your Event"
-msgstr "Konfiguriranje Twitter zida na svom događaju"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_partner_commission
@@ -10475,7 +10119,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_timesheet_enterprise
 msgid "Configure timesheet invoicing"
-msgstr "Konfiguriranje fakturiranja vremenske tablice"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_product_configurator
@@ -10532,7 +10176,7 @@ msgstr ""
 #: code:addons/base/models/ir_mail_server.py:0
 #, python-format
 msgid "Connection Test Succeeded!"
-msgstr "Test povezivanja uspio!"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_consolidation
@@ -10552,7 +10196,7 @@ msgstr "Vrsta ograničenja"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_model_constraint_search
 msgid "Constraint type"
-msgstr "tip ograničenja"
+msgstr ""
 
 #. module: base
 #: code:addons/model.py:0
@@ -10573,7 +10217,7 @@ msgstr "Ograničenja s istim imenom su jedinstvena po modulu."
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_F
 msgid "Construction"
-msgstr "Nadogradnja"
+msgstr ""
 
 #. module: base
 #: model:res.partner.category,name:base.res_partner_category_8
@@ -10629,7 +10273,7 @@ msgstr "Titule kontakta"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid "Contact image"
-msgstr "Slika kontakta"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_model.py:0 code:addons/base/models/ir_rule.py:0
@@ -10652,7 +10296,7 @@ msgstr "Kontakti i adrese"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_contacts_enterprise
 msgid "Contacts Enterprise"
-msgstr "Enterprize kontakti"
+msgstr ""
 
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_res_partner_check_name
@@ -10702,12 +10346,12 @@ msgstr "Doprinjeli"
 #. module: base
 #: model:ir.module.module,summary:base.module_quality_control
 msgid "Control the quality of your products"
-msgstr "Kontrolirajte kvalitetu vaših proizvoda"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_quality_control_iot
 msgid "Control the quality of your products with IoT devices"
-msgstr "Kontrolirajte kvalitetu svojih proizvoda pomoću IoT uređaja"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.ck
@@ -10825,7 +10469,7 @@ msgstr "Kreiraj pravo pristupa"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
 msgid "Create Contextual Action"
-msgstr "Stvori kontekstualnu akciju"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_constraint__create_date
@@ -10855,7 +10499,7 @@ msgstr ""
 #: model:ir.module.module,summary:base.module_industry_fsm_report
 #: model:ir.module.module,summary:base.module_industry_fsm_sale_report
 msgid "Create Reports for Field service workers"
-msgstr "Stvaranje izvješća za servisere na terenu"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_crm_helpdesk
@@ -10890,7 +10534,7 @@ msgstr "Kreiraj novi zapis"
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_res_bank_form
 msgid "Create a new bank"
-msgstr "Kreirajte novu banku"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_res_company_form
@@ -10906,12 +10550,12 @@ msgstr "Kreiraj novu oznaku za kontakt"
 #: model_terms:ir.actions.act_window,help:base.action_partner_customer_form
 #: model_terms:ir.actions.act_window,help:base.action_partner_form
 msgid "Create a new customer in your address book"
-msgstr "Kreiraj novog Kupca u adresaru"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.res_partner_industry_action
 msgid "Create a new industry"
-msgstr "Kreirajte novu industriju"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_partner_supplier_form
@@ -10966,7 +10610,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,description:base.module_crm_livechat
 msgid "Create new lead with using /lead command in the channel"
-msgstr "Stvorite novog potencijalnog klijenta pomoću naredbe /lead u kanalu"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_survey
@@ -11301,7 +10945,7 @@ msgstr "Prečaci"
 #. module: base
 #: model:ir.model,name:base.model_ir_ui_view_custom
 msgid "Custom View"
-msgstr "Prilagođeni pogled"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_model.py:0
@@ -11416,7 +11060,7 @@ msgstr "Nadzorne ploče"
 #: model:ir.module.category,name:base.module_category_productivity_data_cleaning
 #: model:ir.module.module,shortdesc:base.module_data_cleaning
 msgid "Data Cleaning"
-msgstr "Čišćenje podataka"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_data_merge
@@ -11431,7 +11075,7 @@ msgstr "Podaci za testove xml pretvorbe"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
 msgid "Data to Write"
-msgstr "Podaci za pisanje"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_logging_search_view
@@ -11467,8 +11111,6 @@ msgid ""
 "Database fetch misses ids ({}) and has extra ids ({}), may be caused by a "
 "type incoherence in a previous request"
 msgstr ""
-"Dohvaćanje baze podataka propušta ID-ove ({}) i ima dodatne ID-ove ({}), "
-"može biti uzrokovano nesuvislošću vrste u prethodnom zahtjevu"
 
 #. module: base
 #: code:addons/base/models/ir_qweb_fields.py:0
@@ -11509,7 +11151,7 @@ msgstr ""
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "Date unit used for comparison and formatting"
-msgstr "Jedinica datuma koja se koristi za usporedbu i oblikovanje"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_qweb_fields.py:0
@@ -11591,12 +11233,12 @@ msgstr "Spoji drugi dupli kontakt"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
 msgid "Default Company"
-msgstr "Zadana tvrtka"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_filters__is_default
 msgid "Default Filter"
-msgstr "Zadani filter"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_theme_default
@@ -11626,7 +11268,7 @@ msgstr "Zadani format papira?"
 #. module: base
 #: model:ir.module.module,description:base.module_theme_default
 msgid "Default website theme"
-msgstr "Zadana tema websitea"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_tax_python
@@ -11672,7 +11314,7 @@ msgstr "Adresa dostave"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_delivery_barcode
 msgid "Delivery Barcode Scanning"
-msgstr "Skeniranje barkoda isporuke"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_delivery
@@ -11692,12 +11334,12 @@ msgstr "Demo podaci"
 #. module: base
 #: model:ir.model,name:base.model_ir_demo_failure_wizard
 msgid "Demo Failure wizard"
-msgstr "Čarobnjak za demo neuspjeh"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_demo_failure_wizard__failure_ids
 msgid "Demo Installation Failures"
-msgstr "Neuspjele demo instalacije"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.demo_force_install_form
@@ -11709,12 +11351,12 @@ msgstr ""
 #. module: base
 #: model:ir.model,name:base.model_ir_demo_failure
 msgid "Demo failure"
-msgstr "Demo neuspjeh"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.cd
 msgid "Democratic Republic of the Congo"
-msgstr "Demokratska republika Kongo"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.dk
@@ -11724,12 +11366,12 @@ msgstr "Danska"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_dk
 msgid "Denmark - Accounting"
-msgstr "Danska - Računovodstvo"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_dk_reports
 msgid "Denmark - Accounting Reports"
-msgstr "Danska – računovodstvena izvješća"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_fields__depends
@@ -11770,7 +11412,7 @@ msgstr "Opis HTML"
 #. module: base
 #: model:ir.module.module,summary:base.module_mass_mailing_themes
 msgid "Design gorgeous mails"
-msgstr "Dizajniranje prekrasnih poruka"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_sale_quotation_builder
@@ -11782,7 +11424,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_mass_mailing_sms
 msgid "Design, send and track SMS"
-msgstr "Dizajniranje, slanje i praćenje SMS-a"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_mass_mailing
@@ -11827,12 +11469,12 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_form_simple_modif
 msgid "Developer API Keys"
-msgstr "Razvojni API ključ"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_digest_enterprise
 msgid "Digest Enterprise"
-msgstr "Probavi enterprise"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale_digital
@@ -11868,12 +11510,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_disallowed_expenses
 msgid "Disallowed Expenses"
-msgstr "Nedozvoljeni troškovi"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_disallowed_expenses_fleet
 msgid "Disallowed Expenses on Fleets"
-msgstr "Nedozvoljeni troškovi voznog parka"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.onboarding_container
@@ -11889,7 +11531,7 @@ msgstr "Odbaci"
 #: model_terms:res.partner,website_description:base.res_partner_3
 #: model_terms:res.partner,website_description:base.res_partner_4
 msgid "Discover more"
-msgstr "Otkrijte još"
+msgstr ""
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_productivity_discuss
@@ -12077,7 +11719,7 @@ msgstr ""
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "Display only the date"
-msgstr "Prikaži samo datum"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_qweb_fields.py:0
@@ -12095,7 +11737,7 @@ msgstr ""
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "Display the country image if the field is present on the record"
-msgstr "Prikaz slike zemlje ako je polje prisutno u zapisu"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_qweb_fields.py:0
@@ -12107,7 +11749,7 @@ msgstr ""
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "Displayed fields"
-msgstr "Prikazana polja"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.dj
@@ -12165,12 +11807,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_documents_l10n_be_hr_payroll
 msgid "Documents - Belgian Payroll"
-msgstr "Dokumenti - belgijski platni spisak"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_documents_hr_contract
 msgid "Documents - Contracts"
-msgstr "Dokumenti - ugovori"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_documents_fleet
@@ -12180,17 +11822,17 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_documents_hr
 msgid "Documents - HR"
-msgstr "Dokumenti - HR"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_documents_hr_payroll
 msgid "Documents - Payroll"
-msgstr "Dokumenti - Plaća"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_documents_product
 msgid "Documents - Product"
-msgstr "Dokumenti - Proizvod"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_documents_project
@@ -12269,12 +11911,12 @@ msgstr "Riješeno"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.form_res_users_key_show
 msgid "Done!"
-msgstr "Gotovo!"
+msgstr ""
 
 #. module: base
 #: model:res.partner,website_short_description:base.res_partner_address_3
 msgid "Douglas Fletcher is a mighty functional consultant at Deco Addict"
-msgstr "Douglas Fletcher je moćni funkcionalni savjetnik u Deco Addictu"
+msgstr ""
 
 #. module: base
 #: model_terms:res.partner,website_description:base.res_partner_address_3
@@ -12320,8 +11962,6 @@ msgid ""
 "Due to security restrictions, you are not allowed to create "
 "'%(document_kind)s' (%(document_model)s) records."
 msgstr ""
-"Zbog sigurnosnih ograničenja nije vam dopušteno stvarati '%(document_kind)s'"
-" (%(document_model)s) zapise."
 
 #. module: base
 #: code:addons/base/models/ir_rule.py:0
@@ -12330,8 +11970,6 @@ msgid ""
 "Due to security restrictions, you are not allowed to delete "
 "'%(document_kind)s' (%(document_model)s) records."
 msgstr ""
-"Iz sigurnosnih razloga nije Vam dozvoljeno brisanje '%(document_kind)s' "
-"(%(document_model)s) zapisa."
 
 #. module: base
 #: code:addons/base/models/ir_rule.py:0
@@ -12356,7 +11994,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_be_edi
 msgid "E-Invoicing, Universal Business Language (UBL 2.0), e-fff protocol"
-msgstr "E-fakturiranje, Univerzalni poslovni jezik (UBL 2.0), e-fff protokol"
+msgstr ""
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_accounting_localizations_edi
@@ -12391,7 +12029,7 @@ msgstr "EU Mini One Stop Shop (MOSS)"
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_ir_model_obj_name_uniq
 msgid "Each model must have a unique name."
-msgstr "Svaki model mora imati jedinstveni naziv."
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_data_cleaning
@@ -12584,7 +12222,7 @@ msgstr ""
 #: code:addons/base/models/ir_model.py:0
 #, python-format
 msgid "Empty dependency in %r"
-msgstr "Prazna ovisnost u %r"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_cache
@@ -12664,7 +12302,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_epson_printer_restaurant
 msgid "Epson Printers as Order Printers"
-msgstr "Epson pisači kao pisači narudžbi"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_epson_printer
@@ -12704,9 +12342,6 @@ msgid ""
 "\n"
 "%(error)s"
 msgstr ""
-"Pogreška tijekom provjere valjanosti prikaza:\n"
-"\n"
-"%(error)s"
 
 #. module: base
 #: code:addons/base/models/ir_ui_menu.py:0
@@ -12742,7 +12377,7 @@ msgstr "Vrsta vrednovanja"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mass_mailing_event_sms
 msgid "Event Attendees SMS Marketing"
-msgstr "Sudionici događaja SMS marketing"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_event_barcode
@@ -12752,12 +12387,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_event_barcode_mobile
 msgid "Event Barcode in Mobile"
-msgstr "Barkod događaja u mobilnom uređaju"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_event_barcode_mobile
 msgid "Event Barcode scan in Mobile"
-msgstr "Skeniranje barkoda događaja na mobitelu"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_event_crm
@@ -12767,7 +12402,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_event_crm_sale
 msgid "Event CRM Sale"
-msgstr "CRM rasprodaja događaja"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_event_track_exhibitor
@@ -12777,12 +12412,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_event_meet
 msgid "Event Meeting / Rooms"
-msgstr "Sastanak / sobe događaja"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_event_meet
 msgid "Event: meeting and chat rooms"
-msgstr "Događaj: sobe za sastanke i razgovore"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_event_track_exhibitor
@@ -12814,12 +12449,12 @@ msgstr "Događanja prodaje"
 #: code:addons/base/models/ir_mail_server.py:0
 #, python-format
 msgid "Everything seems properly set up!"
-msgstr "Sve izgleda ispravno podešeno!"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
 msgid "Example of Python code"
-msgstr "Primjer python koda"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_gamification_sale_crm
@@ -12972,7 +12607,7 @@ msgstr ""
 #. module: base
 #: model:ir.model,name:base.model_ir_exports_line
 msgid "Exports Line"
-msgstr "Stavke izvoza"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_server_object_lines__value
@@ -12981,14 +12616,11 @@ msgid ""
 "When Formula type is selected, this field may be a Python expression  that can use the same values as for the code field on the server action.\n"
 "If Value type is selected, the value will be used directly without evaluation."
 msgstr ""
-"Izraz koji sadrži specifikaciju vrijednosti. \n"
-"Kada je odabrana vrsta formule, ovo polje može biti Pythonov izraz koji može koristiti iste vrijednosti kao i za polje koda u akciji poslužitelja.\n"
-"Ako je odabrana vrsta vrijednosti, vrijednost će se koristiti izravno bez procjene."
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_base_address_extended
 msgid "Extended Addresses"
-msgstr "Proširene adrese"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_ui_view__mode__extension
@@ -13096,7 +12728,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_demo_failure_wizard__failures_count
 msgid "Failures Count"
-msgstr "Broj neuspjeha"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.fk
@@ -13266,7 +12898,7 @@ msgstr "Naziv polja"
 #: model:ir.module.category,name:base.module_category_services_field_service
 #: model:ir.module.module,shortdesc:base.module_industry_fsm
 msgid "Field Service"
-msgstr "Terenski servis"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_industry_fsm_forecast
@@ -13276,7 +12908,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_industry_fsm_sale
 msgid "Field Service - Sale"
-msgstr "Terenski servis - Prodaja"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_industry_fsm_report
@@ -13323,7 +12955,7 @@ msgstr "Nazivi polja moraju biti jedinstveni po modelu."
 #: code:addons/base/models/ir_ui_view.py:0
 #, python-format
 msgid "Field tag must have a \"name\" attribute defined"
-msgstr "Polje mora imati definiran atribut \"naziv\""
+msgstr ""
 
 #. module: base
 #: code:addons/model.py:0
@@ -13411,12 +13043,12 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_attachment__datas
 msgid "File Content (base64)"
-msgstr "Sadržaj datoteke (base64)"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_attachment__raw
 msgid "File Content (raw)"
-msgstr "Sadržaj datoteke (sirovo)"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_language_export__format
@@ -13440,8 +13072,6 @@ msgid ""
 "File from where the view originates.\n"
 "                                                          Useful to (hard) reset broken views or to read arch from file in dev-xml mode."
 msgstr ""
-"Datoteka odakle potječe prikaz.\n"
-"Korisno za (tvrdi) reset slomljenih prikaza na izvorno ili za čitanje luka iz datoteke u dev-xml načinu rada."
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_act_window__filter
@@ -13531,7 +13161,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__week_start
 msgid "First Day of Week"
-msgstr "Prvi dan tjedna"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_mx_reports_closing
@@ -13585,7 +13215,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_fleet
 msgid "Fleet History"
-msgstr "Povijest voznog parka"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_documents_fleet
@@ -13600,7 +13230,7 @@ msgstr "Decimalni"
 #. module: base
 #: model:res.partner,website_short_description:base.res_partner_address_4
 msgid "Floyd Steward is a mighty analyst at Deco Addict."
-msgstr "Floyd Steward je moćan analitičar u Deco Addictu."
+msgstr ""
 
 #. module: base
 #: model_terms:res.partner,website_description:base.res_partner_address_4
@@ -13623,7 +13253,7 @@ msgstr "Font"
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_I
 msgid "Food"
-msgstr "Hrana"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_company__report_footer
@@ -13665,7 +13295,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.identity_check_wizard
 msgid "Forgot password?"
-msgstr "Zaboravljena lozinka?"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_actions_act_window_view__view_mode__form
@@ -13715,8 +13345,6 @@ msgid ""
 "Found more than 10 errors and more than one error per 10 records, "
 "interrupted to avoid showing too many errors."
 msgstr ""
-"Pronađeno je više od 10 pogrešaka i više od jedne pogreške na 10 zapisa, "
-"prekinutih kako bi se izbjeglo prikazivanje previše pogrešaka."
 
 #. module: base
 #: code:addons/base/models/ir_fields.py:0
@@ -13749,8 +13377,6 @@ msgstr ""
 msgid ""
 "France - VAT Anti-Fraud Certification for Point of Sale (CGI 286 I-3 bis)"
 msgstr ""
-"Francuska - PDV certifikat za borbu protiv prijevara za prodajno mjesto (CGI"
-" 286 I-3 bis)"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale_coupon_delivery
@@ -13867,7 +13493,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_in_purchase
 msgid "GST Purchase Report"
-msgstr "Izvješće o nabavi GST-a"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_in_sale
@@ -13882,7 +13508,7 @@ msgstr ""
 #. module: base
 #: model:res.country,vat_label:base.in
 msgid "GSTIN"
-msgstr "GSTIN"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.ga
@@ -13921,8 +13547,6 @@ msgid ""
 "Gemini Furniture brings honesty and seriousness to wood industry while "
 "helping customers deal with trees, flowers and fungi."
 msgstr ""
-"Namještaj Gemini donosi iskrenost i ozbiljnost drvnoj industriji, a pomaže "
-"kupcima da se nose s drvećem, cvijećem i gljivama."
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_rule_form
@@ -13944,9 +13568,6 @@ msgstr "Opće postavke"
 #: model:ir.module.module,summary:base.module_crm_iap_lead
 msgid "Generate Leads/Opportunities based on country, industries, size, etc."
 msgstr ""
-"Generiraj nove potencijale/prilike temeljene na državama, idustriji, veličini...\n"
-"\n"
-" "
 
 #. module: base
 #: model:ir.module.module,summary:base.module_crm_iap_lead_website
@@ -13968,7 +13589,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_website_crm
 msgid "Generate leads from a contact form"
-msgstr "Generiraj potencijal iz kontakt forme"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_subscription
@@ -14025,7 +13646,7 @@ msgstr "Njemačka"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_de
 msgid "Germany - Accounting"
-msgstr "Njemačka - Računovodstvo"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_de_reports
@@ -14040,7 +13661,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_de_skr04
 msgid "Germany SKR04 - Accounting"
-msgstr "Njemačka SKR04 - Računovodstvo"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_sale_dashboard
@@ -14180,7 +13801,7 @@ msgstr "Grenada"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_web_grid
 msgid "Grid View"
-msgstr "Pogled mreže"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_access__group_id
@@ -14262,7 +13883,7 @@ msgstr "Grupe (prazno = globalno)"
 #. module: base
 #: model:res.country,name:base.gp
 msgid "Guadeloupe"
-msgstr "Guadeloupe"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.gu
@@ -14282,7 +13903,7 @@ msgstr "Guatemala - Računovodstvo"
 #. module: base
 #: model:res.country,name:base.gg
 msgid "Guernsey"
-msgstr "Guernsey"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.gn
@@ -14292,7 +13913,7 @@ msgstr "Gvineja"
 #. module: base
 #: model:res.country,name:base.gw
 msgid "Guinea-Bissau"
-msgstr "Gvinea Bisao"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.gy
@@ -14322,7 +13943,7 @@ msgstr ""
 #. module: base
 #: model:res.country,vat_label:base.ca
 msgid "HST"
-msgstr "HST"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_actions_report__report_type__qweb-html
@@ -14342,7 +13963,7 @@ msgstr "Haiti"
 #. module: base
 #: model:ir.module.module,summary:base.module_lunch
 msgid "Handle lunch orders of your employees"
-msgstr "Rukujte narudžbama za ručak svojih zaposlenika"
+msgstr ""
 
 #. module: base
 #: model_terms:res.partner,website_description:base.res_partner_1
@@ -14352,7 +13973,7 @@ msgstr "Rukujte narudžbama za ručak svojih zaposlenika"
 #: model_terms:res.partner,website_description:base.res_partner_3
 #: model_terms:res.partner,website_description:base.res_partner_4
 msgid "Happy to be Sponsor"
-msgstr "Sretan što sam sponzor"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_hw_escpos
@@ -14367,7 +13988,7 @@ msgstr "Hardverski proxy"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_reset_view_arch_wizard__has_diff
 msgid "Has Diff"
-msgstr "Ima razliku"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_module_module__has_iap
@@ -14404,7 +14025,7 @@ msgstr "Pomoć"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
 msgid "Help with Python expressions"
-msgstr "Pomoć s Python izrazima"
+msgstr ""
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_services_helpdesk
@@ -14430,7 +14051,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_helpdesk_repair
 msgid "Helpdesk Repair"
-msgstr "Helpdesk popravak"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_helpdesk_sale_coupon
@@ -14466,8 +14087,6 @@ msgid ""
 "Helps you handle your accounting needs, if you are not an accountant, we "
 "suggest you to install only the Invoicing."
 msgstr ""
-"Pomaže vam u rješavanju računovodstvenih potreba, ako niste računovođa, "
-"predlažemo vam da instalirate samo fakturiranje."
 
 #. module: base
 #: model:ir.module.category,description:base.module_category_sales_sales
@@ -14684,7 +14303,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_model_fields_form
 #: model_terms:ir.ui.view,arch_db:base.view_model_form
 msgid "How to define a computed field"
-msgstr "Kako definirati izračunato polje"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_expense_extract
@@ -14694,7 +14313,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_expense_predict_product
 msgid "Hr Expense Predict product"
-msgstr "Hr Trošak Predvidjeti proizvod"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_recruitment_survey
@@ -14726,12 +14345,12 @@ msgstr "Mađarska"
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_I
 msgid "I ACCOMMODATION AND FOOD SERVICE ACTIVITIES"
-msgstr "I DJELATNOSTI PRUŽANJA SMJEŠTAJA I PRIPREME I USLUŽIVANJA HRANE"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_iap_crm
 msgid "IAP / CRM"
-msgstr "IAP / CRM"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_iap_mail
@@ -14980,7 +14599,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_default__condition
 msgid "If set, applies the default upon condition."
-msgstr "Ako je postavljeno, primjenjuje zadano pod uvjetom."
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
@@ -15057,9 +14676,6 @@ msgid ""
 " (if you delete a native ACL, it will be re-created when you reload the "
 "module)."
 msgstr ""
-"Ako poništite aktivno polje, ono će onemogućiti ACL bez brisanja (ako "
-"izbrišete izvorni ACL, on će se ponovno stvoriti kada ponovno učitate "
-"modul)."
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_rule__active
@@ -15114,7 +14730,7 @@ msgstr "Slika 512"
 #. module: base
 #: model:ir.model,name:base.model_image_mixin
 msgid "Image Mixin"
-msgstr "Mixin slike"
+msgstr ""
 
 #. module: base
 #: code:addons/image.py:0
@@ -15127,7 +14743,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_upgrade
 msgid "Impacted Apps"
-msgstr "Utjecaj na Aplikacije"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_module_uninstall__model_ids
@@ -15137,12 +14753,12 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_module_uninstall__module_ids
 msgid "Impacted modules"
-msgstr "Pogođeni moduli"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_auth_password_policy
 msgid "Implement basic password policy configuration & check"
-msgstr "Implementacija konfiguracije pravila osnovne lozinke i provjera"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_sequence__implementation
@@ -15169,7 +14785,7 @@ msgstr "Uvoz/Izvoz"
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_amazon
 msgid "Import Amazon orders and sync deliveries"
-msgstr "Učitaj Amazonove narudžbe i sinkroniziraj isporuke"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_bank_statement_import_camt
@@ -15200,7 +14816,7 @@ msgstr "Uvoz QIF bankovnog izvoda"
 #: code:addons/base/models/res_partner.py:0
 #, python-format
 msgid "Import Template for Customers"
-msgstr "Uvoz predloška za kupce"
+msgstr ""
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_view_base_import_language
@@ -15255,7 +14871,7 @@ msgstr "Neaktivni korisnici"
 #: code:addons/models.py:0
 #, python-format
 msgid "Incompatible companies on records:"
-msgstr "Nekompatibilna poduzeća u evidenciji:"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_fields__index
@@ -15336,12 +14952,12 @@ msgstr "Indonezija"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_id_efaktur
 msgid "Indonesia E-faktur"
-msgstr "Indonezija E-fakture"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_id
 msgid "Indonesian - Accounting"
-msgstr "Indonezija - Računovodstvo"
+msgstr ""
 
 #. module: base
 #: model:ir.actions.act_window,name:base.res_partner_industry_action
@@ -15355,7 +14971,7 @@ msgstr "Industrije"
 #: model_terms:ir.ui.view,arch_db:base.res_partner_industry_view_form
 #: model_terms:ir.ui.view,arch_db:base.res_partner_industry_view_tree
 msgid "Industry"
-msgstr "Industrija"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model__info
@@ -15386,8 +15002,6 @@ msgid ""
 "Inherited Qweb view cannot have 'Groups' define on the record. Use 'groups' "
 "attributes inside the view definition"
 msgstr ""
-"Naslijeđeni Qweb prikaz ne može imati definirane 'Grupe' na zapisu. "
-"Korištenje atributa 'grupa' unutar definicije prikaza"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_ui_view__inherit_id
@@ -15494,7 +15108,7 @@ msgstr "Cijeli broj"
 #. module: base
 #: model:ir.module.module,summary:base.module_marketing_automation_sms
 msgid "Integrate SMS Marketing in marketing campaigns"
-msgstr "Integrirajte SMS marketing u marketinške kampanje"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_coupon
@@ -15509,7 +15123,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,description:base.module_sale_coupon_delivery
 msgid "Integrate coupon mechanism with shipping costs."
-msgstr "Integrirajte mehanizam kupona s troškovima dostave."
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_six
@@ -15536,7 +15150,7 @@ msgstr "Interakcija između pravila"
 #: model:ir.module.module,summary:base.module_account_inter_company_rules
 #: model:ir.module.module,summary:base.module_sale_purchase_inter_company_rules
 msgid "Intercompany SO/PO/INV rules"
-msgstr "Međukompanijska SO/PO/INV pravila"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_groups_search
@@ -15556,7 +15170,7 @@ msgstr "Interni izvor"
 #. module: base
 #: model:res.groups,name:base.group_user
 msgid "Internal User"
-msgstr "Interni korisnik"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_search
@@ -15597,7 +15211,7 @@ msgstr "Jedinica intervala"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_intrastat
 msgid "Intrastat Reports"
-msgstr "Intrastat izvještaji"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.report_irmodulereference
@@ -15691,12 +15305,6 @@ msgid "Invalid model name %r in action definition."
 msgstr "Neispravan naziv modela %r u definiciji akcije."
 
 #. module: base
-#: code:addons/base/models/ir_actions.py:611
-#, python-format
-msgid "many2many fields cannot be evaluated by reference"
-msgstr ""
-
-#. module: base
 #: code:addons/template_inheritance.py:0
 #, python-format
 msgid "Invalid position attribute: '%s'"
@@ -15721,8 +15329,6 @@ msgid ""
 "Invalid server name !\n"
 " %s"
 msgstr ""
-"Naziv poslužitelja nije valjan !\n"
-" %s"
 
 #. module: base
 #: code:addons/base/models/ir_ui_view.py:0
@@ -15785,8 +15391,6 @@ msgid ""
 "Invoice & Delivery addresses are used in sales orders. Private addresses are"
 " only visible by authorized users."
 msgstr ""
-"Adrese fakture i dostave koriste se u nalozima za prodaju. Privatne adrese "
-"vidljive su samo ovlaštenim korisnicima."
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__type__invoice
@@ -15796,12 +15400,12 @@ msgstr "Adresa za račun"
 #. module: base
 #: model:ir.module.module,summary:base.module_account
 msgid "Invoices & Payments"
-msgstr "Računi i plaćanja"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_documents_account
 msgid "Invoices from Documents"
-msgstr "Računi iz dokumenata"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account
@@ -15811,7 +15415,7 @@ msgstr "Računovodstvo"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hw_posbox_homepage
 msgid "IoT Box Homepage"
-msgstr "IoT Box Početna stranica"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mrp_workorder_iot
@@ -15826,12 +15430,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_iot
 msgid "IoT for PoS"
-msgstr "IoT za PoS"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_restaurant_iot
 msgid "IoT for restaurants"
-msgstr "IoT za restorane"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.ir
@@ -15851,12 +15455,12 @@ msgstr "Irska"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ie
 msgid "Ireland - Accounting"
-msgstr "Irska - računovodstvo"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_lock
 msgid "Irreversible Lock Date"
-msgstr "Nepovratni datum zaključavanja"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_partner_merge_automatic_wizard__group_by_is_company
@@ -16062,7 +15666,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_latam_base
 msgid "LATAM Localization Base"
-msgstr "Baza lokalizacije LATAM-a"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_module_module__license__lgpl-3
@@ -16090,7 +15694,7 @@ msgstr "Zavisni troškovi"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mrp_landed_costs
 msgid "Landed Costs On MO"
-msgstr "Zavisni troškovi PN"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_mrp_landed_costs
@@ -16116,7 +15720,7 @@ msgstr "Jezik"
 #. module: base
 #: model:ir.model,name:base.model_base_language_export
 msgid "Language Export"
-msgstr "Izvoz jezika"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_base_language_import
@@ -16445,7 +16049,7 @@ msgstr "Zadnja verzija"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users__login_date
 msgid "Latest authentication"
-msgstr "Najnovija provjera autentičnosti"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_company__font__lato
@@ -16477,12 +16081,12 @@ msgstr "Izgled u izvješćima"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_crm_iap_lead_enrich
 msgid "Lead Enrichment"
-msgstr "Obogaćivanje potencijala"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_crm_iap_lead
 msgid "Lead Generation"
-msgstr "Generiranje potencijala"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_crm_iap_lead_website
@@ -16507,7 +16111,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.module_view_kanban
 msgid "Learn More"
-msgstr "Saznaj više"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.lb
@@ -16555,8 +16159,6 @@ msgid ""
 "Let the system try to select the right account, taxes and/or product for "
 "your vendor bills"
 msgstr ""
-"Neka sustav pokuša odabrati pravi račun, poreze i/ili proizvod za vaše "
-"račune dobavljača"
 
 #. module: base
 #: model:ir.module.module,description:base.module_hr_referral
@@ -16567,12 +16169,12 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.onboarding_step
 msgid "Let's do it"
-msgstr "Učinimo to!"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.onboarding_company_step
 msgid "Let's start!"
-msgstr "Počnimo !"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__report_paperformat__format__letter
@@ -16657,12 +16259,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_hr
 msgid "Link module between Point of Sale and HR"
-msgstr "Modul koji povezuje POS i Ljudske resurse"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_sale
 msgid "Link module between Point of Sale and Sales"
-msgstr "Modul povezivanja između prodajnog mjesta i prodajnog mjesta"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_hr_l10n_be
@@ -16673,7 +16275,7 @@ msgstr ""
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "List of contact fields to display in the widget"
-msgstr "Popis polja kontakta za prikaz u widgetu"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_model_fields__modules
@@ -16693,7 +16295,7 @@ msgstr "Litva"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_lt
 msgid "Lithuania - Accounting"
-msgstr "Litva - Računovodstvo"
+msgstr ""
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_website_live_chat
@@ -16709,7 +16311,7 @@ msgstr "Online tečajna lista"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_event_track_live
 msgid "Live Event Tracks"
-msgstr "Zapisi događaja uživo"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_im_livechat_enterprise
@@ -16781,7 +16383,7 @@ msgstr "Praćenja"
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "Long"
-msgstr "Lugačko"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_loyalty
@@ -16832,7 +16434,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mrp_workorder
 msgid "MRP II"
-msgstr "Proizvodnja II"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mrp_workorder_expiry
@@ -17045,7 +16647,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_work_entry_holidays
 msgid "Manage Time Off in Payslips"
-msgstr "Upravljanje slobodnim vremenom na platnim listama"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_forum
@@ -17098,7 +16700,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_coupon_taxcloud_delivery
 msgid "Manage discounts in taxclouds computations with delivery."
-msgstr "Upravljajte popustima u izračunima poreznih oblaka uz isporuku."
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_coupon_taxcloud
@@ -17114,7 +16716,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_account_accountant
 msgid "Manage financial and analytic accounting"
-msgstr "Upravljanje financijskim i analitičkim računovodstvom"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.res_partner_industry_action
@@ -17136,7 +16738,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_skills
 msgid "Manage skills, knowledge and resumé of your employees"
-msgstr "Upravljajte vještinama, znanjem i životopisom svojih zaposlenika"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_partner_title_contact
@@ -17150,7 +16752,7 @@ msgstr ""
 #: model:ir.module.module,summary:base.module_hr_work_entry
 #: model:ir.module.module,summary:base.module_hr_work_entry_contract
 msgid "Manage work entries"
-msgstr "Upravljanje radnim stavkama"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_social_facebook
@@ -17168,7 +16770,7 @@ msgstr ""
 #: model:ir.module.module,description:base.module_social_twitter
 #: model:ir.module.module,summary:base.module_social_twitter
 msgid "Manage your Twitter accounts and schedule tweets"
-msgstr "Upravljanje twitter računima i zakazivanje tweetova"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_contract_sign
@@ -17188,12 +16790,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_fleet
 msgid "Manage your fleet and track car costs"
-msgstr "Upravljajte svojim voznim parkom i pratite troškove automobila"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_hr_recruitment
 msgid "Manage your online hiring process"
-msgstr "Upravljajte vašim online procesom zapošljavanja"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_social
@@ -17219,12 +16821,12 @@ msgstr "Proizvodnja"
 #: model:ir.module.module,shortdesc:base.module_mrp_product_expiry
 #: model:ir.module.module,summary:base.module_mrp_product_expiry
 msgid "Manufacturing Expiry"
-msgstr "Istek proizvodnje"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_mrp
 msgid "Manufacturing Orders & BOMs"
-msgstr "Proizvodni nalozi i sastavnice"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_property__type__many2one
@@ -17270,12 +16872,12 @@ msgstr "Marketing"
 #: model:ir.module.category,name:base.module_category_marketing_marketing_automation
 #: model:ir.module.module,shortdesc:base.module_marketing_automation
 msgid "Marketing Automation"
-msgstr "Automatizacija marketinga"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_marketing_automation
 msgid "Marketing Automation Tests"
-msgstr "Testovi automatizacije marketinga"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ma
@@ -17290,18 +16892,17 @@ msgstr "Maršalovi otoci"
 #. module: base
 #: model:res.country,name:base.mq
 msgid "Martinique"
-msgstr "Martinik"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_mass_mailing
 msgid "Mass Mail Tests"
-msgstr "Testovi masovne pošte"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_test_mass_mailing
 msgid "Mass Mail Tests: feature and performance tests for mass mailing"
 msgstr ""
-"Testovi masovne pošte: testovi značajki i performansi za masovnu poštu"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mass_mailing_themes
@@ -17316,7 +16917,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mass_mailing_slides
 msgid "Mass mailing on course members"
-msgstr "Masovna pošta članovima tečaja"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mass_mailing_crm
@@ -17331,7 +16932,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mass_mailing_event_track
 msgid "Mass mailing on track speakers"
-msgstr "Masovno slanje pošte na govornicima zapisa"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mrp_mps
@@ -17428,7 +17029,7 @@ msgstr ""
 #. module: base
 #: model:ir.model,name:base.model_base_partner_merge_automatic_wizard
 msgid "Merge Partner Wizard"
-msgstr "Čarobnjak za spajanje partnera"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.base_partner_merge_automatic_wizard_form
@@ -17603,7 +17204,7 @@ msgstr "Nedostaje vrijednost za obavezno polje '%s' (%s)"
 #: code:addons/base/models/ir_ui_view.py:0
 #, python-format
 msgid "Missing view architecture."
-msgstr "Nedostaje arhitektura prikaza."
+msgstr ""
 
 #. module: base
 #: model:res.partner.title,name:base.res_partner_title_mister
@@ -17673,7 +17274,7 @@ msgstr ""
 #. module: base
 #: model:ir.model,name:base.model_ir_model_access
 msgid "Model Access"
-msgstr "Pristup modelu"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_ir_model_constraint
@@ -17834,7 +17435,7 @@ msgstr "Zavisnost modula"
 #. module: base
 #: model:ir.model,name:base.model_ir_module_module_exclusion
 msgid "Module exclusion"
-msgstr "Isključivanje modula"
+msgstr ""
 
 #. module: base
 #: code:addons/convert.py:0
@@ -17923,7 +17524,7 @@ msgstr "Monserat"
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
 #: model_terms:ir.ui.view,arch_db:base.view_users_form_simple_modif
 msgid "More languages"
-msgstr "Više jezika"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.ma
@@ -18038,7 +17639,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.form_res_users_key_description
 msgid "Name your key"
-msgstr "Nazovite ključ"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.report_irmodeloverview
@@ -18089,17 +17690,17 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_nl_report_intrastat
 msgid "Netherlands Intrastat Declaration Reports"
-msgstr "Izvješća o deklaraciji o intrastatu u Nizozemskoj"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_form_simple_modif
 msgid "New API Key"
-msgstr "novi API ključ"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.nc
 msgid "New Caledonia"
-msgstr "Nova Kaledonija"
+msgstr ""
 
 #. module: base
 #: code:addons/base/wizard/base_export_language.py:0
@@ -18184,8 +17785,6 @@ msgid ""
 "Nicole is <b>author of several books</b>, including Amazon best seller\n"
 "                \"How Azure and Odoo will change the business world!\"."
 msgstr ""
-"Nicole je <b>autorica nekoliko knjiga </b>, uključujući Amazon bestseler\n"
-"\"Kako će Azure i Odoo promijeniti poslovni svijet!\"."
 
 #. module: base
 #: model_terms:res.partner,website_description:base.res_partner_address_16
@@ -18287,7 +17886,7 @@ msgstr ""
 #: code:addons/base/models/ir_actions.py:0
 #, python-format
 msgid "No spaces allowed in view_mode: %r"
-msgstr "Razmaci nisu dozvoljeni u view_mode: %r"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_data__noupdate
@@ -18385,7 +17984,7 @@ msgstr ""
 #: code:addons/base/models/ir_rule.py:0
 #, python-format
 msgid "Note: this might be a multi-company issue."
-msgstr "Napomena : ovo bi mogao biti problem sa više tvrtki."
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner__comment
@@ -18674,7 +18273,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_module_module__license__oeel-1
 msgid "Odoo Enterprise Edition License v1.0"
-msgstr "Odoo Enterprise Edition Licenca v1.0"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_module_module__to_buy
@@ -19582,16 +19181,6 @@ msgid ""
 msgstr ""
 
 #. module: base
-#: code:addons/base/models/ir_actions_report.py:0
-#, python-format
-msgid ""
-"Odoo is unable to merge the PDFs attached to the following records:\n"
-"%s\n"
-"\n"
-"Please exclude them from the selection to continue. It's possible to still retrieve those PDFs by selecting each of the affected records individually, which will avoid merging."
-msgstr ""
-
-#. module: base
 #: model:ir.module.module,shortdesc:base.module_odoo_referral
 msgid "Odoo referral program"
 msgstr ""
@@ -19665,7 +19254,7 @@ msgstr ""
 #: code:addons/base/models/ir_actions_report.py:0
 #, python-format
 msgid "One of the documents, you try to merge is encrypted"
-msgstr "Jedan od dokumenata koji pokušavate spojiti je kriptiran"
+msgstr ""
 
 #. module: base
 #: code:addons/models.py:0
@@ -19696,7 +19285,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,name:base.module_category_marketing_online_appointment
 msgid "Online Appointment"
-msgstr "Online sastanak"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_online_synchronization
@@ -19706,7 +19295,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_event_sale
 msgid "Online Event Ticketing"
-msgstr "Online ulaznice za događaje"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_hr_recruitment
@@ -19716,12 +19305,12 @@ msgstr "Online poslovi"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_membership
 msgid "Online Members Directory"
-msgstr "Mrežni direktorij članova"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_form_project
 msgid "Online Task Submission"
-msgstr "Slanje mrežnih zadataka"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_helpdesk_form
@@ -19791,7 +19380,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.demo_force_install_form
 msgid "Oops, no!"
-msgstr "Oops, ne!"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_update
@@ -19823,7 +19412,7 @@ msgstr "Otvori prozor"
 #: code:addons/models.py:0
 #, python-format
 msgid "Operation:"
-msgstr "Operacija"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_crm
@@ -19833,7 +19422,7 @@ msgstr "Od prodajne prilike do ponude"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_renting_crm
 msgid "Opportunity to Rental"
-msgstr "Prilika za najam"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__base_partner_merge_automatic_wizard__state__option
@@ -19863,7 +19452,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_actions_client__res_model
 msgid "Optional model, mostly used for needactions."
-msgstr "Opcionalni model, koji se uglavnom koristi za potrebe."
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_mail_server__smtp_pass
@@ -19874,7 +19463,7 @@ msgstr "Opcionalna zaporka za SMTP autentifikaciju"
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "Optional timezone name"
-msgstr "Opcionalni naziv vremenske zone"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_mail_server__smtp_user
@@ -20078,12 +19667,12 @@ msgstr "Originalni pogled"
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "Original currency"
-msgstr "Originalna valuta"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_company__font__oswald
 msgid "Oswald"
-msgstr "Oswald"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/res_users.py:0
@@ -20094,7 +19683,7 @@ msgstr "Ostalo"
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__type__other
 msgid "Other Address"
-msgstr "Ostale adrese"
+msgstr ""
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_extra
@@ -20147,7 +19736,7 @@ msgstr "Odlazni E-mail poslužitelji"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_microsoft_calendar
 msgid "Outlook Calendar"
-msgstr "Outlook Kalendar"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_report_paperformat__dpi
@@ -20174,7 +19763,7 @@ msgstr "Vlasnik"
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_P
 msgid "P EDUCATION"
-msgstr "P edukacija"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_pe
@@ -20209,7 +19798,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_hr_mobile
 msgid "POS Barcode in Mobile"
-msgstr "POS barkod u mobitelu"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_hr_mobile
@@ -20370,7 +19959,7 @@ msgstr "Partner"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_partner_autocomplete
 msgid "Partner Autocomplete"
-msgstr "Automatsko popunjavanje partnera"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_res_partner_category
@@ -20380,7 +19969,7 @@ msgstr "Oznake partnera"
 #. module: base
 #: model:ir.model,name:base.model_res_partner_title
 msgid "Partner Title"
-msgstr "Naslov partnera"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_title_form
@@ -20402,7 +19991,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_partner__same_vat_partner_id
 #: model:ir.model.fields,field_description:base.field_res_users__same_vat_partner_id
 msgid "Partner with same Tax ID"
-msgstr "Partner sa istim poreznim brojem"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_users__partner_id
@@ -20437,7 +20026,7 @@ msgstr "Zaporka"
 #. module: base
 #: model:ir.model,name:base.model_res_users_identitycheck
 msgid "Password Check Wizard"
-msgstr "Čarobnjak za provjeru lozinke"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_auth_password_policy
@@ -20459,12 +20048,12 @@ msgstr "Putanja"
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "Pattern to format"
-msgstr "Uzorak za formatiranje"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_payroll_account_sepa
 msgid "Pay your employees with SEPA payment."
-msgstr "Platite zaposlenike sa SEPA plaćanjem."
+msgstr ""
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_accounting_payment
@@ -20534,7 +20123,7 @@ msgstr "Stjecatelj plaćanja: PayuMoney implementacija"
 #. module: base
 #: model:ir.module.module,summary:base.module_payment_sepa_direct_debit
 msgid "Payment Acquirer: Sepa Direct Debit"
-msgstr "Stjecatelj plaćanja: Sepa Direct Debit"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_payment_stripe
@@ -20791,7 +20380,7 @@ msgstr "PostgreSQL definicija ograničenja"
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_model_constraint__name
 msgid "PostgreSQL constraint or foreign key name."
-msgstr "PostgreSQL ograničenje ili naziv stranog ključa."
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_model_relation__name
@@ -20822,7 +20411,7 @@ msgstr "Prefiks za brojčanu seriju"
 #. module: base
 #: model:ir.module.module,summary:base.module_website_twitter_wall
 msgid "Pretty Way to Display Tweets for Event"
-msgstr "Lijep način prikaza tweetova za događaj"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_report_layout__image
@@ -20838,7 +20427,7 @@ msgstr ""
 #: code:addons/base/models/ir_ui_view.py:0
 #, python-format
 msgid "Previous Arch"
-msgstr "Prijašnji luk"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_ui_view__arch_prev
@@ -20865,7 +20454,7 @@ msgstr "Primarna boja"
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_ca_check_printing
 msgid "Print CA Checks"
-msgstr "Ispiši CA čekove"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_us_check_printing
@@ -20880,7 +20469,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_report_paperformat__print_page_width
 msgid "Print page width (mm)"
-msgstr "Širina ispisa stranice (mm)"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_report__print_report_name
@@ -20912,7 +20501,7 @@ msgstr "Privatna metoda (kao što je %s) ne može biti pozvana na daljiinu."
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale_stock
 msgid "Product Availability"
-msgstr "Dostupnost proizvoda"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale_comparison
@@ -20933,7 +20522,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_product_matrix
 msgid "Product Matrix"
-msgstr "Matrica proizvoda"
+msgstr ""
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_productivity
@@ -20954,7 +20543,7 @@ msgstr "Datum isteka proizvoda"
 #. module: base
 #: model:ir.module.module,summary:base.module_documents_product
 msgid "Products from Documents"
-msgstr "Proizvodi iz dokumenata"
+msgstr ""
 
 #. module: base
 #: model:res.partner.title,shortcut:base.res_partner_title_prof
@@ -21156,7 +20745,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_website_event
 msgid "Publish events, sell tickets"
-msgstr "Objavite događaje, prodajte karte"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_customer
@@ -21199,12 +20788,12 @@ msgstr "Dogovori o nabavi"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_purchase_intrastat
 msgid "Purchase Intrastat"
-msgstr "Intrastat u nabavi"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_purchase_product_matrix
 msgid "Purchase Matrix"
-msgstr "Matrica nabave"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_purchase_stock
@@ -21224,7 +20813,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_purchase_stock_enterprise
 msgid "Purchase Stock Enterprise"
-msgstr "Nabava burzovne korporacije"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_purchase_mrp
@@ -21239,7 +20828,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_purchase
 msgid "Purchase orders, tenders and agreements"
-msgstr "Narudžbenice, ponude i ugovori"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_event_track_social
@@ -21324,7 +20913,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_quality_iot
 msgid "Quality steps and IoT devices"
-msgstr "Koraci kvalitete i IoT uređaji"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_event_questions
@@ -21360,7 +20949,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_quotation_builder
 msgid "Quotation Builder"
-msgstr "Izrađivač ponuda"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_expense
@@ -21381,7 +20970,7 @@ msgstr ""
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_barcode
 msgid "Qweb Field Barcode"
-msgstr "Barkod polja Qweb"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_contact
@@ -21422,7 +21011,7 @@ msgstr ""
 #: model:ir.model,name:base.model_ir_qweb_field_image
 #: model:ir.model,name:base.model_ir_qweb_field_image_url
 msgid "Qweb Field Image"
-msgstr "Qweb Polje Slika"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_integer
@@ -21462,7 +21051,7 @@ msgstr ""
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_many2many
 msgid "Qweb field many2many"
-msgstr "Qweb polje many2many"
+msgstr ""
 
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_R
@@ -21477,12 +21066,12 @@ msgstr ""
 #. module: base
 #: model:res.country,vat_label:base.do
 msgid "RNC"
-msgstr "RNC"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_company__font__raleway
 msgid "Raleway"
-msgstr "Raleway"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_currency_rate__rate
@@ -21522,7 +21111,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_L
 msgid "Real Estate"
-msgstr "Nekretnine"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_server_object_lines__resource_ref
@@ -21606,13 +21195,13 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_documents_hr_recruitment
 msgid "Recruitment resumés and letters from documents"
-msgstr "Životopisi za zapošljavanje i pisma iz dokumenata"
+msgstr ""
 
 #. module: base
 #: code:addons/models.py:0
 #, python-format
 msgid "Recursion Detected."
-msgstr "Detektirana rekurzija."
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_module.py:0
@@ -21639,7 +21228,7 @@ msgstr "Vezna oznaka"
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "Reference date"
-msgstr "Referentni datum"
+msgstr ""
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_human_resources_referrals
@@ -21800,7 +21389,7 @@ msgstr "Izvješće"
 #. module: base
 #: model:ir.model,name:base.model_ir_actions_report
 msgid "Report Action"
-msgstr "Akcija izvještaja"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_report__report_file
@@ -21815,7 +21404,7 @@ msgstr "Podnožje izvještaja"
 #. module: base
 #: model:ir.model,name:base.model_report_layout
 msgid "Report Layout"
-msgstr "Izgled izvještaja"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.act_report_xml_search_view
@@ -21882,7 +21471,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_reset_view_arch_wizard__reset_mode
 msgid "Reset Mode"
-msgstr "Reset Mode"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.reset_view_arch_wizard_view
@@ -21996,7 +21585,7 @@ msgstr "Preciznost zaokruživanja"
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "Rounding precision"
-msgstr "Preciznost zaokruživanja"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_qweb_fields.py:0
@@ -22043,7 +21632,7 @@ msgstr "Pokreni ručno"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
 msgid "Run this action manually."
-msgstr "Pokreni ovu akciju ručno."
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.ru
@@ -22083,7 +21672,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_payroll_account_sepa
 msgid "SEPA Payments for Payroll"
-msgstr "SEPA plaćanja za obračun plaće"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mass_mailing_sms
@@ -22103,7 +21692,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sms
 msgid "SMS gateway"
-msgstr "SMS gateway"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_crm_sms
@@ -22113,7 +21702,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_event_sms
 msgid "SMS on Events"
-msgstr "SMS o događajima"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_mail_server__smtp_port
@@ -22133,7 +21722,7 @@ msgstr "SMTP poslužitelj"
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_purchase_stock
 msgid "SO/PO relation in case of MTO"
-msgstr "SO/PO veza u slučaju MTO"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_model__order
@@ -22190,7 +21779,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_be_hr_contract_salary
 msgid "Salary Configurator (Belgium)"
-msgstr "Konfigurator plaće (Belgija)"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_contract_salary_payroll
@@ -22220,12 +21809,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_coupon
 msgid "Sale Coupon"
-msgstr "Kupon prodaje"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_coupon_delivery
 msgid "Sale Coupon Delivery"
-msgstr "Isporuka kupona za prodaju"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_intrastat
@@ -22235,7 +21824,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_product_matrix
 msgid "Sale Matrix"
-msgstr "Matrica prodaje"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_product_configurator
@@ -22285,12 +21874,12 @@ msgstr "Prodaja"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid "Sales & Purchase"
-msgstr "Prodaja i Nabava"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_project
 msgid "Sales - Project"
-msgstr "Prodaja - Projekti"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_expense
@@ -22394,7 +21983,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_mrp_maintenance
 msgid "Schedule and manage maintenance on machine and tools."
-msgstr "Zakažite i upravljajte održavanjem na stroju i alatima."
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_industry_fsm_sale
@@ -22409,12 +21998,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_website_calendar
 msgid "Schedule appointments with clients"
-msgstr "Zakažite sastanke sa korisnicima"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_calendar
 msgid "Schedule employees' meetings"
-msgstr "Zakažite sastanke djelatnika"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_event_social
@@ -22471,7 +22060,7 @@ msgstr "Akcije traženja"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_bank_view_search
 msgid "Search Bank"
-msgstr "Pretraži banke"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_res_partner_filter
@@ -22486,7 +22075,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_partner_industry_view_search
 msgid "Search Partner Industry"
-msgstr "Industrija partnera za pretraživanje"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_act_window__search_view
@@ -22513,7 +22102,6 @@ msgstr "Traži module"
 #, python-format
 msgid "Search tag can only contain one search panel"
 msgstr ""
-"Oznaka za pretraživanje može sadržavati samo jednu ploču za pretraživanje"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_config_settings_view_form
@@ -22529,7 +22117,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company__secondary_color
 msgid "Secondary Color"
-msgstr "Sekundarna boja"
+msgstr ""
 
 #. module: base
 #: model:ir.ui.menu,name:base.menu_security
@@ -22544,7 +22132,7 @@ msgstr "Sigurnost"
 #: model_terms:ir.ui.view,arch_db:base.identity_check_wizard
 #, python-format
 msgid "Security Control"
-msgstr "Sigurnosna kontrola"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_mail_server_form
@@ -22652,12 +22240,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_website_event_sale
 msgid "Sell event tickets online"
-msgstr "Prodajte ulaznice za događaje putem interneta"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_sale_slides
 msgid "Sell your courses online"
-msgstr "Sell your courses online"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_sale_slides
@@ -22701,7 +22289,7 @@ msgstr ""
 #: model:ir.module.module,description:base.module_calendar_sms
 #: model:ir.module.module,summary:base.module_calendar_sms
 msgid "Send text messages as event reminders"
-msgstr "Slanje tekstnih poruka kao podsjetnika na događaje"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_stock_sms
@@ -22784,7 +22372,7 @@ msgstr "Tip brojčane serije"
 #. module: base
 #: model:ir.model,name:base.model_ir_sequence_date_range
 msgid "Sequence Date Range"
-msgstr "Sekvenca raspona datuma"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_sequence__padding
@@ -22839,7 +22427,7 @@ msgstr "Serverske radnje"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_cron__ir_actions_server_id
 msgid "Server action"
-msgstr "Serverska radnja"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_mail_server.py:0
@@ -22875,7 +22463,7 @@ msgstr "Postavi kao Todo"
 #. module: base
 #: model:ir.actions.act_window,name:base.action_open_base_onboarding_company
 msgid "Set your company data"
-msgstr "Postavite podatke vaše Tvrtke"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.onboarding_company_step
@@ -22895,8 +22483,6 @@ msgid ""
 "Setting a value makes this action available in the sidebar for the given "
 "model."
 msgstr ""
-"Postavljanje vrijednosti čini ovu radnju dostupnom u bočnoj traci za "
-"navedeni model."
 
 #. module: base
 #: code:addons/base/models/res_users.py:0
@@ -22947,7 +22533,7 @@ msgstr ""
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "Short"
-msgstr "Kratko"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_module_uninstall__show_all
@@ -22988,7 +22574,7 @@ msgstr "Potpiši"
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_contract_salary
 msgid "Sign Employment Contracts"
-msgstr "Potpiši ugovore o radu"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_documents_sign
@@ -23043,7 +22629,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_skills
 msgid "Skills Management"
-msgstr "Upravljanje vještinama"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_skills_slides
@@ -23064,7 +22650,7 @@ msgstr "Preskoči ove kontakte"
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "Slash"
-msgstr "Povlaka"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.sk
@@ -23084,7 +22670,7 @@ msgstr "Slovenski - Računovodstvo"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_snailmail
 msgid "Snail Mail"
-msgstr "Regularna pošta"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_snailmail_account_followup
@@ -23104,13 +22690,13 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_social_linkedin
 msgid "Social LinkedIn"
-msgstr "Social LinkedIn"
+msgstr ""
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_marketing_social_marketing
 #: model:ir.module.module,shortdesc:base.module_social
 msgid "Social Marketing"
-msgstr "Socijalni marketing"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_social_media
@@ -23158,7 +22744,7 @@ msgstr ""
 #: code:addons/base/models/ir_attachment.py:0
 #, python-format
 msgid "Sorry, you are not allowed to access these fields on attachments."
-msgstr "Nažalost, nije vam dopušten pristup ovim poljima u privicima."
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_attachment.py:0
@@ -23201,7 +22787,7 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.gs
 msgid "South Georgia and the South Sandwich Islands"
-msgstr "Južna Gruzija i Južni Sandwitch otoci"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.kr
@@ -23252,8 +22838,6 @@ msgstr ""
 msgid ""
 "Specify if missed occurrences should be executed when the server restarts."
 msgstr ""
-"Odredite treba li propuštena pojavljivanja izvršiti prilikom ponovnog "
-"pokretanja poslužitelja."
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_event_track
@@ -23263,7 +22847,7 @@ msgstr "Sponzori, Pjesme, Dnevni red, Vijesti događaja"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_documents_spreadsheet_account
 msgid "Spreadsheet Accounting Templates"
-msgstr "Predlošci računovodstva proračunskih tablica"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_documents_spreadsheet_account
@@ -23491,7 +23075,7 @@ msgstr "Stripe stjecatelj plaćanja"
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_translation__type__model_terms
 msgid "Structured Model Field"
-msgstr "Polje strukturiranog modela"
+msgstr ""
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_customizations_studio
@@ -23502,7 +23086,7 @@ msgstr "Studio"
 #. module: base
 #: model:ir.module.module,summary:base.module_mrp_subcontracting
 msgid "Subcontract Productions"
-msgstr "Podugovori proizvodnju"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_stock_barcode_mrp_subcontracting
@@ -23523,7 +23107,7 @@ msgstr "Podizbornici"
 #: model:ir.module.module,summary:base.module_hr_expense
 #: model:ir.module.module,summary:base.module_hr_payroll_expense
 msgid "Submit, validate and reinvoice employee expenses"
-msgstr "Podnošenje, potvrđivanje i ponovno pozivanje na troškove zaposlenika"
+msgstr ""
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_sales_subscription
@@ -23709,7 +23293,7 @@ msgstr "Ažuriranje sustava"
 #. module: base
 #: model:res.country,name:base.st
 msgid "São Tomé and Príncipe"
-msgstr "Sv. Tomo i Princip"
+msgstr ""
 
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_T
@@ -23736,7 +23320,7 @@ msgstr "TLS (STARTTLS)"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_auth_totp_portal
 msgid "TOTPortal"
-msgstr "TOTPortal"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__report_paperformat__format__tabloid
@@ -23817,7 +23401,7 @@ msgstr "PDV ID / OIB"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale_taxcloud_delivery
 msgid "TaxCloud and Delivery - Ecommerce"
-msgstr "TaxCloud i dostava - E-trgovina"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_subscription_taxcloud
@@ -23887,7 +23471,7 @@ msgstr ""
 #: model:ir.module.module,shortdesc:base.module_test_l10n_be_hr_payroll_account
 #: model:ir.module.module,summary:base.module_test_l10n_be_hr_payroll_account
 msgid "Test Belgian Payroll"
-msgstr "Testirajte belgijski obračun plaća"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_mail_server_form
@@ -23902,7 +23486,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_event_full
 msgid "Test Full Event Flow"
-msgstr "Testiraj puni tijek događaja"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_website_slides_full
@@ -23912,7 +23496,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_main_flows
 msgid "Test Main Flow"
-msgstr "Testiraj glavni tijek"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_payment_test
@@ -23927,7 +23511,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_rpc
 msgid "Test RPC"
-msgstr "Test RPC"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_test_marketing_automation
@@ -23937,7 +23521,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_test_data_cleaning
 msgid "Test Suite for Data Cleaning"
-msgstr "Komplet testova za čišćenje podataka"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_testing_utilities
@@ -24018,8 +23602,6 @@ msgid ""
 "The Jackson Group brings honesty and seriousness to wood industry while "
 "helping customers deal with trees, flowers and fungi."
 msgstr ""
-"Jackson Group unosi poštenje i ozbiljnost u drvnu industriju dok pomaže "
-"kupcima u rješavanju problema s drvećem, cvijećem i gljivama."
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_lang__url_code
@@ -24063,8 +23645,6 @@ msgid ""
 "The Tax Identification Number. Complete it if the contact is subjected to "
 "government taxes. Used in some legal statements."
 msgstr ""
-"Porezni identifikacijski broj. Dovršite ga ako je kontakt podvrgnut državnim"
-" porezima. Koristi se u nekim pravnim izjavama."
 
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_res_lang_url_code_uniq
@@ -24084,8 +23664,8 @@ msgstr ""
 #. module: base
 #: code:addons/base/models/ir_module.py:0
 #, python-format
-msgid "Those modules cannot be uninstalled: %s"
-msgstr ""
+msgid "The `base` module cannot be uninstalled"
+msgstr "Modul `base` ne može biti deinstaliran"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_partner_category__active
@@ -24206,12 +23786,12 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_uninstall
 msgid "The following apps will be uninstalled"
-msgstr "Deinstalirat će se sljedeće aplikacije"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_uninstall
 msgid "The following documents will be permanently lost"
-msgstr "Sljedeći dokumenti će biti trajno izgubljeni"
+msgstr ""
 
 #. module: base
 #: code:addons/base/wizard/base_module_upgrade.py:0
@@ -24228,12 +23808,6 @@ msgstr "Puni naziv države."
 #: model:ir.model.fields,help:base.field_res_partner__user_id
 #: model:ir.model.fields,help:base.field_res_users__user_id
 msgid "The internal user in charge of this contact."
-msgstr ""
-
-#. module: base
-#: code:addons/base/models/res_country.py:106
-#, python-format
-msgid "The layout contains an invalid format key"
 msgstr ""
 
 #. module: base
@@ -24355,8 +23929,6 @@ msgid ""
 "The path to the main report file (depending on Report Type) or empty if the "
 "content is in another field"
 msgstr ""
-"Put do glavne datoteke izvješća (ovisno o vrsti izvješća) ili prazan ako se "
-"sadržaj nalazi u drugom polju"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_cron__priority
@@ -24407,7 +23979,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_res_currency_rounding_gt_zero
 msgid "The rounding factor must be greater than 0!"
-msgstr "faktor zaokruživanja mora biti veći od 0!"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_mail_server.py:0
@@ -24446,7 +24018,7 @@ msgstr "Šifra države."
 #: code:addons/base/models/ir_model.py:0
 #, python-format
 msgid "The table %r if used for other, possibly incompatible fields."
-msgstr "Tablica %r ako se koristi za druga, možda nekompatibilna polja."
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_model_fields__model
@@ -24461,10 +24033,6 @@ msgid ""
 "browser PDF means the report will be rendered using Wkhtmltopdf and "
 "downloaded by the user."
 msgstr ""
-"Vrsta izvješća koja će se prikazati, od kojih svaka ima svoju metodu "
-"vizualizacije. HTML znači da će se izvješće otvoriti izravno u vašem "
-"pregledniku PDF znači da će se izvješće prikazati pomoću Wkhtmltopdf-a i "
-"preuzeti od strane korisnika."
 
 #. module: base
 #: code:addons/base/models/res_users.py:0
@@ -24513,7 +24081,7 @@ msgstr "Tema"
 #: model:ir.ui.menu,name:base.menu_theme_store
 #: model:ir.ui.menu,name:base.theme_store
 msgid "Theme Store"
-msgstr "Trgovina temama"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.base_partner_merge_automatic_wizard_form
@@ -24561,7 +24129,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_ui_view__arch_base
 msgid "This field is the same as `arch` field without translations"
-msgstr "Ovo je polje isto kao i polje \"luk\" bez prijevoda"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_lang__code
@@ -24586,8 +24154,6 @@ msgid ""
 "This field will save the current `arch_db` before writing on it.\n"
 "                                                                         Useful to (soft) reset a broken view."
 msgstr ""
-"Ovo će polje spremiti trenutnu 'arch_db' prije pisanja na njega.\n"
-"Korisno za (meko) resetiranje slomljenog prikaza."
 
 #. module: base
 #: code:addons/image.py:0
@@ -24612,10 +24178,6 @@ msgid ""
 " and reference view. The result is returned as an ordered list of pairs "
 "(view_id,view_mode)."
 msgstr ""
-"Ovo funkcijsko polje izračunava naručeni popis prikaza koji bi trebali biti "
-"omogućeni pri prikazivanju rezultata akcije, načinu vanjskog prikaza, "
-"prikazima i referentnom prikazu. Rezultat se vraća kao naručeni popis parova"
-" (view_id,view_mode)."
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.identity_check_wizard
@@ -24713,9 +24275,6 @@ msgid ""
 "present in a separate module as it contains models used only to perform\n"
 "tests independently to functional aspects of other models. "
 msgstr ""
-"Ovaj modul sadrži testove povezane s prikazom web-rešetke. To su.\n"
-"prisutan u zasebnom modulu jer sadrži modele koji se koriste samo za izvođenje\n"
-"samostalno testira na funkcionalne aspekte drugih modela. "
 
 #. module: base
 #: model:ir.module.module,description:base.module_test_timer
@@ -24751,11 +24310,6 @@ msgid ""
 "dependencies. Neither we want to add in website module some routes, views and\n"
 "models which only purpose is to run tests."
 msgstr ""
-"Ovaj modul sadrži testove povezane s web stranicom. To su.\n"
-"prisutni u zasebnom modulu dok testiramo instalaciju/deinstalaciju/nadogradnju modula\n"
-"i ne želimo svaki put ponovno učitati modul web stranice, uključujući i to je moguće\n"
-"Ovisnosti. Niti želimo dodati u modul web stranice neke rute, preglede i\n"
-"modeli čija je jedina svrha pokretanje testova."
 
 #. module: base
 #: model:ir.module.module,description:base.module_sale_subscription_timesheet
@@ -24770,8 +24324,6 @@ msgid ""
 "This module ensures that the taxes are computed on the invoice before a payment is created automatically for a subscription.\n"
 "    "
 msgstr ""
-"Ovaj modul osigurava da se porezi izračunavaju na fakturi prije nego što se "
-"plaćanje automatski kreira za pretplatu."
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_sale_taxcloud_delivery
@@ -24840,7 +24392,7 @@ msgstr "Četvrtak"
 #. module: base
 #: model:ir.module.module,summary:base.module_website_helpdesk_livechat
 msgid "Ticketing, Support, Livechat"
-msgstr "Problemi, podrška, čavrljanje uživo"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_helpdesk_slides
@@ -25006,10 +24558,6 @@ msgid ""
 "                IT budget by almost half within the last 2 years.\n"
 "                Famous Managing Partner."
 msgstr ""
-"Toni Rhodes radi u IT sektoru od 10 godina. On je poznat.\n"
-"posebno za prodaju mišjih zamki. S tim trikom koji je izrezao.\n"
-"IT proračun za gotovo polovicu u posljednje dvije godine.\n"
-"Poznati upravljački partner."
 
 #. module: base
 #: code:addons/base/models/res_users.py:0
@@ -25062,7 +24610,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_crm
 msgid "Track leads and close opportunities"
-msgstr "Praćenje potencijalnih klijenata i zatvaranje prilika"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_recruitment
@@ -25313,14 +24861,6 @@ msgid ""
 "- 'Add Followers': add followers to a record (Discuss)\n"
 "- 'Create Next Activity': create an activity (Discuss)"
 msgstr ""
-"Vrsta akcije poslužitelja. Dostupne su sljedeće vrijednosti:\n"
-"- \"Izvršite Python code\": blok piton koda koji će se izvršiti\n"
-"- \"Stvori\": stvaranje novog zapisa s novim vrijednostima\n"
-"- \"Ažuriranje zapisa\": ažuriranje vrijednosti zapisa\n"
-"- \"Izvršavanje nekoliko radnji\": definiranje akcije koja pokreće nekoliko drugih akcija poslužitelja\n"
-"- \"Pošalji e-poštu\": automatski pošaljite e-poštu (Razgovarajte)\n"
-"- \"Dodaj sljedbenike\": dodajte sljedbenike u zapis (Razgovarajte)\n"
-"- \"Stvori sljedeću aktivnost\": stvaranje aktivnosti (rasprava)"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_model_constraint__type
@@ -25381,17 +24921,17 @@ msgstr "URL"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__url_code
 msgid "URL Code"
-msgstr "URL Code"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_us_reports
 msgid "US - Accounting Reports"
-msgstr "SAD - Računovodstvena izvješća"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_us_check_printing
 msgid "US Checks Layout"
-msgstr "Izgled američkih čekova"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.um
@@ -25416,7 +24956,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,description:base.module_mass_mailing_crm
 msgid "UTM and mass mailing on lead / opportunities"
-msgstr "UTM i masovna pošta o potencijalnom klijentu / prilikama"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_mass_mailing_sale
@@ -25479,8 +25019,6 @@ msgid ""
 "Unable to order by %s: fields used for ordering must be present on the model"
 " and stored."
 msgstr ""
-"Nemoguće naručiti %s:  Polja koja se koriste za naručivanje moraju biti "
-"prisutna na modelu i pohranjena."
 
 #. module: base
 #: code:addons/base/models/ir_module.py:0
@@ -25520,7 +25058,7 @@ msgstr "Deinstaliraj modul"
 #: model:ir.model.fields.selection,name:base.selection__ir_module_module_dependency__state__uninstallable
 #: model:ir.model.fields.selection,name:base.selection__ir_module_module_exclusion__state__uninstallable
 msgid "Uninstallable"
-msgstr "Nije za instalaciju"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.ae
@@ -25550,7 +25088,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_uom
 msgid "Units of measure"
-msgstr "Jedinice mjere"
+msgstr ""
 
 #. module: base
 #: code:addons/model.py:0 code:addons/model.py:0 code:addons/model.py:0
@@ -25566,7 +25104,7 @@ msgstr "Nepoznato"
 #: code:addons/models.py:0
 #, python-format
 msgid "Unknown database error: '%s'"
-msgstr "Nepoznata pogreška baze podataka:%s"
+msgstr ""
 
 #. module: base
 #: code:addons/models.py:0
@@ -25710,7 +25248,7 @@ msgstr "Url"
 #. module: base
 #: model:ir.model.fields,help:base.field_res_country__image_url
 msgid "Url of static flag image"
-msgstr "URL slike statičke zastavice"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.uy
@@ -25744,12 +25282,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_delivery_iot
 msgid "Use IoT devices in delivery operations"
-msgstr "Korištenje IoT uređaja u operacijama isporuke"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_partner__barcode
 msgid "Use a barcode to identify this contact."
-msgstr "Koristite barkod za identifikaciju ovog ugovora."
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_stock_barcode
@@ -25771,7 +25309,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_website_sale_coupon
 msgid "Use coupon & promotion programs in your eCommerce store"
-msgstr "Koristite programe kupona i promocije u svojoj trgovini e-trgovine"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_coupon
@@ -25786,7 +25324,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_account_tax_python
 msgid "Use python code to define taxes"
-msgstr "Koristi python kod za definiciju poreza"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_sequence__use_date_range
@@ -25802,11 +25340,6 @@ msgid ""
 "This allow the user to send badges to employees instead of simple users.\n"
 "Badge received are displayed on the user profile.\n"
 msgstr ""
-"Koristite HR resurse za postupak gamifikacije.\n"
-"\n"
-"HR zaposlenik sada može upravljati izazovima i značkama.\n"
-"To korisniku omogućuje slanje znački zaposlenicima umjesto jednostavnim korisnicima.\n"
-"Primljena značka prikazuje se na korisničkom profilu.\n"
 
 #. module: base
 #: code:addons/base/models/ir_fields.py:0
@@ -26020,7 +25553,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_phone_validation
 msgid "Validate and format phone numbers"
-msgstr "Validiraj i provjeri telefonske brojeve"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_industry_fsm_stock
@@ -26083,7 +25616,7 @@ msgstr "Tekstualna vrijednost"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_mercury
 msgid "Vantiv Payment Services"
-msgstr "Vantiv Platne usluge"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.vu
@@ -26160,7 +25693,7 @@ msgstr "Pogledaj"
 #: code:addons/base/models/ir_ui_view.py:0
 #, python-format
 msgid "View '%(name)s' accessible only to groups %(groups)s "
-msgstr "Pogled '%(name)s' dostupan samo grupama %(groups)s "
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_ui_view.py:0
@@ -26251,7 +25784,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_ui_view__inherit_children_ids
 msgid "Views which inherit from this one"
-msgstr "Prikazi koji nasljeđuju od ovog"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.vg
@@ -26348,7 +25881,7 @@ msgstr "Web urednik"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_web_enterprise
 msgid "Web Enterprise"
-msgstr "Web Enterprise"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_web_gantt
@@ -26358,7 +25891,7 @@ msgstr "Web Gantt"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_web_grid
 msgid "Web Grid Tests"
-msgstr "Testovi web-rešetke"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_test_web_grid
@@ -26415,7 +25948,7 @@ msgstr "Web stranica poduzeća"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_event_crm_questions
 msgid "Website Event CRM Questions"
-msgstr "CRM pitanja o događaju web-mjesta"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_event_crm
@@ -26440,14 +25973,14 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_jitsi
 msgid "Website Jitsi"
-msgstr "Website Jitsi"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company__website
 #: model:ir.model.fields,field_description:base.field_res_partner__website
 #: model:ir.model.fields,field_description:base.field_res_users__website
 msgid "Website Link"
-msgstr "Link web stranice"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_livechat
@@ -26518,7 +26051,6 @@ msgstr ""
 #: model:ir.module.module,shortdesc:base.module_crm_enterprise_iap_lead_website
 msgid "Website Visits Lead Generation Enterprise"
 msgstr ""
-"Web stranica posjećuje enterprise za generiranje potencijalnih klijenata"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_profile
@@ -26543,7 +26075,7 @@ msgstr "Zapadna Sahara"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.form_res_users_key_description
 msgid "What's this key for?"
-msgstr "Čemu služi ovaj ključ?"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_actions_server__sequence
@@ -26568,9 +26100,6 @@ msgid ""
 "If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
 "Anywhere else, time values are computed according to the time offset of your web client."
 msgstr ""
-"Prilikom ispisa dokumenata i izvoza/uvoza podataka, vremenske vrijednosti izračunavaju se prema ovoj vremenskoj zoni.\n"
-"Ako vremenska zona nije postavljena, koristi se UTC (koordinirano univerzalno vrijeme).\n"
-"Bilo gdje drugdje, vremenske vrijednosti izračunavaju se prema vremenskom pomaku vašeg web klijenta."
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.sequence_view
@@ -26589,12 +26118,12 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_model_fields__store
 msgid "Whether the value is stored in the database."
-msgstr "Je li vrijednost pohranjena u bazi podataka."
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_module_module_dependency__auto_install_required
 msgid "Whether this dependency blocks automatic installation of the dependent"
-msgstr "Blokira li ova ovisnost automatsku instalaciju ovisnog"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_model_fields__translate
@@ -26612,11 +26141,6 @@ msgid ""
 "number upon assignment, there can still be gaps in the sequence if records "
 "are deleted. The 'no gap' implementation is slower than the standard one."
 msgstr ""
-"Dok se zapisu dodjeljuje redni broj, implementacija slijeda 'no gap' "
-"osigurava da je svaki prethodni redni broj već dodijeljen. Iako ova "
-"implementacija slijeda neće preskočiti nijedan redni broj nakon dodjele, još"
-" uvijek mogu postojati praznine u nizu ako se zapisi izbrišu. Implementacija"
-" 'no gap' je sporija od standardne."
 
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_G
@@ -26712,8 +26236,6 @@ msgid ""
 "Write Python code that the action will execute. Some variables are available"
 " for use; help about python expression is given in the help tab."
 msgstr ""
-"Napišite Python kod koji će akcija izvršiti. Neke varijable su dostupne za "
-"upotrebu; pomoć za izraz Python daje se na kartici pomoći."
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.form_res_users_key_show
@@ -26781,7 +26303,7 @@ msgstr ""
 #: code:addons/base/models/ir_module.py:0
 #, python-format
 msgid "You are trying to install incompatible modules in category \"%s\":"
-msgstr "Pokušavate instalirati nekompatibilne module u kategoriji \"%s\":"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_module.py:0
@@ -26793,7 +26315,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
 msgid "You can archive the contact"
-msgstr "Kontakt možete arhivirati"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_attachment__type
@@ -26851,12 +26373,12 @@ msgstr ""
 #: code:addons/base/models/res_users.py:0
 #, python-format
 msgid "You cannot activate the superuser."
-msgstr "Ne možete aktivirati superkorisnik."
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/res_partner.py:0
 #, python-format
-msgid "You cannot archive a contact linked to a portal or internal user."
+msgid "You cannot archive a contact linked to an internal user."
 msgstr ""
 
 #. module: base
@@ -26869,13 +26391,13 @@ msgstr "Ne možete kreirati rekurzivne hijerarhije partnera"
 #: code:addons/base/models/res_company.py:0
 #, python-format
 msgid "You cannot create recursive companies."
-msgstr "Nije moguće kreirati rekurzivne tvrtke."
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_ui_view.py:0
 #, python-format
 msgid "You cannot create recursive inherited views."
-msgstr "Ne možete stvoriti rekurzivne naslijeđene prikaze."
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/res_users.py:0
@@ -27023,7 +26545,7 @@ msgstr "Poštanski br."
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_country__zip_required
 msgid "Zip Required"
-msgstr "Broj pošte je obavezan"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_import_language
@@ -27054,7 +26576,7 @@ msgstr ""
 #: code:addons/models.py:0
 #, python-format
 msgid "allowed for groups %s"
-msgstr "dozvoljeno za grupe %s"
+msgstr ""
 
 #. module: base
 #: code:addons/models.py:0
@@ -27086,7 +26608,7 @@ msgstr "bool"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_delivery_bpost
 msgid "bpost Shipping"
-msgstr "bpost Shipping"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_model_fields__ttype__char
@@ -27144,7 +26666,7 @@ msgstr "npr. engleski"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid "e.g. Mister"
-msgstr "npr. Gospodin"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
@@ -27250,8 +26772,6 @@ msgid ""
 "has been successfully installed.\n"
 "Users can choose his favorite language in their preferences."
 msgstr ""
-"je uspješno instaliran.\n"
-"Korisnici mogu odabrati njegov omiljeni jezik u svojim preferencijama."
 
 #. module: base
 #: code:addons/base/models/ir_qweb_fields.py:0
@@ -27303,7 +26823,7 @@ msgstr "ir.actions.server"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_es_real_estates
 msgid "l10n_es_real_estates"
-msgstr "l10n_es_real_estates"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mail_bot_hr
@@ -27313,17 +26833,17 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_model_fields__ttype__many2many
 msgid "many2many"
-msgstr "many2many"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_model_fields__ttype__many2one
 msgid "many2one"
-msgstr "many2one"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_model_fields__ttype__many2one_reference
 msgid "many2one_reference"
-msgstr "many2one_reference"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_qweb_fields.py:0
@@ -27334,12 +26854,12 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.demo_failures_dialog
 msgid "module(s) failed to install and were disabled"
-msgstr "modul(i) se nisu uspjeli instalirati i onemogućeni su"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_model_fields__ttype__monetary
 msgid "monetary"
-msgstr "valutno"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_qweb_fields.py:0
@@ -27377,7 +26897,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_account_reports
 msgid "pos_account_reports"
-msgstr "pos_account_reports"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_cache
@@ -27397,7 +26917,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_hr
 msgid "pos_hr"
-msgstr "pos_hr"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_sale
@@ -27407,33 +26927,33 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_expense_predict_product
 msgid "predict the product from the expense description based on old ones"
-msgstr "predvidjeti proizvod iz opisa troškova na temelju starih"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_model_fields__ttype__reference
 msgid "reference"
-msgstr "referenca"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_res_users_apikeys
 msgid "res.users.apikeys"
-msgstr "res.users.apikeys"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_res_users_apikeys_description
 msgid "res.users.apikeys.description"
-msgstr "res.users.apikeys.description"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_res_users_apikeys_show
 msgid "res.users.apikeys.show"
-msgstr "res.users.apikeys.show"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "second"
-msgstr "drugi"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_model_fields__ttype__selection
@@ -27443,7 +26963,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_snailmail_account
 msgid "snailmail_account"
-msgstr "snailmail_account"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_form_simple_modif
@@ -27468,7 +26988,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_xlsx_export
 msgid "test xlsx export"
-msgstr "test izvoz u xlsx"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_assetsbundle
@@ -27508,7 +27028,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_limits
 msgid "test-limits"
-msgstr "ograničenja ispitivanja"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_lint
@@ -27565,13 +27085,13 @@ msgstr ""
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "week"
-msgstr "tjedan"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "year"
-msgstr "godina"
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/ir_fields.py:0
@@ -27583,9 +27103,3 @@ msgstr "da"
 #: model:res.country,name:base.ax
 msgid "Åland Islands"
 msgstr "Alandski otoci"
-
-#. module: base
-#: code:addons/base/models/res_currency.py:0
-#, python-format
-msgid "This currency is set on a company and therefore must be active."
-msgstr ""

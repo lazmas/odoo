@@ -3,7 +3,6 @@
 import itertools
 import logging
 import re
-import psycopg2
 from ast import literal_eval
 from collections import defaultdict
 from collections.abc import Mapping
@@ -14,7 +13,7 @@ from psycopg2 import sql
 from odoo import api, fields, models, tools, _
 from odoo.exceptions import AccessError, UserError, ValidationError
 from odoo.osv import expression
-from odoo.tools import pycompat, unique, OrderedSet
+from odoo.tools import pycompat, unique
 from odoo.tools.safe_eval import safe_eval, datetime, dateutil, time
 
 _logger = logging.getLogger(__name__)
@@ -201,7 +200,7 @@ class IrModel(models.Model):
         self.count = 0
         for model in self:
             records = self.env[model.model]
-            if not records._abstract and records._auto:
+            if not records._abstract:
                 cr.execute(sql.SQL('SELECT COUNT(*) FROM {}').format(sql.Identifier(records._table)))
                 model.count = cr.fetchone()[0]
 
@@ -431,18 +430,8 @@ class IrModel(models.Model):
             if tools.table_kind(cr, Model._table) not in ('r', None):
                 # not a regular table, so disable schema upgrades
                 Model._auto = False
-                cr.execute(
-                    '''
-                    SELECT a.attname
-                      FROM pg_attribute a
-                      JOIN pg_class t
-                        ON a.attrelid = t.oid
-                       AND t.relname = %s
-                     WHERE a.attnum > 0 -- skip system columns
-                    ''',
-                    [Model._table]
-                )
-                columns = {colinfo[0] for colinfo in cr.fetchall()}
+                cr.execute('SELECT * FROM %s LIMIT 0' % Model._table)
+                columns = {desc[0] for desc in cr.description}
                 Model._log_access = set(models.LOG_ACCESS_COLUMNS) <= columns
 
 
@@ -826,15 +815,16 @@ class IrModelFields(models.Model):
         self._prepare_update()
 
         # determine registry fields corresponding to self
-        fields = OrderedSet()
+        fields = []
         for record in self:
             try:
-                fields.add(self.pool[record.model]._fields[record.name])
+                fields.append(self.pool[record.model]._fields[record.name])
             except KeyError:
                 pass
 
-        # clean the registry from the fields to remove
-        self.pool.registry_invalidated = True
+        model_names = self.mapped('model')
+        self._drop_column()
+        res = super(IrModelFields, self).unlink()
 
         # discard the removed fields from field triggers
         def discard_fields(tree):
@@ -849,18 +839,7 @@ class IrModelFields(models.Model):
                     discard_fields(subtree)
 
         discard_fields(self.pool.field_triggers)
-
-        # discard the removed fields from field inverses
-        for Model in self.pool.values():
-            Model._field_inverses.discard_keys_and_values(fields)
-
-        # discard the removed fields from fields to compute
-        for field in fields:
-            self.env.all.tocompute.pop(field, None)
-
-        model_names = self.mapped('model')
-        self._drop_column()
-        res = super(IrModelFields, self).unlink()
+        self.pool.registry_invalidated = True
 
         # The field we just deleted might be inherited, and the registry is
         # inconsistent in this case; therefore we reload the registry.
@@ -1044,8 +1023,6 @@ class IrModelFields(models.Model):
             model_id = self.env['ir.model']._get_id(model_name)
             for field in self.env[model_name]._fields.values():
                 rows.append(self._reflect_field_params(field, model_id))
-        if not rows:
-            return
         cols = list(unique(['model', 'name'] + list(rows[0])))
         expected = [tuple(row[col] for col in cols) for row in rows]
 
@@ -1391,29 +1368,6 @@ class IrModelSelection(models.Model):
 
     def _process_ondelete(self):
         """ Process the 'ondelete' of the given selection values. """
-        def safe_write(records, fname, value):
-            if not records:
-                return
-            try:
-                with self.env.cr.savepoint():
-                    records.write({fname: value})
-            except Exception as e:
-                # going through the ORM failed, probably because of an exception
-                # in an override or possibly a constraint.
-                _logger.runbot(
-                    "Could not fulfill ondelete action for field %s.%s, "
-                    "attempting ORM bypass...", records._name, fname,
-                )
-                query = sql.SQL("UPDATE {} SET {}=%s WHERE id IN %s").format(
-                    sql.Identifier(records._table),
-                    sql.Identifier(fname),
-                )
-                # if this fails then we're shit out of luck and there's nothing
-                # we can do except fix on a case-by-case basis
-                value = field.convert_to_column(value, records)
-                self.env.cr.execute(query, [value, records._ids])
-                records.invalidate_cache([fname])
-
         for selection in self:
             Model = self.env[selection.field_id.model]
             # The field may exist in database but not in registry. In this case
@@ -1425,21 +1379,14 @@ class IrModelSelection(models.Model):
             if not field or not field.store or Model._abstract:
                 continue
 
-            ondelete = (field.ondelete or {}).get(selection.value)
-            # special case for custom fields
-            if ondelete is None and field.manual and not field.required:
-                ondelete = 'set null'
-
-            if ondelete is None:
-                # nothing to do, the selection does not come from a field extension
-                continue
-            elif callable(ondelete):
+            ondelete = (field.ondelete or {}).get(selection.value) or 'set null'
+            if callable(ondelete):
                 ondelete(selection._get_records())
             elif ondelete == 'set null':
-                safe_write(selection._get_records(), field.name, False)
+                selection._get_records().write({field.name: False})
             elif ondelete == 'set default':
                 value = field.convert_to_write(field.default(Model), Model)
-                safe_write(selection._get_records(), field.name, value)
+                selection._get_records().write({field.name: value})
             elif ondelete == 'cascade':
                 selection._get_records().unlink()
             else:
@@ -2196,41 +2143,21 @@ class IrModelData(models.Model):
         constraints = self.env['ir.model.constraint'].search([('module', 'in', modules.ids)])
         constraints._module_data_uninstall()
 
-        # If we delete a selection field, and some of its values have ondelete='cascade',
-        # we expect the records with that value to be deleted. If we delete the field first,
-        # the column is dropped and the selection is gone, and thus the records above will not
-        # be deleted.
-        delete(self.env['ir.model.fields.selection'].browse(unique(selection_ids)).exists())
+        # Remove fields, selections and relations. Note that the selections of
+        # removed fields do not require any "data fix", as their corresponding
+        # column no longer exists. We can therefore completely ignore them. That
+        # is why selections are removed after fields: most selections are
+        # deleted on cascade by their corresponding field.
         delete(self.env['ir.model.fields'].browse(unique(field_ids)))
+        delete(self.env['ir.model.fields.selection'].browse(unique(selection_ids)).exists())
         relations = self.env['ir.model.relation'].search([('module', 'in', modules.ids)])
         relations._module_data_uninstall()
 
         # remove models
         delete(self.env['ir.model'].browse(unique(model_ids)))
 
-        # sort out which undeletable model data may have become deletable again because
-        # of records being cascade-deleted or tables being dropped just above
-        for data in self.browse(undeletable_ids).exists():
-            record = self.env[data.model].browse(data.res_id)
-            try:
-                with self.env.cr.savepoint():
-                    if record.exists():
-                        # record exists therefore the data is still undeletable,
-                        # remove it from module_data
-                        module_data -= data
-                        continue
-            except psycopg2.ProgrammingError:
-                # This most likely means that the record does not exist, since record.exists()
-                # is rougly equivalent to `SELECT id FROM table WHERE id=record.id` and it may raise
-                # a ProgrammingError because the table no longer exists (and so does the
-                # record), also applies to ir.model.fields, constraints, etc.
-                pass
         # remove remaining module data records
-        module_data.unlink()
-
-    @api.model
-    def _process_end_unlink_record(self, record):
-        record.unlink()
+        (module_data - self.browse(undeletable_ids)).unlink()
 
     @api.model
     def _process_end(self, modules):
@@ -2302,12 +2229,12 @@ class IrModelData(models.Model):
                 module = xmlid.split('.', 1)[0]
                 record = record.with_context(module=module)
                 if record._name == 'ir.model.fields' and not module.startswith('test_'):
-                    _logger.runbot(
+                    _logger.warning(
                         "Deleting field %s.%s (hint: fields should be"
                         " explicitly removed by an upgrade script)",
                         record.model, record.name,
                     )
-                self._process_end_unlink_record(record)
+                record.unlink()
             else:
                 bad_imd_ids.append(id)
         if bad_imd_ids:
@@ -2323,7 +2250,7 @@ class IrModelData(models.Model):
         """ Toggle the noupdate flag on the external id of the record """
         record = self.env[model].browse(res_id)
         if record.check_access_rights('write'):
-            for xid in self.search([('model', '=', model), ('res_id', '=', res_id)]):
+            for xid in  self.search([('model', '=', model), ('res_id', '=', res_id)]):
                 xid.noupdate = not xid.noupdate
 
 

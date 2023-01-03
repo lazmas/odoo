@@ -11,6 +11,5 @@ supposed to do
     'data': [
         'ir.model.access.csv',
         'menu.xml',
-    ],
-    'license': 'LGPL-3',
+    ]
 }

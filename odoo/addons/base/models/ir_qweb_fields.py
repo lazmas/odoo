@@ -7,11 +7,10 @@ from odoo import api, fields, models, _, _lt
 from PIL import Image
 import babel
 import babel.dates
-from lxml import etree, html
+from lxml import etree
 import math
 
 from odoo.tools import html_escape as escape, posix_to_ldml, float_utils, format_date, format_duration, pycompat
-from odoo.tools.mail import safe_attrs
 from odoo.tools.misc import get_lang, babel_locale_parse
 
 import logging
@@ -266,7 +265,7 @@ class DateTimeConverter(models.AbstractModel):
 
         if options.get('time_only'):
             format_func = babel.dates.format_time
-            return pycompat.to_text(format_func(value, format=pattern, tzinfo=tzinfo, locale=locale))
+            return pycompat.to_text(format_func(value, format=pattern, locale=locale))
         if options.get('date_only'):
             format_func = babel.dates.format_date
             return pycompat.to_text(format_func(value, format=pattern, locale=locale))
@@ -570,10 +569,6 @@ class DurationConverter(models.AbstractModel):
         r = round((value * factor) / round_to) * round_to
 
         sections = []
-        sign = ''
-        if value < 0:
-            r = -r
-            sign = '-'
 
         if options.get('digital'):
             for unit, label, secs_per_unit in TIMEDELTA_UNITS:
@@ -582,9 +577,14 @@ class DurationConverter(models.AbstractModel):
                 v, r = divmod(r, secs_per_unit)
                 if not v and (secs_per_unit > factor or secs_per_unit < round_to):
                     continue
+                if len(sections):
+                    sections.append(u':')
                 sections.append(u"%02.0f" % int(round(v)))
-            return sign + u':'.join(sections)
+            return u''.join(sections)
 
+        if value < 0:
+            r = -r
+            sections.append(u'-')
         for unit, label, secs_per_unit in TIMEDELTA_UNITS:
             v, r = divmod(r, secs_per_unit)
             if not v:
@@ -598,8 +598,7 @@ class DurationConverter(models.AbstractModel):
                 locale=locale)
             if section:
                 sections.append(section)
-        if sign:
-            sections.insert(0, sign)
+
         return u' '.join(sections)
 
 
@@ -652,29 +651,17 @@ class BarcodeConverter(models.AbstractModel):
             width=dict(type='integer', string=_('Width'), default_value=600),
             height=dict(type='integer', string=_('Height'), default_value=100),
             humanreadable=dict(type='integer', string=_('Human Readable'), default_value=0),
-            quiet=dict(type='integer', string='Quiet', default_value=1),
-            mask=dict(type='string', string='Mask', default_value='')
         )
         return options
 
     @api.model
     def value_to_html(self, value, options=None):
-        if not value:
-            return ''
         barcode_symbology = options.get('symbology', 'Code128')
         barcode = self.env['ir.actions.report'].barcode(
             barcode_symbology,
             value,
-            **{key: value for key, value in options.items() if key in ['width', 'height', 'humanreadable', 'quiet', 'mask']})
-
-        img_element = html.Element('img')
-        for k, v in options.items():
-            if k.startswith('img_') and k[4:] in safe_attrs:
-                img_element.set(k[4:], v)
-        if not img_element.get('alt'):
-            img_element.set('alt', _('Barcode %s') % value)
-        img_element.set('src', 'data:image/png;base64,%s' % base64.b64encode(barcode).decode())
-        return html.tostring(img_element, encoding='unicode')
+            **{key: value for key, value in options.items() if key in ['width', 'height', 'humanreadable']})
+        return u'<img src="data:png;base64,%s">' % base64.b64encode(barcode).decode('ascii')
 
 
 class Contact(models.AbstractModel):
@@ -711,7 +698,7 @@ class Contact(models.AbstractModel):
     @api.model
     def value_to_html(self, value, options):
         if not value:
-            return ''
+            return False
 
         opf = options and options.get('fields') or ["name", "address", "phone", "mobile", "email"]
         opsep = options and options.get('separator') or "\n"

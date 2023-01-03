@@ -6210,12 +6210,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid ""
 "<span class=\"o_form_label o_td_label\" name=\"address_name\">\n"
-"                                <b attrs=\"{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'contact')]}\">Company Address</b>\n"
-"                                <b attrs=\"{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'invoice')]}\">Invoice Address</b>\n"
-"                                <b attrs=\"{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'delivery')]}\">Delivery Address</b>\n"
-"                                <b attrs=\"{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'other')]}\">Other Address</b>\n"
-"                                <b attrs=\"{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'private')]}\">Private Address</b>\n"
-"                                <b attrs=\"{'invisible': ['&amp;', ('parent_id', '!=', False), ('type', '!=', False)]}\">Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'contact')]}\">Company Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'invoice')]}\">Invoice Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'delivery')]}\">Delivery Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'other')]}\">Other Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'private')]}\">Private Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', False)]}\">Address</b>\n"
 "                            </span>"
 msgstr ""
 
@@ -14953,12 +14953,6 @@ msgid "Invalid model name %r in action definition."
 msgstr ""
 
 #. module: base
-#: code:addons/base/models/ir_actions.py:611
-#, python-format
-msgid "many2many fields cannot be evaluated by reference"
-msgstr ""
-
-#. module: base
 #: code:addons/template_inheritance.py:0
 #, python-format
 msgid "Invalid position attribute: '%s'"
@@ -18824,16 +18818,6 @@ msgstr ""
 msgid ""
 "Odoo is currently processing a scheduled action.\n"
 "Module operations are not possible at this time, please try again later or contact your system administrator."
-msgstr ""
-
-#. module: base
-#: code:addons/base/models/ir_actions_report.py:0
-#, python-format
-msgid ""
-"Odoo is unable to merge the PDFs attached to the following records:\n"
-"%s\n"
-"\n"
-"Please exclude them from the selection to continue. It's possible to still retrieve those PDFs by selecting each of the affected records individually, which will avoid merging."
 msgstr ""
 
 #. module: base
@@ -23286,7 +23270,7 @@ msgstr ""
 #. module: base
 #: code:addons/base/models/ir_module.py:0
 #, python-format
-msgid "Those modules cannot be uninstalled: %s"
+msgid "The `base` module cannot be uninstalled"
 msgstr ""
 
 #. module: base
@@ -23429,12 +23413,6 @@ msgstr ""
 #: model:ir.model.fields,help:base.field_res_partner__user_id
 #: model:ir.model.fields,help:base.field_res_users__user_id
 msgid "The internal user in charge of this contact."
-msgstr ""
-
-#. module: base
-#: code:addons/base/models/res_country.py:106
-#, python-format
-msgid "The layout contains an invalid format key"
 msgstr ""
 
 #. module: base
@@ -25974,7 +25952,7 @@ msgstr ""
 #. module: base
 #: code:addons/base/models/res_partner.py:0
 #, python-format
-msgid "You cannot archive a contact linked to a portal or internal user."
+msgid "You cannot archive a contact linked to an internal user."
 msgstr ""
 
 #. module: base
@@ -26686,10 +26664,4 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.ax
 msgid "Åland Islands"
-msgstr ""
-
-#. module: base
-#: code:addons/base/models/res_currency.py:0
-#, python-format
-msgid "This currency is set on a company and therefore must be active."
 msgstr ""

@@ -5,5 +5,4 @@
         'ir.model.access.csv',
         'test_data.xml',
     ],
-    'license': 'LGPL-3',
 }

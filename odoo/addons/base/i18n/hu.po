@@ -4,19 +4,18 @@
 # 
 # Translators:
 # Tibor Kőnig <konig.tibor@evitalit.hu>, 2021
+# Gergő Kertész <gergo.kertesz@maxflow.hu>, 2021
 # Istvan <leki69@gmail.com>, 2021
 # picibucor <picibucor@gmail.com>, 2021
 # Zsolt Godó <zsolttokio@gmail.com>, 2021
 # Kovács Tibor <kovika@gmail.com>, 2021
+# Tamás Dombos, 2021
 # Ákos Nagy <akos.nagy@oregional.hu>, 2021
 # Martin Trigaux, 2021
 # krnkris, 2021
 # gezza <geza.nagy@oregional.hu>, 2021
 # Daniel Gerstenbrand <daniel.gerstenbrand@gmail.com>, 2021
-# A . <tiboreu@protonmail.com>, 2021
-# Gergő Kertész <gergo.kertesz@maxflow.hu>, 2022
-# Tamás Dombos, 2022
-# Tamás Németh <ntomasz81@gmail.com>, 2022
+# Tamás Németh <ntomasz81@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
@@ -24,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-27 13:50+0000\n"
 "PO-Revision-Date: 2020-09-07 08:09+0000\n"
-"Last-Translator: Tamás Németh <ntomasz81@gmail.com>, 2022\n"
+"Last-Translator: Tamás Németh <ntomasz81@gmail.com>, 2021\n"
 "Language-Team: Hungarian (https://www.transifex.com/odoo/teams/41243/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -503,8 +502,6 @@ msgid ""
 "        App to upload and manage your documents.\n"
 "    "
 msgstr ""
-"\n"
-"      Dokumentumok feltöltése és kezelése."
 
 #. module: base
 #: model:ir.module.module,description:base.module_helpdesk_sale_timesheet
@@ -514,7 +511,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"        Ügyfélszolgálati jegyekre rögzített idők kiszámlázása.\n"
+"        Helpdesk kérésekre rögzített időkimutatások számlázása.\n"
 "    "
 
 #. module: base
@@ -899,7 +896,7 @@ msgid ""
 "        This module is used for Online bank synchronization."
 msgstr ""
 "\n"
-"        Online banki adatok szinkronizáláshoz használt modul."
+"        Ezt a modult használja az Online bank szinkronizáláshoz."
 
 #. module: base
 #: model:ir.module.module,description:base.module_account_online_sync
@@ -909,7 +906,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"        Online banki adatok szinkronizáláshoz használt modul. Biztosítja az alapvető eljárásokat a bankszámlakivonatok szinkronizálásához."
+"        Ezt a modult használja az Online bank szinkronizáláshoz. Alap módokat kínál a banki kivonatok szinkronizálásához."
 
 #. module: base
 #: model:ir.module.module,description:base.module_web_mobile
@@ -927,8 +924,6 @@ msgid ""
 "\n"
 "        Track equipments and maintenance requests"
 msgstr ""
-"\n"
-"    Berendezések és a karbantartási kérelmek követése"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_account_plaid
@@ -937,7 +932,7 @@ msgid ""
 "        Use Plaid.com to retrieve bank statements"
 msgstr ""
 "\n"
-"        Használja a Plaid.com-ot a bankszámlakivonatok lekéréséhez"
+"        Használja a Plaid.com-ot a banki kivonatok betöltéséhez"
 
 #. module: base
 #: model:ir.module.module,description:base.module_account_plaid
@@ -947,7 +942,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"        Használja a Plaid.com-ot a bankszámlakivonatok lekéréséhez."
+"        Használja a Plaid.com-ot a banki kivonatok betöltéséhez."
 
 #. module: base
 #: model:ir.module.module,description:base.module_hr_recruitment_survey
@@ -970,8 +965,6 @@ msgid ""
 "\n"
 "        Use myponto.com to retrieve bank statements"
 msgstr ""
-"\n"
-"    Használja a myponto.com-ot a bankszámlakivonatok lekéréséhez"
 
 #. module: base
 #: model:ir.module.module,description:base.module_sale_timesheet_enterprise
@@ -1134,7 +1127,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"    Jelenlét modulhoz a Munkaidő-kimutatás alkalmazást kapcsoló modul."
+"    Jelenlét modulhoz a Munkaitő-kimutatás alkalmazást  kapcsoló modul."
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_no_saft
@@ -1710,8 +1703,6 @@ msgid ""
 "\n"
 "Adds fleet data to documents\n"
 msgstr ""
-"\n"
-"  Flottaadatok hozzáadása a dokumentumokhoz\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_documents_product
@@ -6703,8 +6694,6 @@ msgid ""
 " another model requires the record being deleted. If possible, archive it "
 "instead."
 msgstr ""
-"egy másik model hivatkozik a törlendő rekordra, inkább archiválja, ne "
-"törölje"
 
 #. module: base
 #: code:addons/base/models/ir_ui_view.py:0
@@ -7186,14 +7175,22 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid ""
 "<span class=\"o_form_label o_td_label\" name=\"address_name\">\n"
-"                                <b attrs=\"{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'contact')]}\">Company Address</b>\n"
-"                                <b attrs=\"{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'invoice')]}\">Invoice Address</b>\n"
-"                                <b attrs=\"{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'delivery')]}\">Delivery Address</b>\n"
-"                                <b attrs=\"{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'other')]}\">Other Address</b>\n"
-"                                <b attrs=\"{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'private')]}\">Private Address</b>\n"
-"                                <b attrs=\"{'invisible': ['&amp;', ('parent_id', '!=', False), ('type', '!=', False)]}\">Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'contact')]}\">Company Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'invoice')]}\">Invoice Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'delivery')]}\">Delivery Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'other')]}\">Other Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'private')]}\">Private Address</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', False)]}\">Address</b>\n"
 "                            </span>"
 msgstr ""
+"<span class=\"o_form_label o_td_label\" name=\"address_name\">\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'contact')]}\">Vállalat címe</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'invoice')]}\">Számlázási cím</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'delivery')]}\">Szállítási cím</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'other')]}\">Egyéb cím</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'private')]}\">Otthoni cím</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', False)]}\">Cím</b>\n"
+"                            </span>"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_update
@@ -7835,7 +7832,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_bank_statement_import
 msgid "Account Bank Statement Import"
-msgstr "Számlához tartozó bankszámlakivonat importálása"
+msgstr "Számlához tartozó bankszámlakivonat Import"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_accounting_localizations_account_charts
@@ -7880,12 +7877,12 @@ msgstr "Bankszámlaszám"
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_res_partner_bank_unique_number
 msgid "Account Number must be unique"
-msgstr "Számlaszámnak egyedinek kell lennie"
+msgstr "Számla számnak egyedinek kell lennie"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_form_simple_modif
 msgid "Account Security"
-msgstr "Fiók kezelése"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_taxcloud
@@ -8158,7 +8155,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_crm_sms
 msgid "Add SMS capabilities to CRM"
-msgstr "SMS-ezési lehetőség hozzáadása a CRM modulhoz"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_transifex
@@ -8552,7 +8549,7 @@ msgstr "Algéria"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_dz
 msgid "Algeria - Accounting"
-msgstr "Algéria - Könyvelés"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_payment_alipay
@@ -8891,7 +8888,7 @@ msgstr "Értékelés"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_appraisal_survey
 msgid "Appraisal - Survey"
-msgstr "Értékelés - Felmérés"
+msgstr ""
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_human_resources_appraisals
@@ -8907,12 +8904,12 @@ msgstr "Jóváhagyások"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_approvals_purchase
 msgid "Approvals - Purchase"
-msgstr "Jóváhagyások - Beszerzés"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_approvals_purchase_stock
 msgid "Approvals - Purchase - Stock"
-msgstr "Jóváhagyások - Beszerzés - Raktár"
+msgstr ""
 
 #. module: base
 #: model:ir.actions.act_window,name:base.open_module_tree
@@ -10532,7 +10529,7 @@ msgstr "Kolumbia"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_co
 msgid "Colombia - Accounting"
-msgstr "Kolumbia - Könyvelés"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_co_reports
@@ -10679,7 +10676,7 @@ msgstr "Vállalat adatai"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company__favicon
 msgid "Company Favicon"
-msgstr "Vállalat Favicon"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company__logo
@@ -10953,7 +10950,7 @@ msgstr ""
 #: code:addons/model.py:0
 #, python-format
 msgid "Constraint:"
-msgstr "Feltétel:"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_model_constraint_search
@@ -12294,7 +12291,7 @@ msgstr "Elvetés"
 #: model_terms:res.partner,website_description:base.res_partner_3
 #: model_terms:res.partner,website_description:base.res_partner_4
 msgid "Discover more"
-msgstr "Fedezzen fel még többet!"
+msgstr ""
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_productivity_discuss
@@ -12630,7 +12627,7 @@ msgstr "Dokumentumok - Szabadság"
 #: model:ir.module.module,shortdesc:base.module_documents_spreadsheet
 #: model:ir.module.module,summary:base.module_documents_spreadsheet
 msgid "Documents Spreadsheet"
-msgstr "Dokumentumok Táblázat"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_filters__domain
@@ -13025,7 +13022,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.form_res_users_key_description
 msgid "Enter a description of and purpose for the key."
-msgstr "Adjon meg egy célt és egy leírást a kulcsnak."
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_event_track_gantt
@@ -13860,12 +13857,12 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_attachment__datas
 msgid "File Content (base64)"
-msgstr "Fájltartalom (base64)"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_attachment__raw
 msgid "File Content (raw)"
-msgstr "Fájltartalom (nyers)"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_language_export__format
@@ -14234,7 +14231,7 @@ msgstr "Forrás"
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_management
 msgid "From quotations to invoices"
-msgstr "Az ajánlatkérésektől a számlákig"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_access_view_search
@@ -15071,7 +15068,7 @@ msgstr "Előzmények"
 #. module: base
 #: model:res.country,name:base.va
 msgid "Holy See (Vatican City State)"
-msgstr "Vatikánváros (Vatikánvárosi Állam)"
+msgstr "Vatikánváros (Vatican City State)"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users__action_id
@@ -16162,12 +16159,6 @@ msgid "Invalid model name %r in action definition."
 msgstr "Érvénytelen %r  modell név az akció definícióban."
 
 #. module: base
-#: code:addons/base/models/ir_actions.py:611
-#, python-format
-msgid "many2many fields cannot be evaluated by reference"
-msgstr ""
-
-#. module: base
 #: code:addons/template_inheritance.py:0
 #, python-format
 msgid "Invalid position attribute: '%s'"
@@ -16256,9 +16247,6 @@ msgid ""
 "Invoice & Delivery addresses are used in sales orders. Private addresses are"
 " only visible by authorized users."
 msgstr ""
-"A számlázási és szállítási címek az értékesítési rendeléseknél lesznek "
-"használva. Az otthoni címeket csak az engedéllyel rendelkező felhasználók "
-"láthatják."
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__type__invoice
@@ -16339,7 +16327,7 @@ msgstr "Vállalat"
 #: model:ir.model.fields,field_description:base.field_res_partner__is_company
 #: model:ir.model.fields,field_description:base.field_res_users__is_company
 msgid "Is a Company"
-msgstr "Vállalat"
+msgstr "Ez egy vállalat"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_attachment__public
@@ -16359,7 +16347,7 @@ msgstr "Izrael"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_il
 msgid "Israel - Accounting"
-msgstr "Izrael - Könyvelés"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.form_res_users_key_description
@@ -17093,7 +17081,7 @@ msgstr "Tétel"
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "Linebreak"
-msgstr "Sortörés"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_partner_merge_automatic_wizard__line_ids
@@ -17115,7 +17103,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_actions_server__link_field_id
 #: model:ir.model.fields,field_description:base.field_ir_cron__link_field_id
 msgid "Link Field"
-msgstr "Hivatkozás mező"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_link_tracker
@@ -18522,7 +18510,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.form_res_users_key_description
 msgid "Name your key"
-msgstr "Nevezze el a kulcsot"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.report_irmodeloverview
@@ -18948,7 +18936,7 @@ msgstr "Objektum"
 #: code:addons/model.py:0
 #, python-format
 msgid "Object %s doesn't exist"
-msgstr "%s objektum nem létezik"
+msgstr "A %s objektum nem létezik"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.report_irmodeloverview
@@ -20064,16 +20052,6 @@ msgid ""
 msgstr ""
 
 #. module: base
-#: code:addons/base/models/ir_actions_report.py:0
-#, python-format
-msgid ""
-"Odoo is unable to merge the PDFs attached to the following records:\n"
-"%s\n"
-"\n"
-"Please exclude them from the selection to continue. It's possible to still retrieve those PDFs by selecting each of the affected records individually, which will avoid merging."
-msgstr ""
-
-#. module: base
 #: model:ir.module.module,shortdesc:base.module_odoo_referral
 msgid "Odoo referral program"
 msgstr ""
@@ -20943,7 +20921,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_auth_password_policy
 msgid "Password Policy"
-msgstr "Jelszó szabályok"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_auth_password_policy_portal
@@ -20970,12 +20948,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,name:base.module_category_accounting_payment
 msgid "Payment"
-msgstr "Fizetés"
+msgstr "Kifizetés"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_payment
 msgid "Payment - Account"
-msgstr "Fizetés - Számla"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_payment
@@ -21877,12 +21855,12 @@ msgstr ""
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb
 msgid "Qweb"
-msgstr "Qweb"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field
 msgid "Qweb Field"
-msgstr "Qweb Mező"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_barcode
@@ -21892,27 +21870,27 @@ msgstr ""
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_contact
 msgid "Qweb Field Contact"
-msgstr "Qweb Mező Kapcsolat"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_date
 msgid "Qweb Field Date"
-msgstr "Qweb Field Dátum"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_datetime
 msgid "Qweb Field Datetime"
-msgstr "Qweb mező Dátum és idő"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_duration
 msgid "Qweb Field Duration"
-msgstr "Qweb mező Időtartam"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_float
 msgid "Qweb Field Float"
-msgstr "Qweb mező Lebegőpontos"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_float_time
@@ -21922,48 +21900,48 @@ msgstr ""
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_html
 msgid "Qweb Field HTML"
-msgstr "Qweb mező HTML"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_image
 #: model:ir.model,name:base.model_ir_qweb_field_image_url
 msgid "Qweb Field Image"
-msgstr "Qweb mező Kép"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_integer
 msgid "Qweb Field Integer"
-msgstr "Qweb mező Egész szám"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_many2one
 msgid "Qweb Field Many to One"
-msgstr "Qweb mező many2one "
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_monetary
 msgid "Qweb Field Monetary"
-msgstr "Qweb mező pénzügyi"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_relative
 msgid "Qweb Field Relative"
-msgstr "Qweb mező relatív"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_selection
 msgid "Qweb Field Selection"
-msgstr "Qweb mező választás"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_text
 msgid "Qweb Field Text"
-msgstr "Qweb mező szöveg"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_qweb
 msgid "Qweb Field qweb"
-msgstr "Qweb mező qweb"
+msgstr ""
 
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field_many2many
@@ -24041,7 +24019,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,name:base.module_category_sales_subscription
 msgid "Subscription"
-msgstr "Előfizetés"
+msgstr "Feliratkozás"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_subscription_sepa_direct_debit
@@ -24057,7 +24035,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_sales_subscriptions
 #: model:ir.module.module,shortdesc:base.module_sale_subscription
 msgid "Subscriptions"
-msgstr "Előfizetések"
+msgstr "Feliratkozások"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_sequence__date_range_ids
@@ -24593,8 +24571,8 @@ msgstr "A `%s` modul úgy néz ki most nem elérhető, kérem próbálja meg ké
 #. module: base
 #: code:addons/base/models/ir_module.py:0
 #, python-format
-msgid "Those modules cannot be uninstalled: %s"
-msgstr ""
+msgid "The `base` module cannot be uninstalled"
+msgstr "Az `alap` modult nem lehet törölni"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_partner_category__active
@@ -24762,12 +24740,6 @@ msgstr "Az ország teljes neve."
 #: model:ir.model.fields,help:base.field_res_partner__user_id
 #: model:ir.model.fields,help:base.field_res_users__user_id
 msgid "The internal user in charge of this contact."
-msgstr ""
-
-#. module: base
-#: code:addons/base/models/res_country.py:106
-#, python-format
-msgid "The layout contains an invalid format key"
 msgstr ""
 
 #. module: base
@@ -27072,7 +27044,7 @@ msgstr "Nyugat-Szahara"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.form_res_users_key_description
 msgid "What's this key for?"
-msgstr "Mire való ez a kulcs?"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_actions_server__sequence
@@ -27246,7 +27218,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.form_res_users_key_show
 msgid "Write down your key"
-msgstr "Mentse el a kulcsot"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.ye
@@ -27385,7 +27357,7 @@ msgstr ""
 #. module: base
 #: code:addons/base/models/res_partner.py:0
 #, python-format
-msgid "You cannot archive a contact linked to a portal or internal user."
+msgid "You cannot archive a contact linked to an internal user."
 msgstr ""
 
 #. module: base
@@ -27961,7 +27933,7 @@ msgstr ""
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "second"
-msgstr "második"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_model_fields__ttype__selection
@@ -28111,9 +28083,3 @@ msgstr "igen"
 #: model:res.country,name:base.ax
 msgid "Åland Islands"
 msgstr "Åland szigetek"
-
-#. module: base
-#: code:addons/base/models/res_currency.py:0
-#, python-format
-msgid "This currency is set on a company and therefore must be active."
-msgstr ""

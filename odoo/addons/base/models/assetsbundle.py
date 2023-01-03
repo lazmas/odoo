@@ -13,13 +13,11 @@ except ImportError:
     # If the `sass` python library isn't found, we fallback on the
     # `sassc` executable in the path.
     libsass = None
-from contextlib import closing
 from datetime import datetime
 from subprocess import Popen, PIPE
 from collections import OrderedDict
 from odoo import fields, tools, SUPERUSER_ID
 from odoo.tools.pycompat import to_text
-from odoo.tools.misc import file_open
 from odoo.http import request
 from odoo.modules.module import get_resource_path
 from .qweb import escape
@@ -28,8 +26,6 @@ from odoo.tools import func, misc
 
 import logging
 _logger = logging.getLogger(__name__)
-
-EXTENSIONS = (".js", ".css", ".scss", ".sass", ".less")
 
 
 class CompileError(RuntimeError): pass
@@ -219,18 +215,6 @@ class AssetsBundle(object):
             **self._get_asset_url_values(id=id, unique=unique, extra=extra, name=name, sep=sep, type=type)
         )
 
-    def _unlink_attachments(self, attachments):
-        """ Unlinks attachments without actually calling unlink, so that the ORM cache is not cleared.
-
-        Specifically, if an attachment is generated while a view is rendered, clearing the ORM cache
-        could unload fields loaded with a sudo(), and expected to be readable by the view.
-        Such a view would be website.layout when main_object is an ir.ui.view.
-        """
-        to_delete = set(attach.store_fname for attach in attachments if attach.store_fname)
-        self.env.cr.execute(f"DELETE FROM {attachments._table} WHERE id IN %s", [tuple(attachments.ids)])
-        for file_path in to_delete:
-            attachments._file_delete(file_path)
-
     def clean_attachments(self, type):
         """ Takes care of deleting any outdated ir.attachment records associated to a bundle before
         saving a fresh one.
@@ -256,7 +240,7 @@ class AssetsBundle(object):
         # avoid to invalidate cache if it's already empty (mainly useful for test)
 
         if attachments:
-            self._unlink_attachments(attachments)
+            attachments.unlink()
             # force bundle invalidation on other workers
             self.env['ir.qweb'].clear_caches()
 
@@ -438,7 +422,7 @@ class AssetsBundle(object):
 
     def is_css_preprocessed(self):
         preprocessed = True
-        old_attachments = self.env['ir.attachment'].sudo()
+        attachments = None
         asset_types = [SassStylesheetAsset, ScssStylesheetAsset, LessStylesheetAsset]
         if self.user_direction == 'rtl':
             asset_types.append(StylesheetAsset)
@@ -449,7 +433,6 @@ class AssetsBundle(object):
             if assets:
                 assets_domain = self._get_assets_domain_for_already_processed_css(assets)
                 attachments = self.env['ir.attachment'].sudo().search(assets_domain)
-                old_attachments += attachments
                 for attachment in attachments:
                     asset = assets[attachment.url]
                     if asset.last_modified > attachment['__last_update']:
@@ -466,7 +449,7 @@ class AssetsBundle(object):
                 if outdated:
                     preprocessed = False
 
-        return preprocessed, old_attachments
+        return preprocessed, attachments
 
     def preprocess_css(self, debug=False, old_attachments=None):
         """
@@ -490,7 +473,7 @@ class AssetsBundle(object):
                 compiled = self.run_rtlcss(compiled)
 
             if not self.css_errors and old_attachments:
-                self._unlink_attachments(old_attachments)
+                old_attachments.unlink()
                 old_attachments = None
 
             fragments = self.rx_css_split.split(compiled)
@@ -693,7 +676,7 @@ class WebAsset(object):
         try:
             self.stat()
             if self._filename:
-                with closing(file_open(self._filename, 'rb', filter_ext=EXTENSIONS)) as fp:
+                with open(self._filename, 'rb') as fp:
                     return fp.read().decode('utf-8')
             else:
                 return base64.b64decode(self._ir_attach['datas']).decode('utf-8')

@@ -146,11 +146,9 @@ class BaseCursor:
         return self
 
     def __exit__(self, exc_type, exc_value, traceback):
-        try:
-            if exc_type is None:
-                self.commit()
-        finally:
-            self.close()
+        if exc_type is None:
+            self.commit()
+        self.close()
 
 
 class Cursor(BaseCursor):
@@ -540,8 +538,7 @@ class TestCursor(BaseCursor):
 
 
 class PsycoConnection(psycopg2.extensions.connection):
-    def lobject(*args, **kwargs):
-        pass
+    pass
 
 class ConnectionPool(object):
     """ The pool of connections to database(s)

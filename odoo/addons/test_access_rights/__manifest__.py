@@ -8,5 +8,4 @@
         'security.xml',
         'data.xml',
     ],
-    'license': 'LGPL-3',
 }
