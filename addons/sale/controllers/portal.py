@@ -215,7 +215,7 @@ class CustomerPortal(CustomerPortal):
         except (AccessError, MissingError):
             return {'error': _('Invalid order.')}
 
-        if not order_sudo.has_to_be_signed():
+        if not order_sudo.has_to_be_signed(True):
             return {'error': _('The order is not in a state requiring customer signature.')}
         if not signature:
             return {'error': _('Signature is missing.')}
@@ -230,9 +230,9 @@ class CustomerPortal(CustomerPortal):
         except (TypeError, binascii.Error) as e:
             return {'error': _('Invalid signature data.')}
 
-        if not order_sudo.has_to_be_paid():
-            order_sudo.action_confirm()
-            order_sudo._send_order_confirmation_mail()
+        # if not order_sudo.has_to_be_paid():
+            # order_sudo.action_confirm()
+            # order_sudo._send_order_confirmation_mail()
 
         pdf = request.env.ref('sale.action_report_saleorder').sudo().render_qweb_pdf([order_sudo.id])[0]
 
